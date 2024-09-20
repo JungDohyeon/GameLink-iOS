@@ -11,6 +11,17 @@
 		CDCB985B2C9DE61200DF9FD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB985A2C9DE61200DF9FD3 /* ContentView.swift */; };
 		CDCB985D2C9DE61400DF9FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */; };
 		CDCB98612C9DE61400DF9FD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB98602C9DE61400DF9FD3 /* Preview Assets.xcassets */; };
+		CDCB98732C9DE8E700DF9FD3 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98722C9DE8E700DF9FD3 /* CombineMoya */; };
+		CDCB98752C9DE8E700DF9FD3 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98742C9DE8E700DF9FD3 /* Moya */; };
+		CDCB98802C9DE96700DF9FD3 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB987F2C9DE96700DF9FD3 /* BaseEntity.swift */; };
+		CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98822C9DE98000DF9FD3 /* ErrorResponse.swift */; };
+		CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98842C9DE98E00DF9FD3 /* NetworkError.swift */; };
+		CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98862C9DE99900DF9FD3 /* NetworkResult.swift */; };
+		CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB988A2C9DEA4A00DF9FD3 /* Config.swift */; };
+		CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB988C2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift */; };
+		CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98912C9DEAAA00DF9FD3 /* UserDefaultsList.swift */; };
+		CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98A12C9DEE3700DF9FD3 /* AuthInterceptor.swift */; };
+		CDCB98AD2C9DF14800DF9FD3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98AC2C9DF14800DF9FD3 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +31,19 @@
 		CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDCB985E2C9DE61400DF9FD3 /* GameLink_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameLink_iOS.entitlements; sourceTree = "<group>"; };
 		CDCB98602C9DE61400DF9FD3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDCB987F2C9DE96700DF9FD3 /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		CDCB98822C9DE98000DF9FD3 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		CDCB98842C9DE98E00DF9FD3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CDCB98862C9DE99900DF9FD3 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		CDCB988A2C9DEA4A00DF9FD3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CDCB988C2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		CDCB98912C9DEAAA00DF9FD3 /* UserDefaultsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsList.swift; sourceTree = "<group>"; };
+		CDCB98A12C9DEE3700DF9FD3 /* AuthInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
+		CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		CDCB98AA2C9DF11D00DF9FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CDCB98B12C9DF1AE00DF9FD3 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		CDCB98B22C9DF1AE00DF9FD3 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		CDCB98B32C9DF1AE00DF9FD3 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCB98AD2C9DF14800DF9FD3 /* Alamofire in Frameworks */,
+				CDCB98752C9DE8E700DF9FD3 /* Moya in Frameworks */,
+				CDCB98732C9DE8E700DF9FD3 /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +79,10 @@
 		CDCB98572C9DE61200DF9FD3 /* GameLink-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CDCB98AA2C9DF11D00DF9FD3 /* Info.plist */,
+				CDCB98892C9DEA4200DF9FD3 /* Utils */,
 				CDCB986B2C9DE6FD00DF9FD3 /* DesignSystem */,
-				CDCB986A2C9DE6F400DF9FD3 /* Network */,
+				CDCB986A2C9DE6F400DF9FD3 /* Networks */,
 				CDCB98692C9DE6EC00DF9FD3 /* Data */,
 				CDCB98682C9DE6E600DF9FD3 /* Domain */,
 				CDCB98672C9DE6B700DF9FD3 /* Feature */,
@@ -91,15 +120,17 @@
 		CDCB98692C9DE6EC00DF9FD3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CDCB98812C9DE96B00DF9FD3 /* Sources */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		CDCB986A2C9DE6F400DF9FD3 /* Network */ = {
+		CDCB986A2C9DE6F400DF9FD3 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				CDCB98762C9DE8F600DF9FD3 /* Sources */,
 			);
-			path = Network;
+			path = Networks;
 			sourceTree = "<group>";
 		};
 		CDCB986B2C9DE6FD00DF9FD3 /* DesignSystem */ = {
@@ -107,6 +138,79 @@
 			children = (
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		CDCB98762C9DE8F600DF9FD3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB98B02C9DF1A900DF9FD3 /* Base */,
+				CDCB98AF2C9DF19D00DF9FD3 /* Service */,
+				CDCB98AE2C9DF18F00DF9FD3 /* Entity */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CDCB98812C9DE96B00DF9FD3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB98902C9DEAA200DF9FD3 /* Literals */,
+				CDCB988E2C9DEA8E00DF9FD3 /* NetworkEntity */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CDCB98892C9DEA4200DF9FD3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB988A2C9DEA4A00DF9FD3 /* Config.swift */,
+				CDCB988C2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift */,
+				CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CDCB988E2C9DEA8E00DF9FD3 /* NetworkEntity */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB987F2C9DE96700DF9FD3 /* BaseEntity.swift */,
+				CDCB98822C9DE98000DF9FD3 /* ErrorResponse.swift */,
+				CDCB98842C9DE98E00DF9FD3 /* NetworkError.swift */,
+				CDCB98862C9DE99900DF9FD3 /* NetworkResult.swift */,
+			);
+			path = NetworkEntity;
+			sourceTree = "<group>";
+		};
+		CDCB98902C9DEAA200DF9FD3 /* Literals */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB98912C9DEAAA00DF9FD3 /* UserDefaultsList.swift */,
+			);
+			path = Literals;
+			sourceTree = "<group>";
+		};
+		CDCB98AE2C9DF18F00DF9FD3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CDCB98AF2C9DF19D00DF9FD3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CDCB98B02C9DF1A900DF9FD3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB98A12C9DEE3700DF9FD3 /* AuthInterceptor.swift */,
+				CDCB98B12C9DF1AE00DF9FD3 /* BaseAPI.swift */,
+				CDCB98B32C9DF1AE00DF9FD3 /* BaseService.swift */,
+				CDCB98B22C9DF1AE00DF9FD3 /* NetworkLogger.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +229,11 @@
 			dependencies = (
 			);
 			name = "GameLink-iOS";
+			packageProductDependencies = (
+				CDCB98722C9DE8E700DF9FD3 /* CombineMoya */,
+				CDCB98742C9DE8E700DF9FD3 /* Moya */,
+				CDCB98AC2C9DF14800DF9FD3 /* Alamofire */,
+			);
 			productName = "GameLink-iOS";
 			productReference = CDCB98552C9DE61200DF9FD3 /* GameLink-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +262,10 @@
 				Base,
 			);
 			mainGroup = CDCB984C2C9DE61200DF9FD3;
+			packageReferences = (
+				CDCB98712C9DE8E700DF9FD3 /* XCRemoteSwiftPackageReference "Moya" */,
+				CDCB98AB2C9DF14800DF9FD3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CDCB98562C9DE61200DF9FD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -179,8 +292,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */,
+				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
 				CDCB985B2C9DE61200DF9FD3 /* ContentView.swift in Sources */,
+				CDCB98802C9DE96700DF9FD3 /* BaseEntity.swift in Sources */,
+				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
+				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
+				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
 				CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */,
+				CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */,
+				CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +310,7 @@
 /* Begin XCBuildConfiguration section */
 		CDCB98622C9DE61400DF9FD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -250,6 +372,7 @@
 		};
 		CDCB98632C9DE61400DF9FD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -303,6 +426,7 @@
 		};
 		CDCB98652C9DE61400DF9FD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +438,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GameLink-iOS/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -341,6 +466,7 @@
 		};
 		CDCB98662C9DE61400DF9FD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -352,6 +478,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GameLink-iOS/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -399,6 +526,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CDCB98712C9DE8E700DF9FD3 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		CDCB98AB2C9DF14800DF9FD3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CDCB98722C9DE8E700DF9FD3 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDCB98712C9DE8E700DF9FD3 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		CDCB98742C9DE8E700DF9FD3 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDCB98712C9DE8E700DF9FD3 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		CDCB98AC2C9DF14800DF9FD3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDCB98AB2C9DF14800DF9FD3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDCB984D2C9DE61200DF9FD3 /* Project object */;
 }
