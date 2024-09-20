@@ -52,6 +52,11 @@
 		CDCB98572C9DE61200DF9FD3 /* GameLink-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CDCB986B2C9DE6FD00DF9FD3 /* DesignSystem */,
+				CDCB986A2C9DE6F400DF9FD3 /* Network */,
+				CDCB98692C9DE6EC00DF9FD3 /* Data */,
+				CDCB98682C9DE6E600DF9FD3 /* Domain */,
+				CDCB98672C9DE6B700DF9FD3 /* Feature */,
 				CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */,
 				CDCB985A2C9DE61200DF9FD3 /* ContentView.swift */,
 				CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */,
@@ -67,6 +72,41 @@
 				CDCB98602C9DE61400DF9FD3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDCB98672C9DE6B700DF9FD3 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		CDCB98682C9DE6E600DF9FD3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CDCB98692C9DE6EC00DF9FD3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CDCB986A2C9DE6F400DF9FD3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CDCB986B2C9DE6FD00DF9FD3 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
