@@ -67,7 +67,7 @@ DerivedData/
 
 
 ### Privacy ###
-APIKeys*.swift
+*.xcconfig
 
 ### Tuist derived files ###
 graph.dot
