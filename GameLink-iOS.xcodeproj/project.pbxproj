@@ -22,6 +22,20 @@
 		CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98912C9DEAAA00DF9FD3 /* UserDefaultsList.swift */; };
 		CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98A12C9DEE3700DF9FD3 /* AuthInterceptor.swift */; };
 		CDCB98AD2C9DF14800DF9FD3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98AC2C9DF14800DF9FD3 /* Alamofire */; };
+		CDD5CD152CA4794800208740 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD142CA4794800208740 /* KakaoSDK */; };
+		CDD5CD172CA4794800208740 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD162CA4794800208740 /* KakaoSDKAuth */; };
+		CDD5CD192CA4794800208740 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD182CA4794800208740 /* KakaoSDKCert */; };
+		CDD5CD1B2CA4794800208740 /* KakaoSDKCertCore in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD1A2CA4794800208740 /* KakaoSDKCertCore */; };
+		CDD5CD1D2CA4794800208740 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD1C2CA4794800208740 /* KakaoSDKCommon */; };
+		CDD5CD1F2CA4794800208740 /* KakaoSDKFriend in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD1E2CA4794800208740 /* KakaoSDKFriend */; };
+		CDD5CD212CA4794800208740 /* KakaoSDKFriendCore in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD202CA4794800208740 /* KakaoSDKFriendCore */; };
+		CDD5CD232CA4794800208740 /* KakaoSDKShare in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD222CA4794800208740 /* KakaoSDKShare */; };
+		CDD5CD252CA4794800208740 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD242CA4794800208740 /* KakaoSDKUser */; };
+		CDD5CD272CA4798F00208740 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD262CA4798F00208740 /* SceneDelegate.swift */; };
+		CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD282CA479A200208740 /* AppDelegate.swift */; };
+		CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD2B2CA47B0D00208740 /* AuthView.swift */; };
+		CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD2D2CA47B1A00208740 /* AuthViewModel.swift */; };
+		CDD5CD312CA47C0A00208740 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD302CA47C0A00208740 /* AuthProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +58,11 @@
 		CDCB98B12C9DF1AE00DF9FD3 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		CDCB98B22C9DF1AE00DF9FD3 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		CDCB98B32C9DF1AE00DF9FD3 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		CDD5CD262CA4798F00208740 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CDD5CD282CA479A200208740 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDD5CD2B2CA47B0D00208740 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		CDD5CD2D2CA47B1A00208740 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CDD5CD302CA47C0A00208740 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +70,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD5CD1D2CA4794800208740 /* KakaoSDKCommon in Frameworks */,
 				CDCB98AD2C9DF14800DF9FD3 /* Alamofire in Frameworks */,
+				CDD5CD1F2CA4794800208740 /* KakaoSDKFriend in Frameworks */,
+				CDD5CD152CA4794800208740 /* KakaoSDK in Frameworks */,
 				CDCB98752C9DE8E700DF9FD3 /* Moya in Frameworks */,
+				CDD5CD232CA4794800208740 /* KakaoSDKShare in Frameworks */,
+				CDD5CD192CA4794800208740 /* KakaoSDKCert in Frameworks */,
 				CDCB98732C9DE8E700DF9FD3 /* CombineMoya in Frameworks */,
+				CDD5CD252CA4794800208740 /* KakaoSDKUser in Frameworks */,
+				CDD5CD172CA4794800208740 /* KakaoSDKAuth in Frameworks */,
+				CDD5CD212CA4794800208740 /* KakaoSDKFriendCore in Frameworks */,
+				CDD5CD1B2CA4794800208740 /* KakaoSDKCertCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +119,8 @@
 				CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */,
 				CDCB985E2C9DE61400DF9FD3 /* GameLink_iOS.entitlements */,
 				CDCB985F2C9DE61400DF9FD3 /* Preview Content */,
+				CDD5CD262CA4798F00208740 /* SceneDelegate.swift */,
+				CDD5CD282CA479A200208740 /* AppDelegate.swift */,
 			);
 			path = "GameLink-iOS";
 			sourceTree = "<group>";
@@ -106,6 +136,7 @@
 		CDCB98672C9DE6B700DF9FD3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				CDD5CD2A2CA47B0700208740 /* Auth */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -153,6 +184,7 @@
 		CDCB98812C9DE96B00DF9FD3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CDD5CD2F2CA47BFD00208740 /* FeatureData */,
 				CDCB98902C9DEAA200DF9FD3 /* Literals */,
 				CDCB988E2C9DEA8E00DF9FD3 /* NetworkEntity */,
 			);
@@ -213,6 +245,23 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		CDD5CD2A2CA47B0700208740 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5CD2B2CA47B0D00208740 /* AuthView.swift */,
+				CDD5CD2D2CA47B1A00208740 /* AuthViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CDD5CD2F2CA47BFD00208740 /* FeatureData */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5CD302CA47C0A00208740 /* AuthProvider.swift */,
+			);
+			path = FeatureData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +282,15 @@
 				CDCB98722C9DE8E700DF9FD3 /* CombineMoya */,
 				CDCB98742C9DE8E700DF9FD3 /* Moya */,
 				CDCB98AC2C9DF14800DF9FD3 /* Alamofire */,
+				CDD5CD142CA4794800208740 /* KakaoSDK */,
+				CDD5CD162CA4794800208740 /* KakaoSDKAuth */,
+				CDD5CD182CA4794800208740 /* KakaoSDKCert */,
+				CDD5CD1A2CA4794800208740 /* KakaoSDKCertCore */,
+				CDD5CD1C2CA4794800208740 /* KakaoSDKCommon */,
+				CDD5CD1E2CA4794800208740 /* KakaoSDKFriend */,
+				CDD5CD202CA4794800208740 /* KakaoSDKFriendCore */,
+				CDD5CD222CA4794800208740 /* KakaoSDKShare */,
+				CDD5CD242CA4794800208740 /* KakaoSDKUser */,
 			);
 			productName = "GameLink-iOS";
 			productReference = CDCB98552C9DE61200DF9FD3 /* GameLink-iOS.app */;
@@ -265,6 +323,7 @@
 			packageReferences = (
 				CDCB98712C9DE8E700DF9FD3 /* XCRemoteSwiftPackageReference "Moya" */,
 				CDCB98AB2C9DF14800DF9FD3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = CDCB98562C9DE61200DF9FD3 /* Products */;
 			projectDirPath = "";
@@ -292,14 +351,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */,
 				CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */,
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
+				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,
 				CDCB985B2C9DE61200DF9FD3 /* ContentView.swift in Sources */,
 				CDCB98802C9DE96700DF9FD3 /* BaseEntity.swift in Sources */,
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
 				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
+				CDD5CD272CA4798F00208740 /* SceneDelegate.swift in Sources */,
+				CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */,
 				CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */,
+				CDD5CD312CA47C0A00208740 /* AuthProvider.swift in Sources */,
 				CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */,
 				CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */,
 			);
@@ -454,7 +518,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dohyeon.GameLink-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamelink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -494,7 +558,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dohyeon.GameLink-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamelink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -544,6 +608,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.22.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -561,6 +633,51 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CDCB98AB2C9DF14800DF9FD3 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		CDD5CD142CA4794800208740 /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		CDD5CD162CA4794800208740 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		CDD5CD182CA4794800208740 /* KakaoSDKCert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCert;
+		};
+		CDD5CD1A2CA4794800208740 /* KakaoSDKCertCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCertCore;
+		};
+		CDD5CD1C2CA4794800208740 /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		CDD5CD1E2CA4794800208740 /* KakaoSDKFriend */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKFriend;
+		};
+		CDD5CD202CA4794800208740 /* KakaoSDKFriendCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKFriendCore;
+		};
+		CDD5CD222CA4794800208740 /* KakaoSDKShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKShare;
+		};
+		CDD5CD242CA4794800208740 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
