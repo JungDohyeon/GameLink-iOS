@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct GameLink_iOSApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  
+  @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
+  
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
