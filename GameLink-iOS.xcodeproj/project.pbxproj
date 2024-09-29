@@ -36,6 +36,14 @@
 		CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD2B2CA47B0D00208740 /* AuthView.swift */; };
 		CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD2D2CA47B1A00208740 /* AuthViewModel.swift */; };
 		CDD5CD312CA47C0A00208740 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD302CA47C0A00208740 /* AuthProvider.swift */; };
+		CDD5CD342CA4839B00208740 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD332CA4839B00208740 /* UserAPI.swift */; };
+		CDD5CD362CA483A900208740 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD352CA483A900208740 /* UserService.swift */; };
+		CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98B12C9DF1AE00DF9FD3 /* BaseAPI.swift */; };
+		CDD5CD382CA4850F00208740 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98B32C9DF1AE00DF9FD3 /* BaseService.swift */; };
+		CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98B22C9DF1AE00DF9FD3 /* NetworkLogger.swift */; };
+		CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD3A2CA4859A00208740 /* OAuthRequestDTO.swift */; };
+		CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD3C2CA4864700208740 /* OAuthDTO.swift */; };
+		CDD5CD3F2CA48AE400208740 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD3E2CA48AE400208740 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +71,11 @@
 		CDD5CD2B2CA47B0D00208740 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		CDD5CD2D2CA47B1A00208740 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		CDD5CD302CA47C0A00208740 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		CDD5CD332CA4839B00208740 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		CDD5CD352CA483A900208740 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		CDD5CD3A2CA4859A00208740 /* OAuthRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthRequestDTO.swift; sourceTree = "<group>"; };
+		CDD5CD3C2CA4864700208740 /* OAuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthDTO.swift; sourceTree = "<group>"; };
+		CDD5CD3E2CA48AE400208740 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +187,7 @@
 		CDCB98762C9DE8F600DF9FD3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CDD5CD322CA4839300208740 /* API */,
 				CDCB98B02C9DF1A900DF9FD3 /* Base */,
 				CDCB98AF2C9DF19D00DF9FD3 /* Service */,
 				CDCB98AE2C9DF18F00DF9FD3 /* Entity */,
@@ -194,6 +208,7 @@
 		CDCB98892C9DEA4200DF9FD3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CDD5CD3E2CA48AE400208740 /* Utils.swift */,
 				CDCB988A2C9DEA4A00DF9FD3 /* Config.swift */,
 				CDCB988C2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift */,
 				CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */,
@@ -223,6 +238,8 @@
 		CDCB98AE2C9DF18F00DF9FD3 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				CDD5CD3A2CA4859A00208740 /* OAuthRequestDTO.swift */,
+				CDD5CD3C2CA4864700208740 /* OAuthDTO.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -230,6 +247,7 @@
 		CDCB98AF2C9DF19D00DF9FD3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CDD5CD352CA483A900208740 /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -260,6 +278,14 @@
 				CDD5CD302CA47C0A00208740 /* AuthProvider.swift */,
 			);
 			path = FeatureData;
+			sourceTree = "<group>";
+		};
+		CDD5CD322CA4839300208740 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5CD332CA4839B00208740 /* UserAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,18 +377,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */,
 				CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */,
 				CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */,
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
+				CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */,
+				CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */,
 				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,
+				CDD5CD342CA4839B00208740 /* UserAPI.swift in Sources */,
 				CDCB985B2C9DE61200DF9FD3 /* ContentView.swift in Sources */,
+				CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */,
 				CDCB98802C9DE96700DF9FD3 /* BaseEntity.swift in Sources */,
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
 				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
 				CDD5CD272CA4798F00208740 /* SceneDelegate.swift in Sources */,
+				CDD5CD3F2CA48AE400208740 /* Utils.swift in Sources */,
+				CDD5CD382CA4850F00208740 /* BaseService.swift in Sources */,
 				CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */,
 				CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */,
+				CDD5CD362CA483A900208740 /* UserService.swift in Sources */,
 				CDD5CD312CA47C0A00208740 /* AuthProvider.swift in Sources */,
 				CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */,
 				CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */,

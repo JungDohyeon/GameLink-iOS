@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import KakaoSDKAuth
 import KakaoSDKUser
 
 final class AuthViewModel: ObservableObject {
@@ -39,33 +40,70 @@ private extension AuthViewModel {
   func handleKakaoLogin() {
     if (UserApi.isKakaoTalkLoginAvailable()) {
       UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-        if let error = error {
-          print("ERROR!")
-          print(error.localizedDescription)
+        if let oauthToken = oauthToken {
+          print("TOKEN: \(oauthToken.accessToken)")
+          self.signUpUserWithSocialLogin(loginPath: .kakao, token: oauthToken)
+        } else {
+          print("Kakao Login Error")
         }
-        else {
-          print("TOKEN: \(oauthToken?.accessToken)")
-          self.signUpUserWithSocialLogin(loginPath: .kakao)
+        
+        if let error = error {
+          print(error.localizedDescription)
         }
       }
     } else {
       UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-        if let error = error {
-          print("ERROR!")
-          print(error.localizedDescription)
+        if let oauthToken = oauthToken {
+          print("TOKEN: \(oauthToken.accessToken)")
+          self.signUpUserWithSocialLogin(loginPath: .kakao, token: oauthToken)
+        } else {
+          print("Kakao Login Error")
         }
-        else {
-          print("TOKEN: \(oauthToken?.accessToken)")
-          self.signUpUserWithSocialLogin(loginPath: .kakao)
+        
+        if let error = error {
+          print(error.localizedDescription)
         }
       }
     }
   }
   
-  
-  func signUpUserWithSocialLogin(loginPath: AuthProvider) {
+  func signUpUserWithSocialLogin(loginPath: AuthProvider, token: OAuthToken) {
     switch loginPath {
     case .kakao:
+      UserApi.shared.me() { (user, error) in
+        if let error = error {
+          print(error.localizedDescription)
+        } else {
+          if let user = user {
+            DefaultAuthService().kakaoLogin(
+              data: OAuthRequestDTO(
+                deviceInfo: DeviceInfo(
+                  uniqueId: String(user.id ?? 0),
+                  model: "test",
+                  deviceId: Utils.getDeviceUUID(),
+                  deviceName: "Tester"
+                ),
+                kakaoInfo: KakaoInfo(
+                  accessToken: token.accessToken,
+                  expiresIn: Int(token.expiresIn),
+                  refreshToken: token.refreshToken,
+                  refreshTokenExpiresIn: Int(token.refreshTokenExpiresIn),
+                  scope: token.scope ?? "",
+                  tokenType: token.tokenType
+                )
+              )) { result in
+                switch result {
+                case let .success(data):
+                  print("Network Success!")
+                  return
+                  
+                default:
+                  return
+                }
+              }
+          }
+        }
+      }
       return
     }
   }
