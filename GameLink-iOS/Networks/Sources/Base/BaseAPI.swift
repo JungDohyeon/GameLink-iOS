@@ -11,6 +11,7 @@ import Foundation
 
 public enum APIType {
   // MARK: API TYPES
+  case user
 }
 
 public protocol BaseAPI: TargetType {
@@ -23,6 +24,8 @@ extension BaseAPI {
     
     switch Self.apiType {
       // MARK: API TYPE ADDRESS
+    case .user:
+      base += "/user"
     }
     
     guard let url = URL(string: base) else {
