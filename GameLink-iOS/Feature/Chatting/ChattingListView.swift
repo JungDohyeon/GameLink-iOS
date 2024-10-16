@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ChattingListView: View {
+  
+  @ObservedObject private var viewModel: ChatViewModel = ChatViewModel()
+  
   var body: some View {
     VStack {
       Text("HI!")
+    }
+    .task {
+      viewModel.action(.mainViewAppear)
     }
   }
 }
