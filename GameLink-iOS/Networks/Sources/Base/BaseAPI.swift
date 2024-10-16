@@ -59,16 +59,28 @@ public enum HeaderType {
       return ["Content-Type": "application/json"]
       
     case .jsonWithToken:
-      return [
-        "Content-Type": "application/json",
-        "Authorization": UserDefaultsList.Auth.accessToken ?? ""
-      ]
+      if let accessToken = UserDefaultsList.Auth.accessToken {
+        return [
+          "Content-Type": "application/json",
+          "Authorization": "Bearer \(accessToken)"
+        ]
+      } else {
+        return [
+          "Content-Type": "application/json"
+        ]
+      }
       
     case .multipartWithToken:
-      return [
-        "Content-Type": "multipart/form-data",
-        "Authorization": UserDefaultsList.Auth.accessToken ?? ""
-      ]
+      if let accessToken = UserDefaultsList.Auth.accessToken {
+        return [
+          "Content-Type": "application/json",
+          "Authorization": "Bearer \(accessToken)"
+        ]
+      } else {
+        return [
+          "Content-Type": "application/json"
+        ]
+      }
     }
   }
 }

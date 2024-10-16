@@ -10,6 +10,7 @@ import Foundation
 import KakaoSDKAuth
 import KakaoSDKUser
 
+@MainActor
 final class AuthViewModel: ObservableObject {
   
   @Published private(set) var isLogin: Bool = false
@@ -96,7 +97,7 @@ private extension AuthViewModel {
               )) { result in
                 switch result {
                 case let .success(data):
-                  print("Network Success!")
+                  UserDefaultsList.setAccessToken(value: data.accessToken)
                   self.isLogin = true
                   return
                   

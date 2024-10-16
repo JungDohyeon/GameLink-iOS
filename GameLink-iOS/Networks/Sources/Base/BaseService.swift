@@ -136,6 +136,7 @@ extension BaseService {
         
       case let .failure(error):
         print(error.localizedDescription)
+        completion(.failure(.invalidData))
       }
     }
   }

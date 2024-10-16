@@ -13,13 +13,21 @@ public struct AuthView: View {
   
   public var body: some View {
     VStack {
+      Text("GameLink")
+        .foregroundStyle(.primary2)
+        .padding(.top, 150)
+      
+      Spacer()
+      
       Button(action: {
         viewModel.action(.tappedLogin(.kakao))
       }, label: {
         Text("KakaoLogin")
       })
+      .padding(.bottom, 100)
     }
-    .padding()
+    .frame(maxWidth: .infinity)
+    .background(.background1)
   }
 }
 

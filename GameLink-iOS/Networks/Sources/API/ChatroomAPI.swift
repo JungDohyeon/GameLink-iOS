@@ -19,7 +19,7 @@ import Moya
 
 extension ChatroomAPI: BaseAPI {
   
-  public static var apiType: APIType = .user
+  public static var apiType: APIType = .chatroom
   
   // MARK: - Header
   public var headers: [String: String]? {
@@ -83,7 +83,7 @@ extension ChatroomAPI: BaseAPI {
   private var parameterEncoding: ParameterEncoding {
     switch self {
     case .chatroomList:
-      return JSONEncoding.default
+      return URLEncoding.default
     case .deletChatroom:
       return JSONEncoding.default
     case .checkUserEntered:

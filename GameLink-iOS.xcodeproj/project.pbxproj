@@ -24,6 +24,8 @@
 		CDCD34B42CBFF6670068E4F7 /* ChatroomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B32CBFF6670068E4F7 /* ChatroomAPI.swift */; };
 		CDCD34B62CBFFDD00068E4F7 /* ChatRoomListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B52CBFFDD00068E4F7 /* ChatRoomListDTO.swift */; };
 		CDCD34B82CBFFE250068E4F7 /* CreateChatRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B72CBFFE250068E4F7 /* CreateChatRoomDTO.swift */; };
+		CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */; };
+		CDCD34BC2CBFFE860068E4F7 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34BB2CBFFE860068E4F7 /* ChatService.swift */; };
 		CDD5CD152CA4794800208740 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD142CA4794800208740 /* KakaoSDK */; };
 		CDD5CD172CA4794800208740 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD162CA4794800208740 /* KakaoSDKAuth */; };
 		CDD5CD192CA4794800208740 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD182CA4794800208740 /* KakaoSDKCert */; };
@@ -70,6 +72,8 @@
 		CDCD34B32CBFF6670068E4F7 /* ChatroomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomAPI.swift; sourceTree = "<group>"; };
 		CDCD34B52CBFFDD00068E4F7 /* ChatRoomListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomListDTO.swift; sourceTree = "<group>"; };
 		CDCD34B72CBFFE250068E4F7 /* CreateChatRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChatRoomDTO.swift; sourceTree = "<group>"; };
+		CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		CDCD34BB2CBFFE860068E4F7 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		CDD5CD262CA4798F00208740 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CDD5CD282CA479A200208740 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD5CD2B2CA47B0D00208740 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -254,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD5CD352CA483A900208740 /* UserService.swift */,
+				CDCD34BB2CBFFE860068E4F7 /* ChatService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */,
+				CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */,
 			);
 			path = Chatting;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */,
 				CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */,
 				CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */,
 				CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */,
@@ -412,6 +419,7 @@
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
 				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
+				CDCD34BC2CBFFE860068E4F7 /* ChatService.swift in Sources */,
 				CDD5CD272CA4798F00208740 /* SceneDelegate.swift in Sources */,
 				CDD5CD3F2CA48AE400208740 /* Utils.swift in Sources */,
 				CDD5CD382CA4850F00208740 /* BaseService.swift in Sources */,
