@@ -26,6 +26,16 @@
 		CDCD34B82CBFFE250068E4F7 /* CreateChatRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B72CBFFE250068E4F7 /* CreateChatRoomDTO.swift */; };
 		CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */; };
 		CDCD34BC2CBFFE860068E4F7 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34BB2CBFFE860068E4F7 /* ChatService.swift */; };
+		CDCD34C92CC00AFE0068E4F7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34C82CC00AFE0068E4F7 /* Fonts.swift */; };
+		CDCD34CA2CC00CAB0068E4F7 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C42CC00AE60068E4F7 /* Pretendard-Black.otf */; };
+		CDCD34CB2CC00CAE0068E4F7 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C02CC00AE60068E4F7 /* Pretendard-Bold.otf */; };
+		CDCD34CC2CC00CB00068E4F7 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C22CC00AE60068E4F7 /* Pretendard-ExtraBold.otf */; };
+		CDCD34CD2CC00CB10068E4F7 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C12CC00AE60068E4F7 /* Pretendard-ExtraLight.otf */; };
+		CDCD34CE2CC00CB40068E4F7 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C32CC00AE60068E4F7 /* Pretendard-Medium.otf */; };
+		CDCD34CF2CC00CB60068E4F7 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C52CC00AE60068E4F7 /* Pretendard-Light.otf */; };
+		CDCD34D02CC00CB70068E4F7 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C62CC00AE60068E4F7 /* Pretendard-Regular.otf */; };
+		CDCD34D12CC00CB90068E4F7 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C72CC00AE60068E4F7 /* Pretendard-SemiBold.otf */; };
+		CDCD34D22CC00CBB0068E4F7 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34BF2CC00AE60068E4F7 /* Pretendard-Thin.otf */; };
 		CDD5CD152CA4794800208740 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD142CA4794800208740 /* KakaoSDK */; };
 		CDD5CD172CA4794800208740 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD162CA4794800208740 /* KakaoSDKAuth */; };
 		CDD5CD192CA4794800208740 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD182CA4794800208740 /* KakaoSDKCert */; };
@@ -74,6 +84,16 @@
 		CDCD34B72CBFFE250068E4F7 /* CreateChatRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChatRoomDTO.swift; sourceTree = "<group>"; };
 		CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		CDCD34BB2CBFFE860068E4F7 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		CDCD34BF2CC00AE60068E4F7 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		CDCD34C02CC00AE60068E4F7 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		CDCD34C12CC00AE60068E4F7 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		CDCD34C22CC00AE60068E4F7 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		CDCD34C32CC00AE60068E4F7 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		CDCD34C42CC00AE60068E4F7 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		CDCD34C52CC00AE60068E4F7 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		CDCD34C62CC00AE60068E4F7 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		CDCD34C72CC00AE60068E4F7 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		CDCD34C82CC00AFE0068E4F7 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		CDD5CD262CA4798F00208740 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CDD5CD282CA479A200208740 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD5CD2B2CA47B0D00208740 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -128,6 +148,7 @@
 		CDCB98572C9DE61200DF9FD3 /* GameLink-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CDCD34BD2CC00AC10068E4F7 /* Resources */,
 				CDCB98AA2C9DF11D00DF9FD3 /* Info.plist */,
 				CDCB98892C9DEA4200DF9FD3 /* Utils */,
 				CDCB986B2C9DE6FD00DF9FD3 /* DesignSystem */,
@@ -136,7 +157,6 @@
 				CDCB98682C9DE6E600DF9FD3 /* Domain */,
 				CDCB98672C9DE6B700DF9FD3 /* Feature */,
 				CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */,
-				CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */,
 				CDCB985E2C9DE61400DF9FD3 /* GameLink_iOS.entitlements */,
 				CDCB985F2C9DE61400DF9FD3 /* Preview Content */,
 				CDD5CD262CA4798F00208740 /* SceneDelegate.swift */,
@@ -221,6 +241,7 @@
 				CDCB988A2C9DEA4A00DF9FD3 /* Config.swift */,
 				CDCB988C2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift */,
 				CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */,
+				CDCD34C82CC00AFE0068E4F7 /* Fonts.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -288,6 +309,31 @@
 				CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */,
 			);
 			path = Chatting;
+			sourceTree = "<group>";
+		};
+		CDCD34BD2CC00AC10068E4F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */,
+				CDCD34BE2CC00AD20068E4F7 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CDCD34BE2CC00AD20068E4F7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CDCD34C42CC00AE60068E4F7 /* Pretendard-Black.otf */,
+				CDCD34C02CC00AE60068E4F7 /* Pretendard-Bold.otf */,
+				CDCD34C22CC00AE60068E4F7 /* Pretendard-ExtraBold.otf */,
+				CDCD34C12CC00AE60068E4F7 /* Pretendard-ExtraLight.otf */,
+				CDCD34C52CC00AE60068E4F7 /* Pretendard-Light.otf */,
+				CDCD34C32CC00AE60068E4F7 /* Pretendard-Medium.otf */,
+				CDCD34C62CC00AE60068E4F7 /* Pretendard-Regular.otf */,
+				CDCD34C72CC00AE60068E4F7 /* Pretendard-SemiBold.otf */,
+				CDCD34BF2CC00AE60068E4F7 /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		CDD5CD2A2CA47B0700208740 /* Auth */ = {
@@ -393,7 +439,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCD34CE2CC00CB40068E4F7 /* Pretendard-Medium.otf in Resources */,
+				CDCD34CF2CC00CB60068E4F7 /* Pretendard-Light.otf in Resources */,
+				CDCD34CD2CC00CB10068E4F7 /* Pretendard-ExtraLight.otf in Resources */,
 				CDCB98612C9DE61400DF9FD3 /* Preview Assets.xcassets in Resources */,
+				CDCD34D02CC00CB70068E4F7 /* Pretendard-Regular.otf in Resources */,
+				CDCD34CB2CC00CAE0068E4F7 /* Pretendard-Bold.otf in Resources */,
+				CDCD34CC2CC00CB00068E4F7 /* Pretendard-ExtraBold.otf in Resources */,
+				CDCD34D12CC00CB90068E4F7 /* Pretendard-SemiBold.otf in Resources */,
+				CDCD34CA2CC00CAB0068E4F7 /* Pretendard-Black.otf in Resources */,
+				CDCD34D22CC00CBB0068E4F7 /* Pretendard-Thin.otf in Resources */,
 				CDCB985D2C9DE61400DF9FD3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCD34C92CC00AFE0068E4F7 /* Fonts.swift in Sources */,
 				CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */,
 				CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */,
 				CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */,

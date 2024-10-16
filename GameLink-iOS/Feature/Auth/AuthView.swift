@@ -15,6 +15,7 @@ public struct AuthView: View {
     VStack {
       Text("GameLink")
         .foregroundStyle(.primary2)
+        .glFont(.head1)
         .padding(.top, 150)
       
       Spacer()
