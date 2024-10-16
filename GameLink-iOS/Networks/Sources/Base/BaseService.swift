@@ -75,13 +75,13 @@ open class BaseService<Target: TargetType> {
   private func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, type: T.Type) -> NetworkResult<T> {
     let decoder = JSONDecoder()
     
-    guard let decodedData = try? decoder.decode(BaseEntity<T>.self, from: data) else {
+    guard let decodedData = try? decoder.decode(T.self, from: data) else {
       return .failure(.decodingFailed)
     }
     
     switch statusCode {
     case 200..<300:
-      return .success(decodedData.data)
+      return .success(decodedData)
       
     case 400..<500:
       return .failure(.requestErr)
