@@ -12,6 +12,7 @@ import Foundation
 public enum APIType {
   // MARK: API TYPES
   case user
+  case chatroom
 }
 
 public protocol BaseAPI: TargetType {
@@ -26,6 +27,9 @@ extension BaseAPI {
       // MARK: API TYPE ADDRESS
     case .user:
       base += "/user"
+      
+    case .chatroom:
+      base += "/chatroom"
     }
     
     guard let url = URL(string: base) else {

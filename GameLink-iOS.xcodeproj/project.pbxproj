@@ -21,6 +21,7 @@
 		CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98912C9DEAAA00DF9FD3 /* UserDefaultsList.swift */; };
 		CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98A12C9DEE3700DF9FD3 /* AuthInterceptor.swift */; };
 		CDCB98AD2C9DF14800DF9FD3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98AC2C9DF14800DF9FD3 /* Alamofire */; };
+		CDCD34B42CBFF6670068E4F7 /* ChatroomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B32CBFF6670068E4F7 /* ChatroomAPI.swift */; };
 		CDD5CD152CA4794800208740 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD142CA4794800208740 /* KakaoSDK */; };
 		CDD5CD172CA4794800208740 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD162CA4794800208740 /* KakaoSDKAuth */; };
 		CDD5CD192CA4794800208740 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD182CA4794800208740 /* KakaoSDKCert */; };
@@ -64,6 +65,7 @@
 		CDCB98B12C9DF1AE00DF9FD3 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		CDCB98B22C9DF1AE00DF9FD3 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		CDCB98B32C9DF1AE00DF9FD3 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		CDCD34B32CBFF6670068E4F7 /* ChatroomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomAPI.swift; sourceTree = "<group>"; };
 		CDD5CD262CA4798F00208740 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CDD5CD282CA479A200208740 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD5CD2B2CA47B0D00208740 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD5CD332CA4839B00208740 /* UserAPI.swift */,
+				CDCD34B32CBFF6670068E4F7 /* ChatroomAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */,
 				CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */,
 				CDD5CD362CA483A900208740 /* UserService.swift in Sources */,
+				CDCD34B42CBFF6670068E4F7 /* ChatroomAPI.swift in Sources */,
 				CDD5CD312CA47C0A00208740 /* AuthProvider.swift in Sources */,
 				CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */,
 				CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */,

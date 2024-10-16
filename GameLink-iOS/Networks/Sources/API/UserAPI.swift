@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import Moya
 
-public enum UserAPI {
+@frozen public enum UserAPI {
   case kakaoSignIn(data: OAuthRequestDTO)
 }
 
