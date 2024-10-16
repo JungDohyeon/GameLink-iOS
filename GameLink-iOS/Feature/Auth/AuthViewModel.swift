@@ -12,6 +12,8 @@ import KakaoSDKUser
 
 final class AuthViewModel: ObservableObject {
   
+  @Published private(set) var isLogin: Bool = false
+  
   public enum Action {
     // User Action
     case mainViewAppear
@@ -79,9 +81,9 @@ private extension AuthViewModel {
               data: OAuthRequestDTO(
                 deviceInfo: DeviceInfo(
                   uniqueId: String(user.id ?? 0),
-                  model: "test",
+                  model: Utils.getDeviceModelName(),
                   deviceId: Utils.getDeviceUUID(),
-                  deviceName: "Tester"
+                  deviceName: Utils.getDeviceModelName()
                 ),
                 kakaoInfo: KakaoInfo(
                   accessToken: token.accessToken,
@@ -95,9 +97,11 @@ private extension AuthViewModel {
                 switch result {
                 case let .success(data):
                   print("Network Success!")
+                  self.isLogin = true
                   return
                   
-                default:
+                case let .failure(error):
+                  print(error.localizedDescription, "🥹")
                   return
                 }
               }

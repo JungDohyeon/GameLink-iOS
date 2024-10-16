@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ChattingListView.swift
 //  GameLink-iOS
 //
 //  Created by 정도현 on 9/21/24.
@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ChattingListView: View {
   var body: some View {
-    AuthView()
+    VStack {
+      Text("HI!")
+    }
   }
 }
 
 #Preview {
-  ContentView()
+  ChattingListView()
 }

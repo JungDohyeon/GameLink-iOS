@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct AuthView: View {
   
-  @StateObject private var viewModel: AuthViewModel = AuthViewModel()
+  @EnvironmentObject private var viewModel: AuthViewModel
   
   public var body: some View {
     VStack {
@@ -25,4 +25,5 @@ public struct AuthView: View {
 
 #Preview {
   AuthView()
+    .environmentObject(AuthViewModel())
 }

@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */; };
-		CDCB985B2C9DE61200DF9FD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB985A2C9DE61200DF9FD3 /* ContentView.swift */; };
+		CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */; };
 		CDCB985D2C9DE61400DF9FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */; };
 		CDCB98612C9DE61400DF9FD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB98602C9DE61400DF9FD3 /* Preview Assets.xcassets */; };
 		CDCB98732C9DE8E700DF9FD3 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98722C9DE8E700DF9FD3 /* CombineMoya */; };
 		CDCB98752C9DE8E700DF9FD3 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98742C9DE8E700DF9FD3 /* Moya */; };
-		CDCB98802C9DE96700DF9FD3 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB987F2C9DE96700DF9FD3 /* BaseEntity.swift */; };
 		CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98822C9DE98000DF9FD3 /* ErrorResponse.swift */; };
 		CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98842C9DE98E00DF9FD3 /* NetworkError.swift */; };
 		CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98862C9DE99900DF9FD3 /* NetworkResult.swift */; };
@@ -49,11 +48,10 @@
 /* Begin PBXFileReference section */
 		CDCB98552C9DE61200DF9FD3 /* GameLink-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameLink-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLink_iOSApp.swift; sourceTree = "<group>"; };
-		CDCB985A2C9DE61200DF9FD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingListView.swift; sourceTree = "<group>"; };
 		CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDCB985E2C9DE61400DF9FD3 /* GameLink_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameLink_iOS.entitlements; sourceTree = "<group>"; };
 		CDCB98602C9DE61400DF9FD3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CDCB987F2C9DE96700DF9FD3 /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		CDCB98822C9DE98000DF9FD3 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		CDCB98842C9DE98E00DF9FD3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		CDCB98862C9DE99900DF9FD3 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				CDCB98682C9DE6E600DF9FD3 /* Domain */,
 				CDCB98672C9DE6B700DF9FD3 /* Feature */,
 				CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */,
-				CDCB985A2C9DE61200DF9FD3 /* ContentView.swift */,
 				CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */,
 				CDCB985E2C9DE61400DF9FD3 /* GameLink_iOS.entitlements */,
 				CDCB985F2C9DE61400DF9FD3 /* Preview Content */,
@@ -149,6 +146,7 @@
 		CDCB98672C9DE6B700DF9FD3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				CDCD34B22CBFF3DD0068E4F7 /* Chatting */,
 				CDD5CD2A2CA47B0700208740 /* Auth */,
 			);
 			path = Feature;
@@ -220,7 +218,6 @@
 		CDCB988E2C9DEA8E00DF9FD3 /* NetworkEntity */ = {
 			isa = PBXGroup;
 			children = (
-				CDCB987F2C9DE96700DF9FD3 /* BaseEntity.swift */,
 				CDCB98822C9DE98000DF9FD3 /* ErrorResponse.swift */,
 				CDCB98842C9DE98E00DF9FD3 /* NetworkError.swift */,
 				CDCB98862C9DE99900DF9FD3 /* NetworkResult.swift */,
@@ -269,6 +266,14 @@
 			children = (
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		CDCD34B22CBFF3DD0068E4F7 /* Chatting */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */,
+			);
+			path = Chatting;
 			sourceTree = "<group>";
 		};
 		CDD5CD2A2CA47B0700208740 /* Auth */ = {
@@ -393,9 +398,8 @@
 				CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */,
 				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,
 				CDD5CD342CA4839B00208740 /* UserAPI.swift in Sources */,
-				CDCB985B2C9DE61200DF9FD3 /* ContentView.swift in Sources */,
+				CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */,
 				CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */,
-				CDCB98802C9DE96700DF9FD3 /* BaseEntity.swift in Sources */,
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
 				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
