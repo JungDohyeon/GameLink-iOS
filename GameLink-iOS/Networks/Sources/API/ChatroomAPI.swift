@@ -31,18 +31,22 @@ extension ChatroomAPI: BaseAPI {
   
   // MARK: - Path
   public var path: String {
+    var endPath = "chatroom"
+    
     switch self {
     case .chatroomList:
-      return ""
+      break
     case .deletChatroom:
-      return ""
+      break
     case let .checkUserEntered(roomId):
-      return "checkUserCnt/\(roomId)"
+      endPath += "checkUserCnt/\(roomId)"
     case let .checkManager(roomId):
-      return "confirm/manager/\(roomId)"
+      endPath += "confirm/manager/\(roomId)"
     case .createChatroom:
-      return "create"
+      endPath += "create"
     }
+    
+    return endPath
   }
   
   // MARK: - Method

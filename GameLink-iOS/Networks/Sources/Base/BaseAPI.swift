@@ -29,7 +29,7 @@ extension BaseAPI {
       base += "/user"
       
     case .chatroom:
-      base += "/chatroom"
+      base += ""
     }
     
     guard let url = URL(string: base) else {
