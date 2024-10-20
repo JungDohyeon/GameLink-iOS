@@ -18,6 +18,11 @@ public struct UserDefaultsList {
 }
 
 extension UserDefaultsList {
+  
+  public static func setAccessToken(value: String) {
+    UserDefaultsList.Auth.accessToken = value
+  }
+  
   public static func clearData() {
     clearAuthData()
   }

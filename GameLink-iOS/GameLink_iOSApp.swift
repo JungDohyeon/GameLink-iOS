@@ -12,9 +12,20 @@ struct GameLink_iOSApp: App {
   
   @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
   
+  @StateObject private var authViewModel: AuthViewModel = AuthViewModel()
+  
+  init() {
+    
+  }
+  
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      if authViewModel.isLogin {
+        ChattingListView()
+      } else {
+        AuthView()
+          .environmentObject(authViewModel)
+      }
     }
   }
 }

@@ -12,6 +12,7 @@ import Foundation
 public enum APIType {
   // MARK: API TYPES
   case user
+  case chatroom
 }
 
 public protocol BaseAPI: TargetType {
@@ -26,6 +27,9 @@ extension BaseAPI {
       // MARK: API TYPE ADDRESS
     case .user:
       base += "/user"
+      
+    case .chatroom:
+      base += ""
     }
     
     guard let url = URL(string: base) else {
@@ -55,16 +59,28 @@ public enum HeaderType {
       return ["Content-Type": "application/json"]
       
     case .jsonWithToken:
-      return [
-        "Content-Type": "application/json",
-        "Authorization": UserDefaultsList.Auth.accessToken ?? ""
-      ]
+      if let accessToken = UserDefaultsList.Auth.accessToken {
+        return [
+          "Content-Type": "application/json",
+          "Authorization": "Bearer \(accessToken)"
+        ]
+      } else {
+        return [
+          "Content-Type": "application/json"
+        ]
+      }
       
     case .multipartWithToken:
-      return [
-        "Content-Type": "multipart/form-data",
-        "Authorization": UserDefaultsList.Auth.accessToken ?? ""
-      ]
+      if let accessToken = UserDefaultsList.Auth.accessToken {
+        return [
+          "Content-Type": "application/json",
+          "Authorization": "Bearer \(accessToken)"
+        ]
+      } else {
+        return [
+          "Content-Type": "application/json"
+        ]
+      }
     }
   }
 }
