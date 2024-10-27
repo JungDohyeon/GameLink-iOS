@@ -19,14 +19,14 @@ final class ChatViewModel: ObservableObject {
     case _fetchChatList
   }
   
-  private let chatService: ChatService
+  private let service: ChatService
   
   @Published private(set) var chatList: [ChatRoomListDTO] = []
   
   public init(
-    chatService: DefaultChatService = DefaultChatService()
+    chatService: ChatService
   ) {
-    self.chatService = chatService
+    self.service = chatService
   }
   
   public func action(_ action: Action) {
@@ -44,7 +44,7 @@ final class ChatViewModel: ObservableObject {
 private extension ChatViewModel {
  
   func fetchChatList() {
-    chatService.chatroomList { result in
+    service.chatroomList { result in
       switch result {
       case let .success(data):
         self.chatList = data

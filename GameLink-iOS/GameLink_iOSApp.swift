@@ -21,7 +21,7 @@ struct GameLink_iOSApp: App {
   var body: some Scene {
     WindowGroup {
       if authViewModel.isLogin {
-        ChattingListView()
+        TabBarView()
       } else {
         AuthView()
           .environmentObject(authViewModel)

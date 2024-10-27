@@ -13,6 +13,7 @@ public enum APIType {
   // MARK: API TYPES
   case user
   case chatroom
+  case riot
 }
 
 public protocol BaseAPI: TargetType {
@@ -30,6 +31,9 @@ extension BaseAPI {
       
     case .chatroom:
       base += ""
+      
+    case .riot:
+      base += "/riot/lol"
     }
     
     guard let url = URL(string: base) else {
