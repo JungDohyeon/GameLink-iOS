@@ -199,8 +199,8 @@
 		CDCB98572C9DE61200DF9FD3 /* GameLink-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CDCD34BD2CC00AC10068E4F7 /* Resources */,
 				CDCB98AA2C9DF11D00DF9FD3 /* Info.plist */,
+				CDCD34BD2CC00AC10068E4F7 /* Resources */,
 				CDCB98892C9DEA4200DF9FD3 /* Utils */,
 				CDCB986B2C9DE6FD00DF9FD3 /* DesignSystem */,
 				CDCB986A2C9DE6F400DF9FD3 /* Networks */,
@@ -289,11 +289,11 @@
 		CDCB98892C9DEA4200DF9FD3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */,
 				CDCD34AD2CBFF0A90068E4F7 /* Extension */,
 				CDD5CD3E2CA48AE400208740 /* Utils.swift */,
 				CDCB988A2C9DEA4A00DF9FD3 /* Config.swift */,
 				CDCB988C2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift */,
-				CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */,
 				CDCD34C82CC00AFE0068E4F7 /* Fonts.swift */,
 			);
 			path = Utils;
