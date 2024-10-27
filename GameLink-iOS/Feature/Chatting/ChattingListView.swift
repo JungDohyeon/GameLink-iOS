@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChattingListView: View {
   
-  @ObservedObject private var viewModel: ChatViewModel = ChatViewModel()
+  @StateObject private var viewModel: ChatViewModel = ChatViewModel(chatService: DefaultChatService())
   
   var body: some View {
     VStack {
@@ -18,6 +18,8 @@ struct ChattingListView: View {
     .task {
       viewModel.action(.mainViewAppear)
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(.background1, ignoresSafeAreaEdges: .all)
   }
 }
 

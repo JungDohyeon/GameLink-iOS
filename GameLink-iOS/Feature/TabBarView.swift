@@ -13,7 +13,7 @@ struct TabBarView: View {
   var body: some View {
     TabView(selection: $selection) {
       Text("카테고리 뷰")
-        .tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 1")/*@END_MENU_TOKEN@*/ }
+        .tabItem { Text("카테고리 뷰") }
         .tag(1)
       
       ChattingListView()
