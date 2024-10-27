@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD277DAD2CCE255000BE57C4 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DAC2CCE255000BE57C4 /* TabBarView.swift */; };
+		CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */; };
+		CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DB12CCE260900BE57C4 /* ProfileViewModel.swift */; };
+		CD277DB52CCE279600BE57C4 /* RiotAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DB42CCE279600BE57C4 /* RiotAPI.swift */; };
+		CD277DB72CCE2A5E00BE57C4 /* RiotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DB62CCE2A5E00BE57C4 /* RiotService.swift */; };
+		CD277DB92CCE2AE500BE57C4 /* RiotAccountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DB82CCE2AE500BE57C4 /* RiotAccountDTO.swift */; };
+		CD277DBB2CCE2B7500BE57C4 /* RiotRecordDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DBA2CCE2B7500BE57C4 /* RiotRecordDTO.swift */; };
+		CD277DBD2CCE2DEC00BE57C4 /* VoidResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */; };
 		CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */; };
 		CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */; };
 		CDCB985D2C9DE61400DF9FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */; };
@@ -61,6 +69,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD277DAC2CCE255000BE57C4 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMainView.swift; sourceTree = "<group>"; };
+		CD277DB12CCE260900BE57C4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		CD277DB42CCE279600BE57C4 /* RiotAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAPI.swift; sourceTree = "<group>"; };
+		CD277DB62CCE2A5E00BE57C4 /* RiotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotService.swift; sourceTree = "<group>"; };
+		CD277DB82CCE2AE500BE57C4 /* RiotAccountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotAccountDTO.swift; sourceTree = "<group>"; };
+		CD277DBA2CCE2B7500BE57C4 /* RiotRecordDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiotRecordDTO.swift; sourceTree = "<group>"; };
+		CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidResponse.swift; sourceTree = "<group>"; };
 		CDCB98552C9DE61200DF9FD3 /* GameLink-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameLink-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLink_iOSApp.swift; sourceTree = "<group>"; };
 		CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingListView.swift; sourceTree = "<group>"; };
@@ -129,6 +145,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD277DAE2CCE25E800BE57C4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */,
+				CD277DB12CCE260900BE57C4 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CD277DBF2CCE2F3800BE57C4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		CD277DC02CCE2F3E00BE57C4 /* DefaultService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DefaultService;
+			sourceTree = "<group>";
+		};
 		CDCB984C2C9DE61200DF9FD3 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +215,8 @@
 		CDCB98672C9DE6B700DF9FD3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				CD277DAC2CCE255000BE57C4 /* TabBarView.swift */,
+				CD277DAE2CCE25E800BE57C4 /* Profile */,
 				CDCD34B22CBFF3DD0068E4F7 /* Chatting */,
 				CDD5CD2A2CA47B0700208740 /* Auth */,
 			);
@@ -271,6 +312,9 @@
 				CDD5CD3C2CA4864700208740 /* OAuthDTO.swift */,
 				CDCD34B52CBFFDD00068E4F7 /* ChatRoomListDTO.swift */,
 				CDCD34B72CBFFE250068E4F7 /* CreateChatRoomDTO.swift */,
+				CD277DB82CCE2AE500BE57C4 /* RiotAccountDTO.swift */,
+				CD277DBA2CCE2B7500BE57C4 /* RiotRecordDTO.swift */,
+				CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -278,8 +322,11 @@
 		CDCB98AF2C9DF19D00DF9FD3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				CD277DC02CCE2F3E00BE57C4 /* DefaultService */,
+				CD277DBF2CCE2F3800BE57C4 /* Protocol */,
 				CDD5CD352CA483A900208740 /* UserService.swift */,
 				CDCD34BB2CBFFE860068E4F7 /* ChatService.swift */,
+				CD277DB62CCE2A5E00BE57C4 /* RiotService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -358,6 +405,7 @@
 			children = (
 				CDD5CD332CA4839B00208740 /* UserAPI.swift */,
 				CDCD34B32CBFF6670068E4F7 /* ChatroomAPI.swift */,
+				CD277DB42CCE279600BE57C4 /* RiotAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -460,22 +508,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD277DB52CCE279600BE57C4 /* RiotAPI.swift in Sources */,
 				CDCD34C92CC00AFE0068E4F7 /* Fonts.swift in Sources */,
+				CD277DBD2CCE2DEC00BE57C4 /* VoidResponse.swift in Sources */,
 				CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */,
 				CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */,
 				CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */,
+				CD277DAD2CCE255000BE57C4 /* TabBarView.swift in Sources */,
 				CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */,
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
 				CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */,
 				CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */,
+				CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */,
 				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,
 				CDD5CD342CA4839B00208740 /* UserAPI.swift in Sources */,
 				CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */,
 				CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */,
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
+				CD277DB72CCE2A5E00BE57C4 /* RiotService.swift in Sources */,
+				CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */,
 				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
 				CDCD34BC2CBFFE860068E4F7 /* ChatService.swift in Sources */,
+				CD277DB92CCE2AE500BE57C4 /* RiotAccountDTO.swift in Sources */,
 				CDD5CD272CA4798F00208740 /* SceneDelegate.swift in Sources */,
 				CDD5CD3F2CA48AE400208740 /* Utils.swift in Sources */,
 				CDD5CD382CA4850F00208740 /* BaseService.swift in Sources */,
@@ -487,6 +542,7 @@
 				CDD5CD312CA47C0A00208740 /* AuthProvider.swift in Sources */,
 				CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */,
 				CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */,
+				CD277DBB2CCE2B7500BE57C4 /* RiotRecordDTO.swift in Sources */,
 				CDCD34B82CBFFE250068E4F7 /* CreateChatRoomDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,21 +12,26 @@ import Moya
 public typealias DefaultChatService = BaseService<ChatroomAPI>
 
 public protocol ChatService {
+  
   func chatroomList(
     completion: @escaping (NetworkResult<[ChatRoomListDTO]>) -> Void
   )
+  
   func deletChatroom(
     roomId: Int,
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
+  
   func checkUserEntered(
     roomId: Int,
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
+  
   func checkManager(
     roomId: Int,
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
+  
   func createChatroom(
     roomName: String, 
     maxUserCount: Int,

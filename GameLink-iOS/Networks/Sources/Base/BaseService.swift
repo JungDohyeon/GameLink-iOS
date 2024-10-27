@@ -72,7 +72,7 @@ open class BaseService<Target: TargetType> {
   }
   
   // Judge Network Status
-  private func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, type: T.Type) -> NetworkResult<T> {
+  private func judgeStatus<T: Decodable>(by statusCode: Int, _ data: Data, type: T.Type) -> NetworkResult<T> {
     let decoder = JSONDecoder()
     
     guard let decodedData = try? decoder.decode(T.self, from: data) else {
@@ -118,7 +118,7 @@ public extension BaseService {
 // MARK: - MakeRequests
 
 extension BaseService {
-  func requestObjectWithNetworkError<T: Codable>(_ target: API, completion: @escaping (NetworkResult<T>) -> Void) {
+  func requestObjectWithNetworkError<T: Decodable>(_ target: API, completion: @escaping (NetworkResult<T>) -> Void) {
     self.provider.request(target) { response in
       switch response {
       case let .success(value):
