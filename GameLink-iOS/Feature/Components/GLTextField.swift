@@ -35,6 +35,7 @@ public struct GLTextField: View {
         .foregroundStyle(.gray1)
     })
     .tint(.primary2)
+    .foregroundStyle(.white)
     .padding(.vertical, 12)
     .padding(.horizontal, 16)
     .background(
