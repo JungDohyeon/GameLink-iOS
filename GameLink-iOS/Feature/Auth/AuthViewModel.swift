@@ -44,7 +44,6 @@ private extension AuthViewModel {
     if (UserApi.isKakaoTalkLoginAvailable()) {
       UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
         if let oauthToken = oauthToken {
-          print("TOKEN: \(oauthToken.accessToken)")
           self.signUpUserWithSocialLogin(loginPath: .kakao, token: oauthToken)
         } else {
           print("Kakao Login Error")
@@ -57,7 +56,6 @@ private extension AuthViewModel {
     } else {
       UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
         if let oauthToken = oauthToken {
-          print("TOKEN: \(oauthToken.accessToken)")
           self.signUpUserWithSocialLogin(loginPath: .kakao, token: oauthToken)
         } else {
           print("Kakao Login Error")
@@ -97,12 +95,11 @@ private extension AuthViewModel {
               )) { result in
                 switch result {
                 case let .success(data):
-                  UserDefaultsList.setAccessToken(value: data.accessToken)
+                  UserDefaultsList.setAuthToken(accessToken: data.accessToken, refreshToken: data.refreshToken)
                   self.isLogin = true
-                  return
                   
                 case let .failure(error):
-                  print(error.localizedDescription, "🥹")
+                  print(error.localizedDescription)
                   return
                 }
               }

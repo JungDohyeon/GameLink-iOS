@@ -19,8 +19,9 @@ public struct UserDefaultsList {
 
 extension UserDefaultsList {
   
-  public static func setAccessToken(value: String) {
-    UserDefaultsList.Auth.accessToken = value
+  public static func setAuthToken(accessToken: String, refreshToken: String) {
+    UserDefaultsList.Auth.accessToken = accessToken
+    UserDefaultsList.Auth.refreshToken = refreshToken
   }
   
   public static func clearData() {

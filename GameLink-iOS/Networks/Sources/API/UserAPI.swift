@@ -11,6 +11,7 @@ import Moya
 
 @frozen public enum UserAPI {
   case kakaoSignIn(data: OAuthRequestDTO)
+  case reissue(refreshToken: String)
 }
 
 extension UserAPI: BaseAPI {
@@ -22,6 +23,8 @@ extension UserAPI: BaseAPI {
     switch self {
     case .kakaoSignIn:
       return HeaderType.json.value
+    case .reissue:
+      return HeaderType.jsonWithToken.value
     }
   }
   
@@ -30,6 +33,8 @@ extension UserAPI: BaseAPI {
     switch self {
     case .kakaoSignIn:
       return "oauth/kakao/login"
+    case .reissue:
+      return "reissue"
     }
   }
   
@@ -37,6 +42,8 @@ extension UserAPI: BaseAPI {
   public var method: Moya.Method {
     switch self {
     case .kakaoSignIn:
+      return .post
+    case .reissue:
       return .post
     }
   }
@@ -68,6 +75,11 @@ extension UserAPI: BaseAPI {
         "deviceInfo": deviceInfo,
         "kakaoInfo": kakaoInfo
       ]
+      
+    case let .reissue(refreshToken):
+      params = [
+        "refreshToken": refreshToken
+      ]
     }
     
     return params
@@ -81,10 +93,7 @@ extension UserAPI: BaseAPI {
   }
   
   public var task: Task {
-    switch self {
-    case .kakaoSignIn:
-      return .requestParameters(parameters: bodyParameters ?? [:], encoding: parameterEncoding)
-    }
+    return .requestParameters(parameters: bodyParameters ?? [:], encoding: parameterEncoding)
   }
   
   public var validationType: ValidationType {

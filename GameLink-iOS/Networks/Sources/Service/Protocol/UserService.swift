@@ -12,4 +12,9 @@ public protocol AuthService {
     data: OAuthRequestDTO,
     completion: @escaping (NetworkResult<OAuthDTO>) -> Void
   )
+  
+  func reissue(
+    refreshToken: String,
+    completion: @escaping (NetworkResult<ReissueDTO>) -> Void
+  )
 }

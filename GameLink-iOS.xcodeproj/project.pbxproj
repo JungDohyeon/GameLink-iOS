@@ -18,6 +18,7 @@
 		CD277DC22CCE2F5B00BE57C4 /* DefaultRiotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC12CCE2F5B00BE57C4 /* DefaultRiotService.swift */; };
 		CD277DC42CCE2F9B00BE57C4 /* DefaultChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC32CCE2F9B00BE57C4 /* DefaultChatService.swift */; };
 		CD277DC62CCE2FCE00BE57C4 /* DefaultAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC52CCE2FCE00BE57C4 /* DefaultAuthService.swift */; };
+		CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */; };
 		CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F182CD2B23300E67E4E /* GLTextField.swift */; };
 		CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */; };
 		CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */; };
@@ -88,6 +89,7 @@
 		CD277DC12CCE2F5B00BE57C4 /* DefaultRiotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRiotService.swift; sourceTree = "<group>"; };
 		CD277DC32CCE2F9B00BE57C4 /* DefaultChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultChatService.swift; sourceTree = "<group>"; };
 		CD277DC52CCE2FCE00BE57C4 /* DefaultAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthService.swift; sourceTree = "<group>"; };
+		CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReissueDTO.swift; sourceTree = "<group>"; };
 		CD929F182CD2B23300E67E4E /* GLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextField.swift; sourceTree = "<group>"; };
 		CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextFieldType.swift; sourceTree = "<group>"; };
 		CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + placeholder.swift"; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				CD277DB82CCE2AE500BE57C4 /* RiotAccountDTO.swift */,
 				CD277DBA2CCE2B7500BE57C4 /* RiotRecordDTO.swift */,
 				CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */,
+				CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */,
 				CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */,
 				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,
+				CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */,
 				CDD5CD342CA4839B00208740 /* UserAPI.swift in Sources */,
 				CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */,
 				CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */,

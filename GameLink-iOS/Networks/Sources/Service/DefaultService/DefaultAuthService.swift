@@ -13,4 +13,8 @@ extension DefaultAuthService: AuthService {
   public func kakaoLogin(data: OAuthRequestDTO, completion: @escaping (NetworkResult<OAuthDTO>) -> Void) {
     return requestObjectWithNetworkError(.kakaoSignIn(data: data), completion: completion)
   }
+  
+  public func reissue(refreshToken: String, completion: @escaping (NetworkResult<ReissueDTO>) -> Void) {
+    return requestObjectWithNetworkError(.reissue(refreshToken: refreshToken), completion: completion)
+  }
 }

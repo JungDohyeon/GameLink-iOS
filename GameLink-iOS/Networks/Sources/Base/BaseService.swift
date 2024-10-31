@@ -22,10 +22,11 @@ open class BaseService<Target: TargetType> {
     configuration.timeoutIntervalForResource = 10
     configuration.requestCachePolicy = .reloadIgnoringLocalCacheData  // Local Cache 접근 무시
     
-    // let interceptor = AuthInterceptor()
+    let interceptor = AuthInterceptor()
     
     let session = Session(
-      configuration: configuration
+      configuration: configuration,
+      interceptor: interceptor
     )
     
     let provider = MoyaProvider<API>(
