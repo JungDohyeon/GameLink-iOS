@@ -41,7 +41,7 @@ public class AuthInterceptor: RequestInterceptor {
       return
     }
     
-    DefaultAuthService().reissue(refreshToken: refreshToken) { result in
+    DefaultUserService().reissue(refreshToken: refreshToken) { result in
       switch result {
       case let .success(data):
         UserDefaultsList.setAuthToken(accessToken: data.accessToken, refreshToken: data.refreshToken)
