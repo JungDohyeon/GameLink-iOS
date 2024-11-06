@@ -17,7 +17,7 @@
 		CD277DBD2CCE2DEC00BE57C4 /* VoidResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */; };
 		CD277DC22CCE2F5B00BE57C4 /* DefaultRiotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC12CCE2F5B00BE57C4 /* DefaultRiotService.swift */; };
 		CD277DC42CCE2F9B00BE57C4 /* DefaultChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC32CCE2F9B00BE57C4 /* DefaultChatService.swift */; };
-		CD277DC62CCE2FCE00BE57C4 /* DefaultAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC52CCE2FCE00BE57C4 /* DefaultAuthService.swift */; };
+		CD277DC62CCE2FCE00BE57C4 /* DefaultUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC52CCE2FCE00BE57C4 /* DefaultUserService.swift */; };
 		CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */; };
 		CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F182CD2B23300E67E4E /* GLTextField.swift */; };
 		CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */; };
@@ -88,7 +88,7 @@
 		CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidResponse.swift; sourceTree = "<group>"; };
 		CD277DC12CCE2F5B00BE57C4 /* DefaultRiotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRiotService.swift; sourceTree = "<group>"; };
 		CD277DC32CCE2F9B00BE57C4 /* DefaultChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultChatService.swift; sourceTree = "<group>"; };
-		CD277DC52CCE2FCE00BE57C4 /* DefaultAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthService.swift; sourceTree = "<group>"; };
+		CD277DC52CCE2FCE00BE57C4 /* DefaultUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserService.swift; sourceTree = "<group>"; };
 		CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReissueDTO.swift; sourceTree = "<group>"; };
 		CD929F182CD2B23300E67E4E /* GLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextField.swift; sourceTree = "<group>"; };
 		CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextFieldType.swift; sourceTree = "<group>"; };
@@ -187,9 +187,19 @@
 			children = (
 				CD277DC12CCE2F5B00BE57C4 /* DefaultRiotService.swift */,
 				CD277DC32CCE2F9B00BE57C4 /* DefaultChatService.swift */,
-				CD277DC52CCE2FCE00BE57C4 /* DefaultAuthService.swift */,
+				CD277DC52CCE2FCE00BE57C4 /* DefaultUserService.swift */,
 			);
 			path = DefaultService;
+			sourceTree = "<group>";
+		};
+		CD3CCFB12CDB41C000691B5A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */,
+				CDD5CD262CA4798F00208740 /* SceneDelegate.swift */,
+				CDD5CD282CA479A200208740 /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		CD929F172CD2B21A00E67E4E /* Components */ = {
@@ -228,11 +238,8 @@
 				CDCB98692C9DE6EC00DF9FD3 /* Data */,
 				CDCB98682C9DE6E600DF9FD3 /* Domain */,
 				CDCB98672C9DE6B700DF9FD3 /* Feature */,
-				CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */,
 				CDCB985E2C9DE61400DF9FD3 /* GameLink_iOS.entitlements */,
 				CDCB985F2C9DE61400DF9FD3 /* Preview Content */,
-				CDD5CD262CA4798F00208740 /* SceneDelegate.swift */,
-				CDD5CD282CA479A200208740 /* AppDelegate.swift */,
 			);
 			path = "GameLink-iOS";
 			sourceTree = "<group>";
@@ -248,6 +255,7 @@
 		CDCB98672C9DE6B700DF9FD3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				CD3CCFB12CDB41C000691B5A /* App */,
 				CD929F172CD2B21A00E67E4E /* Components */,
 				CD277DAC2CCE255000BE57C4 /* TabBarView.swift */,
 				CD277DAE2CCE25E800BE57C4 /* Profile */,
@@ -555,7 +563,7 @@
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
 				CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */,
 				CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */,
-				CD277DC62CCE2FCE00BE57C4 /* DefaultAuthService.swift in Sources */,
+				CD277DC62CCE2FCE00BE57C4 /* DefaultUserService.swift in Sources */,
 				CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */,
 				CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */,
 				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,

@@ -17,15 +17,21 @@ final class AuthViewModel: ObservableObject {
   
   public enum Action {
     // User Action
-    case mainViewAppear
     case tappedLogin(AuthProvider)
     
     // Inner Business Action
+    case _mainViewAppear
     case _setLoginType(AuthProvider)
   }
   
+  private let service: UserService
+  
+  init(service: UserService) {
+    self.service = service
+  }
+  
   public func action(_ action: Action) {
-    switch action {
+    switch action {      
     case let .tappedLogin(authProvider):
       switch authProvider {
       case .kakao:
@@ -76,7 +82,7 @@ private extension AuthViewModel {
           print(error.localizedDescription)
         } else {
           if let user = user {
-            DefaultAuthService().kakaoLogin(
+            self.service.kakaoLogin(
               data: OAuthRequestDTO(
                 deviceInfo: DeviceInfo(
                   uniqueId: String(user.id ?? 0),

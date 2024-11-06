@@ -34,5 +34,5 @@ public struct AuthView: View {
 
 #Preview {
   AuthView()
-    .environmentObject(AuthViewModel())
+    .environmentObject(AuthViewModel(service: DefaultUserService()))
 }
