@@ -10,8 +10,8 @@ import Foundation
 public typealias DefaultUserService = BaseService<UserAPI>
 
 extension DefaultUserService: UserService {
-  public func kakaoLogin(data: OAuthRequestDTO, completion: @escaping (NetworkResult<OAuthDTO>) -> Void) {
-    return requestObjectWithNetworkError(.kakaoSignIn(data: data), completion: completion)
+  public func kakaoLogin(accessToken: String, deviceId: String, completion: @escaping (NetworkResult<OAuthDTO>) -> Void) {
+    return requestObjectWithNetworkError(.kakaoSignIn(accessToken: accessToken, deviceId: deviceId), completion: completion)
   }
   
   public func reissue(refreshToken: String, completion: @escaping (NetworkResult<ReissueDTO>) -> Void) {

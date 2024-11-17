@@ -10,7 +10,7 @@ import Alamofire
 import Moya
 
 @frozen public enum UserAPI {
-  case kakaoSignIn(data: OAuthRequestDTO)
+  case kakaoSignIn(accessToken: String, deviceId: String)
   case reissue(refreshToken: String)
 }
 
@@ -53,27 +53,10 @@ extension UserAPI: BaseAPI {
     var params: Parameters = [:]
     
     switch self {
-    case let .kakaoSignIn(data):
-      
-      let deviceInfo: Parameters = [
-        "uniqueId": data.deviceInfo.uniqueId,
-        "model": data.deviceInfo.model,
-        "deviceId": data.deviceInfo.deviceId,
-        "deviceName": data.deviceInfo.deviceName
-      ]
-      
-      let kakaoInfo: Parameters = [
-        "access_token": data.kakaoInfo.accessToken,
-        "expires_in": data.kakaoInfo.expiresIn,
-        "refresh_token": data.kakaoInfo.refreshToken,
-        "refresh_token_expires_in": data.kakaoInfo.refreshTokenExpiresIn,
-        "scope": data.kakaoInfo.scope,
-        "token_type": data.kakaoInfo.tokenType
-      ]
-      
+    case let .kakaoSignIn(accessToken, deviceId):
       params = [
-        "deviceInfo": deviceInfo,
-        "kakaoInfo": kakaoInfo
+        "accessToken": accessToken,
+        "deviceId": deviceId
       ]
       
     case let .reissue(refreshToken):

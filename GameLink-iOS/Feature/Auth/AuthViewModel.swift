@@ -31,7 +31,7 @@ final class AuthViewModel: ObservableObject {
   }
   
   public func action(_ action: Action) {
-    switch action {      
+    switch action {
     case let .tappedLogin(authProvider):
       switch authProvider {
       case .kakao:
@@ -83,32 +83,19 @@ private extension AuthViewModel {
         } else {
           if let user = user {
             self.service.kakaoLogin(
-              data: OAuthRequestDTO(
-                deviceInfo: DeviceInfo(
-                  uniqueId: String(user.id ?? 0),
-                  model: Utils.getDeviceModelName(),
-                  deviceId: Utils.getDeviceUUID(),
-                  deviceName: Utils.getDeviceModelName()
-                ),
-                kakaoInfo: KakaoInfo(
-                  accessToken: token.accessToken,
-                  expiresIn: Int(token.expiresIn),
-                  refreshToken: token.refreshToken,
-                  refreshTokenExpiresIn: Int(token.refreshTokenExpiresIn),
-                  scope: token.scope ?? "",
-                  tokenType: token.tokenType
-                )
-              )) { result in
-                switch result {
-                case let .success(data):
-                  UserDefaultsList.setAuthToken(accessToken: data.accessToken, refreshToken: data.refreshToken)
-                  self.isLogin = true
-                  
-                case let .failure(error):
-                  print(error.localizedDescription)
-                  return
-                }
+              accessToken: token.accessToken,
+              deviceId: Utils.getDeviceUUID()
+            ) { result in
+              switch result {
+              case let .success(data):
+                UserDefaultsList.setAuthToken(accessToken: data.accessToken, refreshToken: data.refreshToken)
+                self.isLogin = true
+                
+              case let .failure(error):
+                print(error.localizedDescription)
+                return
               }
+            }
           }
         }
       }

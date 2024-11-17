@@ -9,7 +9,8 @@ import Foundation
 
 public protocol UserService {
   func kakaoLogin(
-    data: OAuthRequestDTO,
+    accessToken: String,
+    deviceId: String,
     completion: @escaping (NetworkResult<OAuthDTO>) -> Void
   )
   
