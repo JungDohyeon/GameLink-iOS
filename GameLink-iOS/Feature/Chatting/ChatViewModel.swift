@@ -21,7 +21,10 @@ final class ChatViewModel: ObservableObject {
   
   private let service: ChatService
   
-  @Published private(set) var chatList: [ChatRoomListDTO] = []
+  private(set) var page: Int = 0
+  private(set) var size: Int = 20
+  
+  @Published private(set) var chatroomList: [ChatroomEntity] = []
   
   public init(
     chatService: ChatService
@@ -47,7 +50,17 @@ private extension ChatViewModel {
     service.chatroomList { result in
       switch result {
       case let .success(data):
-        self.chatList = data
+        self.chatroomList = data.content.map {
+          ChatroomEntity(
+            roomId: $0.roomId,
+            roomName: $0.roomName,
+            userCount: $0.userCount,
+            maxUserCount: $0.maxUserCount,
+            leaderTierText: $0.leaderTier,
+            leaderTier: LOLTier.stringToLOLTier(tier: String($0.leaderTier.first!)),
+            positions: [.adcarry]
+          )
+        }
         
       case let .failure(error):
         print(error.localizedDescription)

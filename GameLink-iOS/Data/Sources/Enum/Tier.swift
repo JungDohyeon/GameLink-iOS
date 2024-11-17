@@ -19,7 +19,7 @@ public enum Tier {
   }
 }
 
-public enum LOLTier {
+public enum LOLTier: String {
   case unrank
   case bronze
   case silver
@@ -32,27 +32,24 @@ public enum LOLTier {
   case challenger
   
   public var tierImage: UIImage {
-    switch self {
-    case .unrank:
-      return .icUnrank
-    case .bronze:
-      return .icBronze
-    case .silver:
-      return .icSilver
-    case .gold:
-      return .icGold
-    case .platinum:
-      return .icPlatinum
-    case .emerald:
-      return .icEmerald
-    case .diamond:
-      return .icDiamond
-    case .master:
-      return .icMaster
-    case .grandmaster:
-      return .icGrandMaster
-    case .challenger:
-      return .icChallenger
-    }
+    return UIImage(named: "ic_\(self.rawValue)") ?? UIImage()
+  }
+}
+
+extension LOLTier {
+  private static let tierMapping: [String: LOLTier] = [
+    "B": .bronze,
+    "S": .silver,
+    "G": .gold,
+    "P": .platinum,
+    "E": .emerald,
+    "D": .diamond,
+    "M": .master,
+    "GM": .grandmaster,
+    "C": .challenger
+  ]
+
+  public static func stringToLOLTier(tier: String) -> LOLTier {
+    return tierMapping[tier] ?? .unrank
   }
 }

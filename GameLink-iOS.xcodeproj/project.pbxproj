@@ -28,6 +28,9 @@
 		CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */; };
 		CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1E2CD2B87A00E67E4E /* GridRules.swift */; };
 		CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F202CD2B9E700E67E4E /* GLButton.swift */; };
+		CDC0C5812CEA61D1002988BF /* ChatroomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */; };
+		CDC0C5842CEA63E6002988BF /* ChatroomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */; };
+		CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5852CEA6733002988BF /* ChatroomView.swift */; };
 		CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */; };
 		CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */; };
 		CDCB985D2C9DE61400DF9FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */; };
@@ -103,6 +106,9 @@
 		CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + placeholder.swift"; sourceTree = "<group>"; };
 		CD929F1E2CD2B87A00E67E4E /* GridRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridRules.swift; sourceTree = "<group>"; };
 		CD929F202CD2B9E700E67E4E /* GLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLButton.swift; sourceTree = "<group>"; };
+		CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomDTO.swift; sourceTree = "<group>"; };
+		CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomEntity.swift; sourceTree = "<group>"; };
+		CDC0C5852CEA6733002988BF /* ChatroomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomView.swift; sourceTree = "<group>"; };
 		CDCB98552C9DE61200DF9FD3 /* GameLink-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameLink-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLink_iOSApp.swift; sourceTree = "<group>"; };
 		CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingListView.swift; sourceTree = "<group>"; };
@@ -228,6 +234,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		CDC0C5822CEA63DD002988BF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		CDCB984C2C9DE61200DF9FD3 = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +299,7 @@
 		CDCB98682C9DE6E600DF9FD3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CDC0C5822CEA63DD002988BF /* Entity */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -378,6 +393,7 @@
 				CD277DBA2CCE2B7500BE57C4 /* RiotRecordDTO.swift */,
 				CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */,
 				CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */,
+				CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -416,6 +432,7 @@
 				CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */,
 				CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */,
 				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
+				CDC0C5852CEA6733002988BF /* ChatroomView.swift */,
 			);
 			path = Chatting;
 			sourceTree = "<group>";
@@ -581,6 +598,8 @@
 				CD277DAD2CCE255000BE57C4 /* TabBarView.swift in Sources */,
 				CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */,
 				CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */,
+				CDC0C5842CEA63E6002988BF /* ChatroomEntity.swift in Sources */,
+				CDC0C5812CEA61D1002988BF /* ChatroomDTO.swift in Sources */,
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
 				CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */,
 				CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */,
@@ -610,6 +629,7 @@
 				CD277DC22CCE2F5B00BE57C4 /* DefaultRiotService.swift in Sources */,
 				CD277DC42CCE2F9B00BE57C4 /* DefaultChatService.swift in Sources */,
 				CDCD34B62CBFFDD00068E4F7 /* ChatRoomListDTO.swift in Sources */,
+				CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */,
 				CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */,
 				CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */,
 				CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */,
