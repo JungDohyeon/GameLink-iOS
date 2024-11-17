@@ -10,7 +10,7 @@ import Foundation
 public typealias DefaultChatService = BaseService<ChatroomAPI>
 
 extension DefaultChatService: ChatService {
-  public func chatroomList(completion: @escaping (NetworkResult<[ChatRoomListDTO]>) -> Void) {
+  public func chatroomList(completion: @escaping (NetworkResult<ChatRoomListDTO>) -> Void) {
     return requestObjectWithNetworkError(.chatroomList, completion: completion)
   }
   

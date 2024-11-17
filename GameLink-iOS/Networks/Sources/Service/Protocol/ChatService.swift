@@ -9,7 +9,7 @@ import Foundation
 
 public protocol ChatService {
   func chatroomList(
-    completion: @escaping (NetworkResult<[ChatRoomListDTO]>) -> Void
+    completion: @escaping (NetworkResult<ChatRoomListDTO>) -> Void
   )
   
   func deletChatroom(
