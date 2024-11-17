@@ -17,7 +17,12 @@
 		CD277DBD2CCE2DEC00BE57C4 /* VoidResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */; };
 		CD277DC22CCE2F5B00BE57C4 /* DefaultRiotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC12CCE2F5B00BE57C4 /* DefaultRiotService.swift */; };
 		CD277DC42CCE2F9B00BE57C4 /* DefaultChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC32CCE2F9B00BE57C4 /* DefaultChatService.swift */; };
-		CD277DC62CCE2FCE00BE57C4 /* DefaultAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC52CCE2FCE00BE57C4 /* DefaultAuthService.swift */; };
+		CD277DC62CCE2FCE00BE57C4 /* DefaultUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DC52CCE2FCE00BE57C4 /* DefaultUserService.swift */; };
+		CD3CCFB52CDB5C8400691B5A /* ChattingRoomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */; };
+		CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3CCFB72CDB5CEC00691B5A /* Tier.swift */; };
+		CD3CCFBA2CDB5D3F00691B5A /* GamePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */; };
+		CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */; };
+		CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */; };
 		CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F182CD2B23300E67E4E /* GLTextField.swift */; };
 		CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */; };
 		CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */; };
@@ -87,7 +92,12 @@
 		CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidResponse.swift; sourceTree = "<group>"; };
 		CD277DC12CCE2F5B00BE57C4 /* DefaultRiotService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRiotService.swift; sourceTree = "<group>"; };
 		CD277DC32CCE2F9B00BE57C4 /* DefaultChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultChatService.swift; sourceTree = "<group>"; };
-		CD277DC52CCE2FCE00BE57C4 /* DefaultAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAuthService.swift; sourceTree = "<group>"; };
+		CD277DC52CCE2FCE00BE57C4 /* DefaultUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserService.swift; sourceTree = "<group>"; };
+		CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomCardView.swift; sourceTree = "<group>"; };
+		CD3CCFB72CDB5CEC00691B5A /* Tier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tier.swift; sourceTree = "<group>"; };
+		CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePosition.swift; sourceTree = "<group>"; };
+		CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReissueDTO.swift; sourceTree = "<group>"; };
+		CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLColor.swift; sourceTree = "<group>"; };
 		CD929F182CD2B23300E67E4E /* GLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextField.swift; sourceTree = "<group>"; };
 		CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextFieldType.swift; sourceTree = "<group>"; };
 		CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + placeholder.swift"; sourceTree = "<group>"; };
@@ -185,9 +195,28 @@
 			children = (
 				CD277DC12CCE2F5B00BE57C4 /* DefaultRiotService.swift */,
 				CD277DC32CCE2F9B00BE57C4 /* DefaultChatService.swift */,
-				CD277DC52CCE2FCE00BE57C4 /* DefaultAuthService.swift */,
+				CD277DC52CCE2FCE00BE57C4 /* DefaultUserService.swift */,
 			);
 			path = DefaultService;
+			sourceTree = "<group>";
+		};
+		CD3CCFB12CDB41C000691B5A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */,
+				CDD5CD262CA4798F00208740 /* SceneDelegate.swift */,
+				CDD5CD282CA479A200208740 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CD3CCFB62CDB5CDD00691B5A /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				CD3CCFB72CDB5CEC00691B5A /* Tier.swift */,
+				CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		CD929F172CD2B21A00E67E4E /* Components */ = {
@@ -226,11 +255,8 @@
 				CDCB98692C9DE6EC00DF9FD3 /* Data */,
 				CDCB98682C9DE6E600DF9FD3 /* Domain */,
 				CDCB98672C9DE6B700DF9FD3 /* Feature */,
-				CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */,
 				CDCB985E2C9DE61400DF9FD3 /* GameLink_iOS.entitlements */,
 				CDCB985F2C9DE61400DF9FD3 /* Preview Content */,
-				CDD5CD262CA4798F00208740 /* SceneDelegate.swift */,
-				CDD5CD282CA479A200208740 /* AppDelegate.swift */,
 			);
 			path = "GameLink-iOS";
 			sourceTree = "<group>";
@@ -246,6 +272,7 @@
 		CDCB98672C9DE6B700DF9FD3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				CD3CCFB12CDB41C000691B5A /* App */,
 				CD929F172CD2B21A00E67E4E /* Components */,
 				CD277DAC2CCE255000BE57C4 /* TabBarView.swift */,
 				CD277DAE2CCE25E800BE57C4 /* Profile */,
@@ -299,6 +326,7 @@
 		CDCB98812C9DE96B00DF9FD3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CD3CCFB62CDB5CDD00691B5A /* Enum */,
 				CDD5CD2F2CA47BFD00208740 /* FeatureData */,
 				CDCB98902C9DEAA200DF9FD3 /* Literals */,
 				CDCB988E2C9DEA8E00DF9FD3 /* NetworkEntity */,
@@ -316,6 +344,7 @@
 				CDCB988C2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift */,
 				CDCD34C82CC00AFE0068E4F7 /* Fonts.swift */,
 				CD929F1E2CD2B87A00E67E4E /* GridRules.swift */,
+				CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -348,6 +377,7 @@
 				CD277DB82CCE2AE500BE57C4 /* RiotAccountDTO.swift */,
 				CD277DBA2CCE2B7500BE57C4 /* RiotRecordDTO.swift */,
 				CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */,
+				CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -385,6 +415,7 @@
 			children = (
 				CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */,
 				CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */,
+				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
 			);
 			path = Chatting;
 			sourceTree = "<group>";
@@ -543,6 +574,7 @@
 				CD277DB52CCE279600BE57C4 /* RiotAPI.swift in Sources */,
 				CDCD34C92CC00AFE0068E4F7 /* Fonts.swift in Sources */,
 				CD277DBD2CCE2DEC00BE57C4 /* VoidResponse.swift in Sources */,
+				CD3CCFB52CDB5C8400691B5A /* ChattingRoomCardView.swift in Sources */,
 				CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */,
 				CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */,
 				CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */,
@@ -551,14 +583,18 @@
 				CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */,
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
 				CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */,
+				CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */,
 				CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */,
-				CD277DC62CCE2FCE00BE57C4 /* DefaultAuthService.swift in Sources */,
+				CD3CCFBA2CDB5D3F00691B5A /* GamePosition.swift in Sources */,
+				CD277DC62CCE2FCE00BE57C4 /* DefaultUserService.swift in Sources */,
 				CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */,
 				CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */,
 				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,
+				CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */,
 				CDD5CD342CA4839B00208740 /* UserAPI.swift in Sources */,
 				CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */,
 				CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */,
+				CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */,
 				CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */,
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,

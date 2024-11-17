@@ -17,11 +17,17 @@ final class AuthViewModel: ObservableObject {
   
   public enum Action {
     // User Action
-    case mainViewAppear
     case tappedLogin(AuthProvider)
     
     // Inner Business Action
+    case _mainViewAppear
     case _setLoginType(AuthProvider)
+  }
+  
+  private let service: UserService
+  
+  init(service: UserService) {
+    self.service = service
   }
   
   public func action(_ action: Action) {
@@ -44,7 +50,6 @@ private extension AuthViewModel {
     if (UserApi.isKakaoTalkLoginAvailable()) {
       UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
         if let oauthToken = oauthToken {
-          print("TOKEN: \(oauthToken.accessToken)")
           self.signUpUserWithSocialLogin(loginPath: .kakao, token: oauthToken)
         } else {
           print("Kakao Login Error")
@@ -57,7 +62,6 @@ private extension AuthViewModel {
     } else {
       UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
         if let oauthToken = oauthToken {
-          print("TOKEN: \(oauthToken.accessToken)")
           self.signUpUserWithSocialLogin(loginPath: .kakao, token: oauthToken)
         } else {
           print("Kakao Login Error")
@@ -78,34 +82,20 @@ private extension AuthViewModel {
           print(error.localizedDescription)
         } else {
           if let user = user {
-            DefaultAuthService().kakaoLogin(
-              data: OAuthRequestDTO(
-                deviceInfo: DeviceInfo(
-                  uniqueId: String(user.id ?? 0),
-                  model: Utils.getDeviceModelName(),
-                  deviceId: Utils.getDeviceUUID(),
-                  deviceName: Utils.getDeviceModelName()
-                ),
-                kakaoInfo: KakaoInfo(
-                  accessToken: token.accessToken,
-                  expiresIn: Int(token.expiresIn),
-                  refreshToken: token.refreshToken,
-                  refreshTokenExpiresIn: Int(token.refreshTokenExpiresIn),
-                  scope: token.scope ?? "",
-                  tokenType: token.tokenType
-                )
-              )) { result in
-                switch result {
-                case let .success(data):
-                  UserDefaultsList.setAccessToken(value: data.accessToken)
-                  self.isLogin = true
-                  return
-                  
-                case let .failure(error):
-                  print(error.localizedDescription, "🥹")
-                  return
-                }
+            self.service.kakaoLogin(
+              accessToken: token.accessToken,
+              deviceId: Utils.getDeviceUUID()
+            ) { result in
+              switch result {
+              case let .success(data):
+                UserDefaultsList.setAuthToken(accessToken: data.accessToken, refreshToken: data.refreshToken)
+                self.isLogin = true
+                
+              case let .failure(error):
+                print(error.localizedDescription)
+                return
               }
+            }
           }
         }
       }

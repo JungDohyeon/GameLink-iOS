@@ -33,5 +33,12 @@
 		<string>Pretendard-SemiBold.otf</string>
 		<string>Pretendard-Thin.otf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>Background1</string>
+		<key>UIImageName</key>
+		<string>AppLogo</string>
+	</dict>
 </dict>
 </plist>

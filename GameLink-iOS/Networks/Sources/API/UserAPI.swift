@@ -10,7 +10,8 @@ import Alamofire
 import Moya
 
 @frozen public enum UserAPI {
-  case kakaoSignIn(data: OAuthRequestDTO)
+  case kakaoSignIn(accessToken: String, deviceId: String)
+  case reissue(refreshToken: String)
 }
 
 extension UserAPI: BaseAPI {
@@ -22,6 +23,8 @@ extension UserAPI: BaseAPI {
     switch self {
     case .kakaoSignIn:
       return HeaderType.json.value
+    case .reissue:
+      return HeaderType.jsonWithToken.value
     }
   }
   
@@ -30,6 +33,8 @@ extension UserAPI: BaseAPI {
     switch self {
     case .kakaoSignIn:
       return "oauth/kakao/login"
+    case .reissue:
+      return "reissue"
     }
   }
   
@@ -37,6 +42,8 @@ extension UserAPI: BaseAPI {
   public var method: Moya.Method {
     switch self {
     case .kakaoSignIn:
+      return .post
+    case .reissue:
       return .post
     }
   }
@@ -46,27 +53,15 @@ extension UserAPI: BaseAPI {
     var params: Parameters = [:]
     
     switch self {
-    case let .kakaoSignIn(data):
-      
-      let deviceInfo: Parameters = [
-        "uniqueId": data.deviceInfo.uniqueId,
-        "model": data.deviceInfo.model,
-        "deviceId": data.deviceInfo.deviceId,
-        "deviceName": data.deviceInfo.deviceName
-      ]
-      
-      let kakaoInfo: Parameters = [
-        "access_token": data.kakaoInfo.accessToken,
-        "expires_in": data.kakaoInfo.expiresIn,
-        "refresh_token": data.kakaoInfo.refreshToken,
-        "refresh_token_expires_in": data.kakaoInfo.refreshTokenExpiresIn,
-        "scope": data.kakaoInfo.scope,
-        "token_type": data.kakaoInfo.tokenType
-      ]
-      
+    case let .kakaoSignIn(accessToken, deviceId):
       params = [
-        "deviceInfo": deviceInfo,
-        "kakaoInfo": kakaoInfo
+        "accessToken": accessToken,
+        "deviceId": deviceId
+      ]
+      
+    case let .reissue(refreshToken):
+      params = [
+        "refreshToken": refreshToken
       ]
     }
     
@@ -81,10 +76,7 @@ extension UserAPI: BaseAPI {
   }
   
   public var task: Task {
-    switch self {
-    case .kakaoSignIn:
-      return .requestParameters(parameters: bodyParameters ?? [:], encoding: parameterEncoding)
-    }
+    return .requestParameters(parameters: bodyParameters ?? [:], encoding: parameterEncoding)
   }
   
   public var validationType: ValidationType {

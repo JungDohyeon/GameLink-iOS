@@ -8,14 +8,21 @@
 import SwiftUI
 
 public struct GLButton: View {
-  public var title: String
-  public var isValid: Bool
-  public var action: () -> Void
+  public let title: String
+  public let isValid: Bool
+  public let action: () -> Void
+  public let activeColor: Color
   
-  public init(title: String, isValid: Bool, action: @escaping () -> Void) {
+  public init(
+    title: String,
+    isValid: Bool,
+    action: @escaping () -> Void,
+    activeColor: Color = .glPrimary2
+  ) {
     self.title = title
     self.isValid = isValid
     self.action = action
+    self.activeColor = activeColor
   }
   
   public var body: some View {
@@ -29,7 +36,7 @@ public struct GLButton: View {
         .frame(maxWidth: .infinity)
         .background(
           RoundedRectangle(cornerRadius: 8.0)
-            .fill(isValid ? .primary1 : .gray2)
+            .fill(isValid ? activeColor : .gray2)
         )
     })
     .disabled(!isValid)
@@ -38,7 +45,7 @@ public struct GLButton: View {
 #Preview {
   GLButton(
     title: "test",
-    isValid: false,
+    isValid: true,
     action: {}
   )
 }
