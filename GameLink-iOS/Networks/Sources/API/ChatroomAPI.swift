@@ -10,7 +10,7 @@ import Alamofire
 import Moya
 
 @frozen public enum ChatroomAPI {
-  case chatroomList
+  case chatroomList(page: Int, size: Int)
   case deletChatroom(roomId: Int)
   case checkUserEntered(roomId: Int)
   case checkManager(roomId: Int)
@@ -70,6 +70,11 @@ extension ChatroomAPI: BaseAPI {
     var params: Parameters = [:]
     
     switch self {
+      
+    case let .chatroomList(page, size):
+      params["page"] = page
+      params["size"] = size
+      
     case let .deletChatroom(roomId):
       params["roomId"] = roomId
 

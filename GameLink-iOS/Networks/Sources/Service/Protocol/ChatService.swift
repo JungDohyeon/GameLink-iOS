@@ -9,6 +9,8 @@ import Foundation
 
 public protocol ChatService {
   func chatroomList(
+    page: Int,
+    size: Int,
     completion: @escaping (NetworkResult<ChatRoomListDTO>) -> Void
   )
   

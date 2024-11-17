@@ -17,6 +17,7 @@ final class ChatViewModel: ObservableObject {
     
     // Inner Business Action
     case _fetchChatList
+    case _fetchNextPage
   }
   
   private let service: ChatService
@@ -24,6 +25,7 @@ final class ChatViewModel: ObservableObject {
   private(set) var page: Int = 0
   private(set) var size: Int = 20
   
+  @Published private(set) var hasNext: Bool = false
   @Published private(set) var chatroomList: [ChatroomEntity] = []
   
   public init(
@@ -35,36 +37,49 @@ final class ChatViewModel: ObservableObject {
   public func action(_ action: Action) {
     switch action {
     case .mainViewAppear:
+      self.page = 0
+      self.hasNext = false
+      self.chatroomList = []
       self.action(._fetchChatList)
       
     case ._fetchChatList:
-      self.fetchChatList()
+      self.fetchChatList(page: self.page, size: self.size)
+      
+    case ._fetchNextPage:
+      self.page += 1
+      self.action(._fetchChatList)
     }
   }
 }
 
 // MARK: KAKAO LOGIN
 private extension ChatViewModel {
- 
-  func fetchChatList() {
-    service.chatroomList { result in
+  
+  func fetchChatList(page: Int, size: Int) {
+    service.chatroomList(page: page, size: size) { result in
       switch result {
       case let .success(data):
-        self.chatroomList = data.content.map {
-          ChatroomEntity(
-            roomId: $0.roomId,
-            roomName: $0.roomName,
-            userCount: $0.userCount,
-            maxUserCount: $0.maxUserCount,
-            leaderTierText: $0.leaderTier,
-            leaderTier: LOLTier.stringToLOLTier(tier: String($0.leaderTier.first!)),
-            positions: [.adcarry]
-          )
-        }
+        self.chatroomList.append(
+          contentsOf: data.content.map {
+            ChatroomEntity(
+              roomId: $0.roomId,
+              roomName: $0.roomName,
+              userCount: $0.userCount,
+              maxUserCount: $0.maxUserCount,
+              leaderTierText: $0.leaderTier,
+              leaderTier: LOLTier.stringToLOLTier(tier: String($0.leaderTier.first!)),
+              positions: [.adcarry]
+            )
+          }
+        )
+        
+        self.hasNext = data.hasNext
         
       case let .failure(error):
         print(error.localizedDescription)
       }
     }
   }
+  
+  
 }

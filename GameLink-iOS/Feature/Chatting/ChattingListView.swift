@@ -51,6 +51,11 @@ private extension ChattingListView {
               .frame(height: 0.8)
               .overlay(Color.glGray2)
           }
+          .onAppear {
+            if viewModel.hasNext && chatroom == viewModel.chatroomList.last {
+              viewModel.action(._fetchNextPage)
+            }
+          }
         }
       }
     }
