@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ChattingListView: View {
   
-  @StateObject private var viewModel: ChatViewModel = ChatViewModel(chatService: DefaultChatService())
+  @EnvironmentObject private var viewModel: ChatViewModel
   
   var body: some View {
     VStack {
       Text("HI!")
     }
-    .task {
+    .onAppear {
       viewModel.action(.mainViewAppear)
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -25,4 +25,5 @@ struct ChattingListView: View {
 
 #Preview {
   ChattingListView()
+    .environmentObject(ChatViewModel(chatService: DefaultChatService()))
 }

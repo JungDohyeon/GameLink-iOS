@@ -9,12 +9,9 @@ import SwiftUI
 
 struct ProfileMainView: View {
   
-  @StateObject private var viewModel: ProfileViewModel = ProfileViewModel(service: DefaultRiotService())
+  @EnvironmentObject private var viewModel: ProfileViewModel
   
   @FocusState private var focusState: GLTextFieldType?
-  
-  @State private var nickname: String = ""
-  @State private var gametag: String = ""
   
   var body: some View {
     VStack(spacing: 0) {
@@ -22,8 +19,11 @@ struct ProfileMainView: View {
       
       Spacer()
     }
+    .onAppear() {
+      viewModel.action(.mainViewAppear)
+    }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(.background1, ignoresSafeAreaEdges: .all)
+    .background(.glBackground1, ignoresSafeAreaEdges: .all)
   }
 }
 
@@ -39,18 +39,42 @@ private extension ProfileMainView {
         
         Text("계정을 등록하시면 인게임 정보를\n한 눈에 확인할 수 있어요!")
           .glFont(.body2)
-          .foregroundStyle(.gray1)
+          .foregroundStyle(.glGray1)
       }
       .multilineTextAlignment(.center)
       .padding(.bottom, 42)
       
       VStack(spacing: 10) {
-        GLTextField(type: .nickname, focusState: $focusState, inputText: $nickname)
-        GLTextField(type: .gametag, focusState: $focusState, inputText: $gametag)
+        GLTextField(
+          type: .nickname,
+          focusState: $focusState,
+          inputText: Binding(
+            get: { viewModel.nickname },
+            set: { text in
+              viewModel.action(._setNickname(text))
+            }
+          )
+        )
+        
+        GLTextField(
+          type: .gametag,
+          focusState: $focusState,
+          inputText: Binding(
+            get: { viewModel.tag },
+            set: { text in
+              viewModel.action(._setTag(text))
+            }
+          )
+        )
       }
       .padding(.bottom, 30)
       
-      GLButton(title: "등록", isValid: true, action: { })
+      GLButton(
+        title: "등록",
+        isValid: !viewModel.nickname.isEmpty && !viewModel.tag.isEmpty,
+        action: { viewModel.action(.tappedRegistButton) },
+        activeColor: .glPrimary3
+      )
     }
     .padding(.horizontal, GridRules.globalHorizontalPadding)
     .padding(.top, 150)
@@ -59,4 +83,5 @@ private extension ProfileMainView {
 
 #Preview {
   ProfileMainView()
+    .environmentObject(ProfileViewModel(service: DefaultRiotService()))
 }
