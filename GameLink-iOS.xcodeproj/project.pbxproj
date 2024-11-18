@@ -23,6 +23,9 @@
 		CD3CCFBA2CDB5D3F00691B5A /* GamePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */; };
 		CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */; };
 		CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */; };
+		CD8CD2A42CEBB35000DD7BB4 /* ChattingFilterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */; };
+		CD8CD2A62CEBB7C800DD7BB4 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */; };
+		CD8CD2A82CEBBB4600DD7BB4 /* FlowRowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */; };
 		CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F182CD2B23300E67E4E /* GLTextField.swift */; };
 		CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */; };
 		CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */; };
@@ -101,6 +104,9 @@
 		CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePosition.swift; sourceTree = "<group>"; };
 		CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReissueDTO.swift; sourceTree = "<group>"; };
 		CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLColor.swift; sourceTree = "<group>"; };
+		CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingFilterDetailView.swift; sourceTree = "<group>"; };
+		CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRowLayoutView.swift; sourceTree = "<group>"; };
 		CD929F182CD2B23300E67E4E /* GLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextField.swift; sourceTree = "<group>"; };
 		CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextFieldType.swift; sourceTree = "<group>"; };
 		CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + placeholder.swift"; sourceTree = "<group>"; };
@@ -221,6 +227,7 @@
 			children = (
 				CD3CCFB72CDB5CEC00691B5A /* Tier.swift */,
 				CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */,
+				CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -433,6 +440,8 @@
 				CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */,
 				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
 				CDC0C5852CEA6733002988BF /* ChatroomView.swift */,
+				CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */,
+				CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */,
 			);
 			path = Chatting;
 			sourceTree = "<group>";
@@ -616,6 +625,7 @@
 				CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */,
 				CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */,
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
+				CD8CD2A82CEBBB4600DD7BB4 /* FlowRowLayoutView.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
 				CD277DB72CCE2A5E00BE57C4 /* RiotService.swift in Sources */,
 				CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */,
@@ -623,8 +633,10 @@
 				CDCD34BC2CBFFE860068E4F7 /* ChatService.swift in Sources */,
 				CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */,
 				CD277DB92CCE2AE500BE57C4 /* RiotAccountDTO.swift in Sources */,
+				CD8CD2A62CEBB7C800DD7BB4 /* GameType.swift in Sources */,
 				CDD5CD272CA4798F00208740 /* SceneDelegate.swift in Sources */,
 				CDD5CD3F2CA48AE400208740 /* Utils.swift in Sources */,
+				CD8CD2A42CEBB35000DD7BB4 /* ChattingFilterDetailView.swift in Sources */,
 				CDD5CD382CA4850F00208740 /* BaseService.swift in Sources */,
 				CD277DC22CCE2F5B00BE57C4 /* DefaultRiotService.swift in Sources */,
 				CD277DC42CCE2F9B00BE57C4 /* DefaultChatService.swift in Sources */,

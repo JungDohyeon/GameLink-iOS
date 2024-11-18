@@ -19,7 +19,7 @@ public enum Tier {
   }
 }
 
-public enum LOLTier: String {
+public enum LOLTier: String, CaseIterable {
   case unrank
   case bronze
   case silver
@@ -33,6 +33,31 @@ public enum LOLTier: String {
   
   public var tierImage: UIImage {
     return UIImage(named: "ic_\(self.rawValue)") ?? UIImage()
+  }
+  
+  public var korName: String {
+    switch self {
+    case .unrank:
+      return "언랭크"
+    case .bronze:
+      return "브론즈"
+    case .silver:
+      return "실버"
+    case .gold:
+      return "골드"
+    case .platinum:
+      return "플래티넘"
+    case .emerald:
+      return "에메랄드"
+    case .diamond:
+      return "다이아몬드"
+    case .master:
+      return "마스터"
+    case .grandmaster:
+      return "그랜드 마스터"
+    case .challenger:
+      return "챌린저"
+    }
   }
 }
 

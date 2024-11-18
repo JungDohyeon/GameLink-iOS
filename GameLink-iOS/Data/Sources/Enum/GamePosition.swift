@@ -19,7 +19,7 @@ public enum GamePosition {
   }
 }
 
-public enum LOLPosition {
+public enum LOLPosition: CaseIterable {
   case top
   case jungle
   case mid
@@ -38,6 +38,21 @@ public enum LOLPosition {
       return .icBottom
     case .supporter:
       return .icSupport
+    }
+  }
+  
+  public var korName: String {
+    switch self {
+      case .top:
+        return "탑"
+      case .jungle:
+        return "정글"
+      case .mid:
+        return "미드"
+      case .adcarry:
+        return "원딜"
+      case .supporter:
+        return "서포터"
     }
   }
 }
