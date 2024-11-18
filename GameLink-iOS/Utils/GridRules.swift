@@ -9,4 +9,5 @@ import Foundation
 
 public struct GridRules {
   public static let globalHorizontalPadding: CGFloat = 16.0
+  public static let globalBottomPadding: CGFloat = 10.0
 }
