@@ -26,6 +26,7 @@
 		CD8CD2A42CEBB35000DD7BB4 /* ChattingFilterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */; };
 		CD8CD2A62CEBB7C800DD7BB4 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */; };
 		CD8CD2A82CEBBB4600DD7BB4 /* FlowRowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */; };
+		CD8CD2AA2CEBC02F00DD7BB4 /* GameFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */; };
 		CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F182CD2B23300E67E4E /* GLTextField.swift */; };
 		CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */; };
 		CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */; };
@@ -107,6 +108,7 @@
 		CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingFilterDetailView.swift; sourceTree = "<group>"; };
 		CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRowLayoutView.swift; sourceTree = "<group>"; };
+		CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFilter.swift; sourceTree = "<group>"; };
 		CD929F182CD2B23300E67E4E /* GLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextField.swift; sourceTree = "<group>"; };
 		CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextFieldType.swift; sourceTree = "<group>"; };
 		CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + placeholder.swift"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				CD3CCFB72CDB5CEC00691B5A /* Tier.swift */,
 				CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */,
 				CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */,
+				CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				CDD5CD382CA4850F00208740 /* BaseService.swift in Sources */,
 				CD277DC22CCE2F5B00BE57C4 /* DefaultRiotService.swift in Sources */,
 				CD277DC42CCE2F9B00BE57C4 /* DefaultChatService.swift in Sources */,
+				CD8CD2AA2CEBC02F00DD7BB4 /* GameFilter.swift in Sources */,
 				CDCD34B62CBFFDD00068E4F7 /* ChatRoomListDTO.swift in Sources */,
 				CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */,
 				CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */,

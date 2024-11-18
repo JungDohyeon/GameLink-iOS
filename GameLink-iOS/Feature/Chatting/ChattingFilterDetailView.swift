@@ -33,12 +33,6 @@ public struct ChattingFilterDetailView: View {
 
 private extension ChattingFilterDetailView {
   
-  enum GameFilter: String {
-    case position = "포지션"
-    case gameType = "게임 종류"
-    case tier = "티어"
-  }
-  
   @ViewBuilder
   func section(filter: GameFilter) -> some View {
     VStack(alignment: .leading, spacing: 16) {
