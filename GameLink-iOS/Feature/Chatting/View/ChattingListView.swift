@@ -30,10 +30,12 @@ struct ChattingListView: View {
         switch destination {
         case .main:
           ChattingListView()
+            .environmentObject(viewModel)
           
         case .filterList:
           ChattingFilterDetailView()
             .environmentObject(viewModel)
+            .toolbar(.hidden, for: .tabBar)
         }
       }
     }

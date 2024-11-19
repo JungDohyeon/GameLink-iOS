@@ -23,6 +23,7 @@ final class ChatViewModel: ObservableObject {
     
     // pageAction
     case _moveFilterList
+    case _moveBack
   }
   
   private let service: ChatService
@@ -56,6 +57,11 @@ final class ChatViewModel: ObservableObject {
       
     case ._moveFilterList:
       self.path.append(.filterList)
+      
+    case ._moveBack:
+      if path.count > 0 {
+        path.removeLast()
+      }
     }
   }
 }

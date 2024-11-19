@@ -9,25 +9,42 @@ import SwiftUI
 
 public struct ChattingFilterDetailView: View {
   
+  @EnvironmentObject private var viewModel: ChatViewModel
+  
   @State var positionSelect: Set<LOLPosition> = []
   @State var gameTypeSelect: Set<LOLGameType> = []
   @State var tierSelect: Set<LOLTier> = []
   
   public var body: some View {
-    VStack(spacing: 26) {
-      Group {
+    VStack(spacing: 0) {
+      VStack(spacing: 26) {
         section(filter: .position)
         section(filter: .gameType)
         section(filter: .tier)
       }
       .padding(.horizontal, GridRules.globalHorizontalPadding)
-      
-      Spacer()
-      
+      .padding(.top, 20)
+    }
+    .background(.glBackground1)
+    .glNavigation(
+      centerContent: {
+        Text("검색 필터")
+          .glFont(.body1Bold)
+          .foregroundStyle(.white)
+      },
+      leftContent: {
+        Image(systemName: "chevron.left").bold()
+          .foregroundStyle(.white)
+          .padding(.horizontal, 6)
+          .padding(.vertical, 4)
+          .onTapGesture {
+            viewModel.action(._moveBack)
+          }
+      }
+    )
+    .overlay(alignment: .bottom) {
       bottomSection()
     }
-    .padding(.top, 20)
-    .background(.background1, ignoresSafeAreaEdges: .all)
   }
 }
 

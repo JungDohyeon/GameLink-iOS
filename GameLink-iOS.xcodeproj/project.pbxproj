@@ -28,6 +28,8 @@
 		CD8CD2A82CEBBB4600DD7BB4 /* FlowRowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */; };
 		CD8CD2AA2CEBC02F00DD7BB4 /* GameFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */; };
 		CD8CD2AD2CEC796B00DD7BB4 /* ChattingViewDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */; };
+		CD8CD2B22CEC7BBB00DD7BB4 /* GLNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2B12CEC7BBB00DD7BB4 /* GLNavigationBar.swift */; };
+		CD8CD2B42CEC7D9100DD7BB4 /* View + Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2B32CEC7D9100DD7BB4 /* View + Navigation.swift */; };
 		CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F182CD2B23300E67E4E /* GLTextField.swift */; };
 		CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */; };
 		CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */; };
@@ -111,6 +113,8 @@
 		CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRowLayoutView.swift; sourceTree = "<group>"; };
 		CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFilter.swift; sourceTree = "<group>"; };
 		CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewDestination.swift; sourceTree = "<group>"; };
+		CD8CD2B12CEC7BBB00DD7BB4 /* GLNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLNavigationBar.swift; sourceTree = "<group>"; };
+		CD8CD2B32CEC7D9100DD7BB4 /* View + Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Navigation.swift"; sourceTree = "<group>"; };
 		CD929F182CD2B23300E67E4E /* GLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextField.swift; sourceTree = "<group>"; };
 		CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextFieldType.swift; sourceTree = "<group>"; };
 		CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + placeholder.swift"; sourceTree = "<group>"; };
@@ -245,7 +249,6 @@
 				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
 				CDC0C5852CEA6733002988BF /* ChatroomView.swift */,
 				CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */,
-				CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -258,13 +261,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		CD929F172CD2B21A00E67E4E /* Components */ = {
+		CD8CD2B02CEC7BAF00DD7BB4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				CD929F182CD2B23300E67E4E /* GLTextField.swift */,
 				CD929F202CD2B9E700E67E4E /* GLButton.swift */,
+				CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */,
+				CD8CD2B12CEC7BBB00DD7BB4 /* GLNavigationBar.swift */,
 			);
-			path = Components;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		CDC0C5822CEA63DD002988BF /* Entity */ = {
@@ -319,9 +324,9 @@
 		CDCB98672C9DE6B700DF9FD3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				CD3CCFB12CDB41C000691B5A /* App */,
-				CD929F172CD2B21A00E67E4E /* Components */,
 				CD277DAC2CCE255000BE57C4 /* TabBarView.swift */,
+				CD8CD2B02CEC7BAF00DD7BB4 /* Core */,
+				CD3CCFB12CDB41C000691B5A /* App */,
 				CD277DAE2CCE25E800BE57C4 /* Profile */,
 				CDCD34B22CBFF3DD0068E4F7 /* Chatting */,
 				CDD5CD2A2CA47B0700208740 /* Auth */,
@@ -455,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */,
+				CD8CD2B32CEC7D9100DD7BB4 /* View + Navigation.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */,
 				CDC0C5842CEA63E6002988BF /* ChatroomEntity.swift in Sources */,
 				CDC0C5812CEA61D1002988BF /* ChatroomDTO.swift in Sources */,
+				CD8CD2B42CEC7D9100DD7BB4 /* View + Navigation.swift in Sources */,
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
 				CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */,
 				CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */,
@@ -670,6 +677,7 @@
 				CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */,
 				CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */,
 				CDD5CD362CA483A900208740 /* UserService.swift in Sources */,
+				CD8CD2B22CEC7BBB00DD7BB4 /* GLNavigationBar.swift in Sources */,
 				CDCD34B42CBFF6670068E4F7 /* ChatroomAPI.swift in Sources */,
 				CDD5CD312CA47C0A00208740 /* AuthProvider.swift in Sources */,
 				CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */,
