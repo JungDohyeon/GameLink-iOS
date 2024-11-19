@@ -127,7 +127,7 @@ private extension ChattingFilterDetailView {
       .background(
         Capsule()
           .fill(.clear)
-          .stroke(isSelected ? .glPrimary3 : .glGray1)
+          .strokeBorder(isSelected ? .glPrimary3 : .glGray1)
       )
   }
 }

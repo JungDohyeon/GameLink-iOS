@@ -16,6 +16,8 @@ struct ChattingListView: View {
       header()
         .padding(.top, 14)
       
+      filterSection()
+      
       roomList()
     }
     .onAppear {
@@ -38,6 +40,39 @@ private extension ChattingListView {
       .padding(.horizontal, GridRules.globalHorizontalPadding)
   }
   
+  @ViewBuilder
+  func filterSection() -> some View {
+    VStack(spacing: 8) {
+      HStack(spacing: 5) {
+        ScrollView(.horizontal, showsIndicators: false) {
+          LazyHStack(alignment: .center, spacing: 8) {
+            filterCapsule(type: .position, isSelected: false, action: { })
+            filterCapsule(type: .gameType, isSelected: false, action: { })
+            filterCapsule(type: .tier, isSelected: false, action: { })
+          }
+        }
+        .frame(height: 35, alignment: .center)
+        .padding(.vertical, 10)
+        
+        Button {
+          // TODO: Move Detail
+        } label: {
+          Image(.filterIcon)
+            .padding(.vertical, 6)
+            .padding(.horizontal, 8)
+            .background(
+              Capsule()
+                .fill(.glPrimary3)
+            )
+        }
+      }
+      .padding(.horizontal, GridRules.globalHorizontalPadding)
+      
+      Divider()
+        .frame(height: 0.8)
+        .overlay(.glGray2)
+    }
+  }
   
   @ViewBuilder
   func roomList() -> some View {
@@ -58,6 +93,31 @@ private extension ChattingListView {
           }
         }
       }
+    }
+  }
+  
+  @ViewBuilder
+  func filterCapsule(
+    type: GameFilter,
+    isSelected: Bool,
+    action: @escaping () -> Void
+  ) -> some View {
+    Button {
+      action()
+    } label: {
+      HStack(spacing: 4) {
+        Text("모든 " + type.rawValue)
+        Image(systemName: "chevron.down")
+      }
+      .glFont(.body2Bold)
+      .foregroundStyle(isSelected ? .glPrimary3 : .glGray1)
+      .padding(.vertical, 9)
+      .padding(.horizontal, 10)
+      .background(
+        Capsule()
+          .fill(.clear)
+          .strokeBorder(isSelected ? .glPrimary3 : .glGray1)
+      )
     }
   }
 }
