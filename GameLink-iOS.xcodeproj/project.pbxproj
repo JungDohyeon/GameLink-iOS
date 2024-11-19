@@ -92,6 +92,11 @@
 		CDF1F09C2CECFC930033F03F /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F09B2CECFC930033F03F /* ImageCacheManager.swift */; };
 		CDF1F09E2CECFC9F0033F03F /* ImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F09D2CECFC9F0033F03F /* ImageCacheLoader.swift */; };
 		CDF1F0A02CECFCBF0033F03F /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */; };
+		CDF1F0A22CECFCF80033F03F /* ChattingRoomCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A12CECFCF80033F03F /* ChattingRoomCarouselView.swift */; };
+		CDF1F0A42CECFD850033F03F /* ChatRoomUserListDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A32CECFD850033F03F /* ChatRoomUserListDetailDTO.swift */; };
+		CDF1F0A82CECFE150033F03F /* GameInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A72CECFE150033F03F /* GameInfoDTO.swift */; };
+		CDF1F0AA2CECFE220033F03F /* ChampionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */; };
+		CDF1F0AC2CED103C0033F03F /* UserCarouselCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +177,11 @@
 		CDF1F09B2CECFC930033F03F /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		CDF1F09D2CECFC9F0033F03F /* ImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoader.swift; sourceTree = "<group>"; };
 		CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		CDF1F0A12CECFCF80033F03F /* ChattingRoomCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomCarouselView.swift; sourceTree = "<group>"; };
+		CDF1F0A32CECFD850033F03F /* ChatRoomUserListDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomUserListDetailDTO.swift; sourceTree = "<group>"; };
+		CDF1F0A72CECFE150033F03F /* GameInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoDTO.swift; sourceTree = "<group>"; };
+		CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDTO.swift; sourceTree = "<group>"; };
+		CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCarouselCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +265,8 @@
 				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
 				CDC0C5852CEA6733002988BF /* ChatroomView.swift */,
 				CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */,
+				CDF1F0A12CECFCF80033F03F /* ChattingRoomCarouselView.swift */,
+				CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,6 +453,9 @@
 				CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */,
 				CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */,
 				CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */,
+				CDF1F0A32CECFD850033F03F /* ChatRoomUserListDetailDTO.swift */,
+				CDF1F0A72CECFE150033F03F /* GameInfoDTO.swift */,
+				CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -646,15 +661,18 @@
 				CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */,
 				CDC0C5842CEA63E6002988BF /* ChatroomEntity.swift in Sources */,
 				CDC0C5812CEA61D1002988BF /* ChatroomDTO.swift in Sources */,
+				CDF1F0A42CECFD850033F03F /* ChatRoomUserListDetailDTO.swift in Sources */,
 				CD8CD2B42CEC7D9100DD7BB4 /* View + Navigation.swift in Sources */,
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
 				CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */,
 				CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */,
 				CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */,
+				CDF1F0AA2CECFE220033F03F /* ChampionDTO.swift in Sources */,
 				CD3CCFBA2CDB5D3F00691B5A /* GamePosition.swift in Sources */,
 				CD277DC62CCE2FCE00BE57C4 /* DefaultUserService.swift in Sources */,
 				CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */,
 				CDF1F0A02CECFCBF0033F03F /* CachedImageView.swift in Sources */,
+				CDF1F0AC2CED103C0033F03F /* UserCarouselCardView.swift in Sources */,
 				CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */,
 				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,
 				CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */,
@@ -671,6 +689,7 @@
 				CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */,
 				CD8CD2AD2CEC796B00DD7BB4 /* ChattingViewDestination.swift in Sources */,
 				CDF1F09E2CECFC9F0033F03F /* ImageCacheLoader.swift in Sources */,
+				CDF1F0A22CECFCF80033F03F /* ChattingRoomCarouselView.swift in Sources */,
 				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
 				CDCD34BC2CBFFE860068E4F7 /* ChatService.swift in Sources */,
 				CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */,
@@ -684,6 +703,7 @@
 				CD277DC42CCE2F9B00BE57C4 /* DefaultChatService.swift in Sources */,
 				CD8CD2AA2CEBC02F00DD7BB4 /* GameFilter.swift in Sources */,
 				CDCD34B62CBFFDD00068E4F7 /* ChatRoomListDTO.swift in Sources */,
+				CDF1F0A82CECFE150033F03F /* GameInfoDTO.swift in Sources */,
 				CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */,
 				CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */,
 				CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */,

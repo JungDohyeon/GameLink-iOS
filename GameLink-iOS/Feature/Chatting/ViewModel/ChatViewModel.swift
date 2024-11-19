@@ -33,6 +33,7 @@ final class ChatViewModel: ObservableObject {
   
   @Published private(set) var hasNext: Bool = false
   @Published private(set) var chatroomList: [ChatroomEntity] = []
+  @Published private(set) var chatroomUserListDetail: [ChatRoomUserListDetailDTO] = []
   
   public init(
     chatService: ChatService
