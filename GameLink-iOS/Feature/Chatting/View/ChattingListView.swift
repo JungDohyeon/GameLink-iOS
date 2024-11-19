@@ -12,19 +12,31 @@ struct ChattingListView: View {
   @EnvironmentObject private var viewModel: ChatViewModel
   
   var body: some View {
-    VStack(spacing: 0) {
-      header()
-        .padding(.top, 14)
-      
-      filterSection()
-      
-      roomList()
+    NavigationStack(path: $viewModel.path) {
+      VStack(spacing: 0) {
+        header()
+          .padding(.top, 14)
+        
+        filterSection()
+        
+        roomList()
+      }
+      .onAppear {
+        viewModel.action(.mainViewAppear)
+      }
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .background(.background1, ignoresSafeAreaEdges: .all)
+      .navigationDestination(for: ChattingViewDestination.self) { destination in
+        switch destination {
+        case .main:
+          ChattingListView()
+          
+        case .filterList:
+          ChattingFilterDetailView()
+            .environmentObject(viewModel)
+        }
+      }
     }
-    .onAppear {
-      viewModel.action(.mainViewAppear)
-    }
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(.background1, ignoresSafeAreaEdges: .all)
   }
 }
 
@@ -46,16 +58,30 @@ private extension ChattingListView {
       HStack(spacing: 5) {
         ScrollView(.horizontal, showsIndicators: false) {
           LazyHStack(alignment: .center, spacing: 8) {
-            filterCapsule(type: .position, isSelected: false, action: { })
-            filterCapsule(type: .gameType, isSelected: false, action: { })
-            filterCapsule(type: .tier, isSelected: false, action: { })
+            filterCapsule(
+              type: .position,
+              isSelected: false,
+              action: { viewModel.action(._moveFilterList) }
+            )
+            
+            filterCapsule(
+              type: .gameType,
+              isSelected: false,
+              action: { viewModel.action(._moveFilterList) }
+            )
+            
+            filterCapsule(
+              type: .tier,
+              isSelected: false,
+              action: { viewModel.action(._moveFilterList) }
+            )
           }
         }
         .frame(height: 35, alignment: .center)
         .padding(.vertical, 10)
         
         Button {
-          // TODO: Move Detail
+          viewModel.action(._moveFilterList)
         } label: {
           Image(.filterIcon)
             .padding(.vertical, 6)
