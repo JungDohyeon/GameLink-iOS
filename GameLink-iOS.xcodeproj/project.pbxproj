@@ -23,11 +23,22 @@
 		CD3CCFBA2CDB5D3F00691B5A /* GamePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */; };
 		CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */; };
 		CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */; };
+		CD8CD2A42CEBB35000DD7BB4 /* ChattingFilterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */; };
+		CD8CD2A62CEBB7C800DD7BB4 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */; };
+		CD8CD2A82CEBBB4600DD7BB4 /* FlowRowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */; };
+		CD8CD2AA2CEBC02F00DD7BB4 /* GameFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */; };
+		CD8CD2AD2CEC796B00DD7BB4 /* ChattingViewDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */; };
+		CD8CD2B22CEC7BBB00DD7BB4 /* GLNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2B12CEC7BBB00DD7BB4 /* GLNavigationBar.swift */; };
+		CD8CD2B42CEC7D9100DD7BB4 /* View + Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2B32CEC7D9100DD7BB4 /* View + Navigation.swift */; };
 		CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F182CD2B23300E67E4E /* GLTextField.swift */; };
 		CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */; };
 		CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */; };
 		CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1E2CD2B87A00E67E4E /* GridRules.swift */; };
 		CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F202CD2B9E700E67E4E /* GLButton.swift */; };
+		CDA1CBE72CEE24A20041116B /* PositionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBE62CEE24A20041116B /* PositionSelectView.swift */; };
+		CDC0C5812CEA61D1002988BF /* ChatroomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */; };
+		CDC0C5842CEA63E6002988BF /* ChatroomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */; };
+		CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5852CEA6733002988BF /* ChatroomView.swift */; };
 		CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */; };
 		CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */; };
 		CDCB985D2C9DE61400DF9FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */; };
@@ -79,6 +90,14 @@
 		CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD3A2CA4859A00208740 /* OAuthRequestDTO.swift */; };
 		CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD3C2CA4864700208740 /* OAuthDTO.swift */; };
 		CDD5CD3F2CA48AE400208740 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD3E2CA48AE400208740 /* Utils.swift */; };
+		CDF1F09C2CECFC930033F03F /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F09B2CECFC930033F03F /* ImageCacheManager.swift */; };
+		CDF1F09E2CECFC9F0033F03F /* ImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F09D2CECFC9F0033F03F /* ImageCacheLoader.swift */; };
+		CDF1F0A02CECFCBF0033F03F /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */; };
+		CDF1F0A22CECFCF80033F03F /* ChattingRoomCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A12CECFCF80033F03F /* ChattingRoomCarouselView.swift */; };
+		CDF1F0A42CECFD850033F03F /* ChatRoomUserListDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A32CECFD850033F03F /* ChatRoomUserListDetailDTO.swift */; };
+		CDF1F0A82CECFE150033F03F /* GameInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A72CECFE150033F03F /* GameInfoDTO.swift */; };
+		CDF1F0AA2CECFE220033F03F /* ChampionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */; };
+		CDF1F0AC2CED103C0033F03F /* UserCarouselCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,11 +117,22 @@
 		CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePosition.swift; sourceTree = "<group>"; };
 		CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReissueDTO.swift; sourceTree = "<group>"; };
 		CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLColor.swift; sourceTree = "<group>"; };
+		CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingFilterDetailView.swift; sourceTree = "<group>"; };
+		CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRowLayoutView.swift; sourceTree = "<group>"; };
+		CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFilter.swift; sourceTree = "<group>"; };
+		CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewDestination.swift; sourceTree = "<group>"; };
+		CD8CD2B12CEC7BBB00DD7BB4 /* GLNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLNavigationBar.swift; sourceTree = "<group>"; };
+		CD8CD2B32CEC7D9100DD7BB4 /* View + Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Navigation.swift"; sourceTree = "<group>"; };
 		CD929F182CD2B23300E67E4E /* GLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextField.swift; sourceTree = "<group>"; };
 		CD929F1A2CD2B27400E67E4E /* GLTextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextFieldType.swift; sourceTree = "<group>"; };
 		CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + placeholder.swift"; sourceTree = "<group>"; };
 		CD929F1E2CD2B87A00E67E4E /* GridRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridRules.swift; sourceTree = "<group>"; };
 		CD929F202CD2B9E700E67E4E /* GLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLButton.swift; sourceTree = "<group>"; };
+		CDA1CBE62CEE24A20041116B /* PositionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionSelectView.swift; sourceTree = "<group>"; };
+		CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomDTO.swift; sourceTree = "<group>"; };
+		CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomEntity.swift; sourceTree = "<group>"; };
+		CDC0C5852CEA6733002988BF /* ChatroomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomView.swift; sourceTree = "<group>"; };
 		CDCB98552C9DE61200DF9FD3 /* GameLink-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GameLink-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCB98582C9DE61200DF9FD3 /* GameLink_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLink_iOSApp.swift; sourceTree = "<group>"; };
 		CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingListView.swift; sourceTree = "<group>"; };
@@ -146,6 +176,14 @@
 		CDD5CD3A2CA4859A00208740 /* OAuthRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthRequestDTO.swift; sourceTree = "<group>"; };
 		CDD5CD3C2CA4864700208740 /* OAuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthDTO.swift; sourceTree = "<group>"; };
 		CDD5CD3E2CA48AE400208740 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CDF1F09B2CECFC930033F03F /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		CDF1F09D2CECFC9F0033F03F /* ImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoader.swift; sourceTree = "<group>"; };
+		CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		CDF1F0A12CECFCF80033F03F /* ChattingRoomCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomCarouselView.swift; sourceTree = "<group>"; };
+		CDF1F0A32CECFD850033F03F /* ChatRoomUserListDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomUserListDetailDTO.swift; sourceTree = "<group>"; };
+		CDF1F0A72CECFE150033F03F /* GameInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoDTO.swift; sourceTree = "<group>"; };
+		CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDTO.swift; sourceTree = "<group>"; };
+		CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCarouselCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,17 +253,53 @@
 			children = (
 				CD3CCFB72CDB5CEC00691B5A /* Tier.swift */,
 				CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */,
+				CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */,
+				CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */,
+				CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
 		};
-		CD929F172CD2B21A00E67E4E /* Components */ = {
+		CD8CD2AE2CEC79A500DD7BB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */,
+				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
+				CDC0C5852CEA6733002988BF /* ChatroomView.swift */,
+				CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */,
+				CDF1F0A12CECFCF80033F03F /* ChattingRoomCarouselView.swift */,
+				CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */,
+				CDA1CBE62CEE24A20041116B /* PositionSelectView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD8CD2AF2CEC79A900DD7BB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CD8CD2B02CEC7BAF00DD7BB4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				CD929F182CD2B23300E67E4E /* GLTextField.swift */,
 				CD929F202CD2B9E700E67E4E /* GLButton.swift */,
+				CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */,
+				CD8CD2B12CEC7BBB00DD7BB4 /* GLNavigationBar.swift */,
+				CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */,
 			);
-			path = Components;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CDC0C5822CEA63DD002988BF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		CDCB984C2C9DE61200DF9FD3 = {
@@ -272,9 +346,9 @@
 		CDCB98672C9DE6B700DF9FD3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				CD3CCFB12CDB41C000691B5A /* App */,
-				CD929F172CD2B21A00E67E4E /* Components */,
 				CD277DAC2CCE255000BE57C4 /* TabBarView.swift */,
+				CD8CD2B02CEC7BAF00DD7BB4 /* Core */,
+				CD3CCFB12CDB41C000691B5A /* App */,
 				CD277DAE2CCE25E800BE57C4 /* Profile */,
 				CDCD34B22CBFF3DD0068E4F7 /* Chatting */,
 				CDD5CD2A2CA47B0700208740 /* Auth */,
@@ -285,6 +359,8 @@
 		CDCB98682C9DE6E600DF9FD3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CD3CCFB62CDB5CDD00691B5A /* Enum */,
+				CDC0C5822CEA63DD002988BF /* Entity */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -326,7 +402,6 @@
 		CDCB98812C9DE96B00DF9FD3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				CD3CCFB62CDB5CDD00691B5A /* Enum */,
 				CDD5CD2F2CA47BFD00208740 /* FeatureData */,
 				CDCB98902C9DEAA200DF9FD3 /* Literals */,
 				CDCB988E2C9DEA8E00DF9FD3 /* NetworkEntity */,
@@ -345,6 +420,8 @@
 				CDCD34C82CC00AFE0068E4F7 /* Fonts.swift */,
 				CD929F1E2CD2B87A00E67E4E /* GridRules.swift */,
 				CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */,
+				CDF1F09B2CECFC930033F03F /* ImageCacheManager.swift */,
+				CDF1F09D2CECFC9F0033F03F /* ImageCacheLoader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -378,6 +455,10 @@
 				CD277DBA2CCE2B7500BE57C4 /* RiotRecordDTO.swift */,
 				CD277DBC2CCE2DEC00BE57C4 /* VoidResponse.swift */,
 				CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */,
+				CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */,
+				CDF1F0A32CECFD850033F03F /* ChatRoomUserListDetailDTO.swift */,
+				CDF1F0A72CECFE150033F03F /* GameInfoDTO.swift */,
+				CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -406,6 +487,7 @@
 			isa = PBXGroup;
 			children = (
 				CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */,
+				CD8CD2B32CEC7D9100DD7BB4 /* View + Navigation.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -413,9 +495,8 @@
 		CDCD34B22CBFF3DD0068E4F7 /* Chatting */ = {
 			isa = PBXGroup;
 			children = (
-				CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */,
-				CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */,
-				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
+				CD8CD2AF2CEC79A900DD7BB4 /* ViewModel */,
+				CD8CD2AE2CEC79A500DD7BB4 /* View */,
 			);
 			path = Chatting;
 			sourceTree = "<group>";
@@ -578,16 +659,24 @@
 				CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */,
 				CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */,
 				CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */,
+				CDA1CBE72CEE24A20041116B /* PositionSelectView.swift in Sources */,
 				CD277DAD2CCE255000BE57C4 /* TabBarView.swift in Sources */,
 				CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */,
 				CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */,
+				CDC0C5842CEA63E6002988BF /* ChatroomEntity.swift in Sources */,
+				CDC0C5812CEA61D1002988BF /* ChatroomDTO.swift in Sources */,
+				CDF1F0A42CECFD850033F03F /* ChatRoomUserListDetailDTO.swift in Sources */,
+				CD8CD2B42CEC7D9100DD7BB4 /* View + Navigation.swift in Sources */,
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
 				CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */,
 				CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */,
 				CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */,
+				CDF1F0AA2CECFE220033F03F /* ChampionDTO.swift in Sources */,
 				CD3CCFBA2CDB5D3F00691B5A /* GamePosition.swift in Sources */,
 				CD277DC62CCE2FCE00BE57C4 /* DefaultUserService.swift in Sources */,
 				CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */,
+				CDF1F0A02CECFCBF0033F03F /* CachedImageView.swift in Sources */,
+				CDF1F0AC2CED103C0033F03F /* UserCarouselCardView.swift in Sources */,
 				CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */,
 				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,
 				CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */,
@@ -597,23 +686,34 @@
 				CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */,
 				CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */,
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
+				CD8CD2A82CEBBB4600DD7BB4 /* FlowRowLayoutView.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
 				CD277DB72CCE2A5E00BE57C4 /* RiotService.swift in Sources */,
+				CDF1F09C2CECFC930033F03F /* ImageCacheManager.swift in Sources */,
 				CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */,
+				CD8CD2AD2CEC796B00DD7BB4 /* ChattingViewDestination.swift in Sources */,
+				CDF1F09E2CECFC9F0033F03F /* ImageCacheLoader.swift in Sources */,
+				CDF1F0A22CECFCF80033F03F /* ChattingRoomCarouselView.swift in Sources */,
 				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
 				CDCD34BC2CBFFE860068E4F7 /* ChatService.swift in Sources */,
 				CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */,
 				CD277DB92CCE2AE500BE57C4 /* RiotAccountDTO.swift in Sources */,
+				CD8CD2A62CEBB7C800DD7BB4 /* GameType.swift in Sources */,
 				CDD5CD272CA4798F00208740 /* SceneDelegate.swift in Sources */,
 				CDD5CD3F2CA48AE400208740 /* Utils.swift in Sources */,
+				CD8CD2A42CEBB35000DD7BB4 /* ChattingFilterDetailView.swift in Sources */,
 				CDD5CD382CA4850F00208740 /* BaseService.swift in Sources */,
 				CD277DC22CCE2F5B00BE57C4 /* DefaultRiotService.swift in Sources */,
 				CD277DC42CCE2F9B00BE57C4 /* DefaultChatService.swift in Sources */,
+				CD8CD2AA2CEBC02F00DD7BB4 /* GameFilter.swift in Sources */,
 				CDCD34B62CBFFDD00068E4F7 /* ChatRoomListDTO.swift in Sources */,
+				CDF1F0A82CECFE150033F03F /* GameInfoDTO.swift in Sources */,
+				CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */,
 				CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */,
 				CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */,
 				CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */,
 				CDD5CD362CA483A900208740 /* UserService.swift in Sources */,
+				CD8CD2B22CEC7BBB00DD7BB4 /* GLNavigationBar.swift in Sources */,
 				CDCD34B42CBFF6670068E4F7 /* ChatroomAPI.swift in Sources */,
 				CDD5CD312CA47C0A00208740 /* AuthProvider.swift in Sources */,
 				CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */,
@@ -772,7 +872,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gamelink;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamesync.gamelink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -812,7 +912,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gamelink;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamesync.gamelink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

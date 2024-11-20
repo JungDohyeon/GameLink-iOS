@@ -8,8 +8,12 @@
 import Foundation
 
 public struct ChatRoomListDTO: Codable, Hashable {
-  public let roomId: String
-  public let roomName: String
-  public let userCount: Int
-  public let maxUserCount: Int
+  public let content: [ChatroomDTO]
+  public let hasNext: Bool
+  public let totalPages: Int
+  public let totalElements: Int
+  public let page: Int
+  public let size: Int
+  public let first: Bool
+  public let last: Bool
 }

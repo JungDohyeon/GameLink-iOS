@@ -9,21 +9,29 @@ import Foundation
 
 public protocol ChatService {
   func chatroomList(
-    completion: @escaping (NetworkResult<[ChatRoomListDTO]>) -> Void
+    page: Int,
+    size: Int,
+    completion: @escaping (NetworkResult<ChatRoomListDTO>) -> Void
   )
   
   func deletChatroom(
-    roomId: Int,
+    roomId: String,
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
   
+  func selectPosition(
+    roomId: String,
+    position: LOLPosition,
+    completion: @escaping (NetworkResult<VoidResponse>) -> Void
+  )
+  
   func checkUserEntered(
-    roomId: Int,
+    roomId: String,
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
   
   func checkManager(
-    roomId: Int,
+    roomId: String,
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
   
@@ -31,5 +39,10 @@ public protocol ChatService {
     roomName: String, 
     maxUserCount: Int,
     completion: @escaping (NetworkResult<CreateChatRoomDTO>) -> Void
+  )
+  
+  func chatroomUserDetailInfo(
+    roomId: String,
+    completion: @escaping (NetworkResult<[ChatRoomUserListDetailDTO]>) -> Void
   )
 }
