@@ -10,4 +10,5 @@ import Foundation
 public enum ChattingViewDestination {
   case main
   case filterList
+  case userDetailCarousel
 }

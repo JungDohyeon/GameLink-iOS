@@ -16,6 +16,7 @@ final class ChatViewModel: ObservableObject {
   public enum Action {
     // User Action
     case mainViewAppear
+    case tappedChatroom(ChatroomEntity)
     
     // Inner Business Action
     case _fetchChatList
@@ -23,6 +24,7 @@ final class ChatViewModel: ObservableObject {
     
     // pageAction
     case _moveFilterList
+    case _moveUserDetailCarousel
     case _moveBack
   }
   
@@ -32,6 +34,7 @@ final class ChatViewModel: ObservableObject {
   private(set) var size: Int = 20
   
   @Published private(set) var hasNext: Bool = false
+  @Published private(set) var selectedChatroom: ChatroomEntity? = nil
   @Published private(set) var chatroomList: [ChatroomEntity] = []
   @Published private(set) var chatroomUserListDetail: [ChatRoomUserListDetailDTO] = []
   
@@ -44,10 +47,15 @@ final class ChatViewModel: ObservableObject {
   public func action(_ action: Action) {
     switch action {
     case .mainViewAppear:
+      self.selectedChatroom = nil
       self.page = 0
       self.hasNext = false
       self.chatroomList = []
       self.action(._fetchChatList)
+      
+    case let .tappedChatroom(chatroom):
+      self.selectedChatroom = chatroom
+      self.fetchChatroomUserDetailInfo(roomId: chatroom.roomId)
       
     case ._fetchChatList:
       self.fetchChatList(page: self.page, size: self.size)
@@ -59,6 +67,9 @@ final class ChatViewModel: ObservableObject {
     case ._moveFilterList:
       self.path.append(.filterList)
       
+    case ._moveUserDetailCarousel:
+      self.path.append(.userDetailCarousel)
+      
     case ._moveBack:
       if path.count > 0 {
         path.removeLast()
@@ -67,7 +78,6 @@ final class ChatViewModel: ObservableObject {
   }
 }
 
-// MARK: KAKAO LOGIN
 private extension ChatViewModel {
   
   func fetchChatList(page: Int, size: Int) {
@@ -96,5 +106,16 @@ private extension ChatViewModel {
     }
   }
   
-  
+  func fetchChatroomUserDetailInfo(roomId: String) {
+    service.chatroomUserDetailInfo(roomId: roomId) { result in
+      switch result {
+      case let .success(data):
+        self.chatroomUserListDetail = data
+        self.action(._moveUserDetailCarousel)
+        
+      case let .failure(error):
+        print(error.localizedDescription)
+      }
+    }
+  }
 }

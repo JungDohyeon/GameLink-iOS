@@ -11,10 +11,11 @@ import Moya
 
 @frozen public enum ChatroomAPI {
   case chatroomList(page: Int, size: Int)
-  case deletChatroom(roomId: Int)
-  case checkUserEntered(roomId: Int)
-  case checkManager(roomId: Int)
+  case deletChatroom(roomId: String)
+  case checkUserEntered(roomId: String)
+  case checkManager(roomId: String)
   case createChatroom(roomName: String, maxUserCount: Int)
+  case chatroomUserDetailInfo(roomId: String)
 }
 
 extension ChatroomAPI: BaseAPI {
@@ -44,6 +45,8 @@ extension ChatroomAPI: BaseAPI {
       endPath += "confirm/manager/\(roomId)"
     case .createChatroom:
       endPath += "create"
+    case .chatroomUserDetailInfo:
+      endPath += "users/info"
     }
     
     return endPath
@@ -62,6 +65,8 @@ extension ChatroomAPI: BaseAPI {
       return .get
     case .createChatroom:
       return .post
+    case .chatroomUserDetailInfo:
+      return .get
     }
   }
   
@@ -81,6 +86,9 @@ extension ChatroomAPI: BaseAPI {
     case let .createChatroom(roomName, maxUserCount):
       params["rooomName"] = roomName
       params["maxUserCount"] = maxUserCount
+      
+    case let .chatroomUserDetailInfo(roomId):
+      params["roomId"] = roomId
 
     default:
       break
@@ -101,6 +109,8 @@ extension ChatroomAPI: BaseAPI {
       return URLEncoding.default
     case .createChatroom:
       return JSONEncoding.default
+    case .chatroomUserDetailInfo:
+      return URLEncoding.default
     }
   }
   

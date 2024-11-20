@@ -36,6 +36,11 @@ struct ChattingListView: View {
           ChattingFilterDetailView()
             .environmentObject(viewModel)
             .toolbar(.hidden, for: .tabBar)
+          
+        case .userDetailCarousel:
+          ChattingRoomCarouselView()
+            .environmentObject(viewModel)
+            .toolbar(.hidden, for: .tabBar)
         }
       }
     }
@@ -113,6 +118,10 @@ private extension ChattingListView {
             Divider()
               .frame(height: 0.8)
               .overlay(Color.glGray2)
+          }
+          .background(.glBackground1)
+          .onTapGesture {
+            viewModel.action(.tappedChatroom(chatroom))
           }
           .onAppear {
             if viewModel.hasNext && chatroom == viewModel.chatroomList.last {

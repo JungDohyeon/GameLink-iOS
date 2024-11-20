@@ -55,7 +55,7 @@ struct ChattingRoomCarouselView: View {
     .padding(.horizontal, GridRules.globalHorizontalPadding)
     .glNavigation(
       centerContent: {
-        Text("채팅방 이름")
+        Text(viewModel.selectedChatroom?.roomName ?? "채팅방 정보 오류")
           .glFont(.body1Bold)
           .foregroundStyle(.white)
       },

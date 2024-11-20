@@ -15,17 +15,17 @@ public protocol ChatService {
   )
   
   func deletChatroom(
-    roomId: Int,
+    roomId: String,
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
   
   func checkUserEntered(
-    roomId: Int,
+    roomId: String,
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
   
   func checkManager(
-    roomId: Int,
+    roomId: String,
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
   
@@ -33,5 +33,10 @@ public protocol ChatService {
     roomName: String, 
     maxUserCount: Int,
     completion: @escaping (NetworkResult<CreateChatRoomDTO>) -> Void
+  )
+  
+  func chatroomUserDetailInfo(
+    roomId: String,
+    completion: @escaping (NetworkResult<[ChatRoomUserListDetailDTO]>) -> Void
   )
 }
