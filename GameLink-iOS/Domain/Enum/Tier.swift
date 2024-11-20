@@ -28,10 +28,11 @@ public enum LOLTier: String, CaseIterable {
   case emerald
   case diamond
   case master
-  case grandmaster
+  case grandmaster = "grand_master"
   case challenger
   
   public var tierImage: UIImage {
+    
     return UIImage(named: "ic_\(self.rawValue)") ?? UIImage()
   }
   
@@ -54,7 +55,7 @@ public enum LOLTier: String, CaseIterable {
     case .master:
       return "마스터"
     case .grandmaster:
-      return "그랜드 마스터"
+      return "그랜드마스터"
     case .challenger:
       return "챌린저"
     }
@@ -71,7 +72,17 @@ extension LOLTier {
     "D": .diamond,
     "M": .master,
     "GM": .grandmaster,
-    "C": .challenger
+    "C": .challenger,
+    "BRONZE": .bronze,
+    "SILVER": .silver,
+    "GOLD": .gold,
+    "PLATINUM":.platinum,
+    "EMERALD": .emerald,
+    "DIAMOND": .diamond,
+    "MASTER": .master,
+    "GRANDMASTER": .grandmaster,
+    "CHALLENGER": .challenger,
+    "UNRANKED": .unrank
   ]
 
   public static func stringToLOLTier(tier: String) -> LOLTier {

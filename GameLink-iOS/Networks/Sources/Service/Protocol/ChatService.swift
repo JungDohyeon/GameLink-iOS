@@ -19,6 +19,12 @@ public protocol ChatService {
     completion: @escaping (NetworkResult<Bool>) -> Void
   )
   
+  func selectPosition(
+    roomId: String,
+    position: LOLPosition,
+    completion: @escaping (NetworkResult<VoidResponse>) -> Void
+  )
+  
   func checkUserEntered(
     roomId: String,
     completion: @escaping (NetworkResult<Bool>) -> Void

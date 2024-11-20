@@ -15,13 +15,13 @@ public struct GameInfoDTO: Codable, Hashable {
   let leaguePoints: Int
   let wins: Int
   let losses: Int
-  let winRate: Int
-  let kda: Int
-  let avgKills: Int
-  let avgDeaths: Int
-  let avgAssists: Int
-  let avgCs: Int
-  let best3Champions: [ChampionDTO]
+  let winRate: Double
+  let kda: Double
+  let avgKills: Double
+  let avgDeaths: Double
+  let avgAssists: Double
+  let avgCs: Double
+  let best3champions: [ChampionDTO]
   let veteran: Bool
   let inactive: Bool
   let freshBlood: Bool

@@ -37,9 +37,11 @@ public struct ChatroomView: View {
       
       HStack(spacing: 8) {
         ForEach(roomData.positions, id: \.self) { position in
-          Image(uiImage: position.positionImage)
-            .resizable()
-            .frame(width: 40, height: 40)
+          if let positionImage = position.positionImage {
+            Image(uiImage: positionImage)
+              .resizable()
+              .frame(width: 40, height: 40)
+          }
         }
       }
     }

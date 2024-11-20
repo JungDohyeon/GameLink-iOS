@@ -29,10 +29,16 @@ struct UserCarouselCardView: View {
       Spacer()
     }
     .frame(maxWidth: .infinity)
-    .padding(.horizontal, 30)
+    .padding(.horizontal, 20)
     .background(
       RoundedRectangle(cornerRadius: 6)
-        .fill(.glWinBlue)
+        .fill(
+          LinearGradient(
+            colors: [.glWinBlue, .glLooseRed],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+          )
+        )
         .stroke(
           LinearGradient(
             colors: [.white.opacity(0.6), .white.opacity(0)],
@@ -50,7 +56,7 @@ private extension UserCarouselCardView {
   @ViewBuilder
   func userInfoSection() -> some View {
     VStack(spacing: 16) {
-      CachedImageView(url: URL(string: userData.backgroundImageUrl))
+      CachedImageView(url: URL(string: userData.summonerIconUrl))
         .clipShape(Circle())
         .frame(width: 80, height: 80)
         .overlay(alignment: .bottom) {
@@ -63,7 +69,7 @@ private extension UserCarouselCardView {
               Capsule()
                 .fill(.glBackground2)
             )
-            .offset(y: 6)
+            .offset(y: 4)
         }
       
       HStack(alignment: .center, spacing: 8) {
@@ -81,26 +87,26 @@ private extension UserCarouselCardView {
   @ViewBuilder
   func midSection() -> some View {
     VStack(spacing: 0) {
-      HStack {
-        Image(uiImage: LOLTier.diamond.tierImage)
+      HStack(alignment: .center) {
+        Image(uiImage: LOLTier.stringToLOLTier(tier: userData.gameInfo.tier).tierImage)
           .resizable()
           .frame(width: 80, height: 80)
           .frame(maxWidth: .infinity, alignment: .center)
         
         VStack(alignment: .leading, spacing: 7) {
           Text(userData.gameInfo.tier)
-            .glFont(.body1Bold)
+            .glFont(.body2Bold)
             .foregroundStyle(.white)
           
           VStack(alignment: .leading, spacing: 2) {
             Text("\(userData.gameInfo.leaguePoints) LP")
-            Text("\(userData.gameInfo.wins)승 \(userData.gameInfo.losses)패 (\(userData.gameInfo.winRate)%)")
+            Text("\(userData.gameInfo.wins)승 \(userData.gameInfo.losses)패 (\(String(format: "%.2f", userData.gameInfo.winRate * 100))%)")
           }
           .glFont(.navi)
           .foregroundStyle(.glGray1)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, 20)
+        .padding(.horizontal, 10)
       }
       
       Divider()
@@ -125,11 +131,11 @@ private extension UserCarouselCardView {
             }
             
             VStack(alignment: .leading, spacing: 4) {
-              Text("\(userData.gameInfo.winRate) %")
+              Text("\(String(format: "%.2f", userData.gameInfo.winRate * 100)) %")
                 .glFont(.navi).bold()
                 .foregroundStyle(.white)
               
-              Text("\(userData.gameInfo.avgKills) / \(userData.gameInfo.avgDeaths) / \(userData.gameInfo.avgAssists)")
+              Text("\(String(format: "%.1f", userData.gameInfo.avgKills)) / \(String(format: "%.1f", userData.gameInfo.avgDeaths)) / \(String(format: "%.1f", userData.gameInfo.avgAssists))")
                 .glFont(.navi).bold()
                 .foregroundStyle(.white)
             }
@@ -143,30 +149,38 @@ private extension UserCarouselCardView {
           .frame(width: 1, height: 80)
           .overlay(.glGray2)
         
-        Image(uiImage: LOLPosition.mid.positionImage)
-          .resizable()
-          .frame(width: 50, height: 50)
-          .frame(maxWidth: .infinity, alignment: .center)
-          .padding(.top, 12)
+        if let positionImage = LOLPosition.stringToPosition(position: userData.position).positionImage {
+          Image(uiImage: positionImage)
+            .resizable()
+            .frame(width: 50, height: 50)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .padding(.top, 12)
+        } else {
+          Text("상관없음")
+            .glFont(.body1Bold)
+            .foregroundStyle(.glGray1)
+            .frame(maxWidth: .infinity)
+        }
       }
     }
   }
   
   @ViewBuilder
   func mostChampion() -> some View {
-    VStack(alignment: .leading, spacing: 18) {
+    VStack(alignment: .leading, spacing: 30) {
       Text("모스트 챔피언 (top 3)")
         .glFont(.body1Bold)
-        .foregroundStyle(.glPrimary1)
+        .foregroundStyle(.glGold1)
+        .frame(maxWidth: .infinity, alignment: .leading)
       
       HStack(spacing: 0) {
-        ForEach(userData.gameInfo.best3Champions, id: \.self) { champion in
+        ForEach(userData.gameInfo.best3champions, id: \.self) { champion in
           VStack(spacing: 8) {
             CachedImageView(url: URL(string: champion.championImageUrl))
               .clipShape(Circle())
               .frame(width: 80, height: 80)
             
-            Text("\(champion.kills) / \(champion.deaths) / \(champion.assists)")
+            Text("\(String(format: "%.1f", champion.kills)) / \(String(format: "%.1f", champion.deaths)) / \(String(format: "%.1f", champion.assists))")
               .glFont(.navi).bold()
               .foregroundStyle(.glGray1)
           }
@@ -207,7 +221,7 @@ private extension UserCarouselCardView {
           avgDeaths: 0,
           avgAssists: 0,
           avgCs: 0,
-          best3Champions: [
+          best3champions: [
             ChampionDTO(
               championImageUrl: "https://gamelink-dev.s3.ap-northeast-2.amazonaws.com/champion-profile/Thresh_0.jpg",
               kills: 0,
@@ -226,5 +240,6 @@ private extension UserCarouselCardView {
       )
   )
   .padding()
+  .background(.glBackground1)
 }
 

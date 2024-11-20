@@ -12,6 +12,7 @@ import Moya
 @frozen public enum ChatroomAPI {
   case chatroomList(page: Int, size: Int)
   case deletChatroom(roomId: String)
+  case selectPosition(roomId: String, myPosition: String)
   case checkUserEntered(roomId: String)
   case checkManager(roomId: String)
   case createChatroom(roomName: String, maxUserCount: Int)
@@ -39,14 +40,16 @@ extension ChatroomAPI: BaseAPI {
       break
     case .deletChatroom:
       break
+    case let .selectPosition(roomId, myPosition):
+      endPath += "/\(roomId)/position"
     case let .checkUserEntered(roomId):
-      endPath += "checkUserCnt/\(roomId)"
+      endPath += "/checkUserCnt/\(roomId)"
     case let .checkManager(roomId):
-      endPath += "confirm/manager/\(roomId)"
+      endPath += "/confirm/manager/\(roomId)"
     case .createChatroom:
       endPath += "create"
     case .chatroomUserDetailInfo:
-      endPath += "users/info"
+      endPath += "/users/info"
     }
     
     return endPath
@@ -59,6 +62,8 @@ extension ChatroomAPI: BaseAPI {
       return .get
     case .deletChatroom:
       return .delete
+    case .selectPosition:
+      return .post
     case .checkUserEntered:
       return .get
     case .checkManager:
@@ -82,6 +87,10 @@ extension ChatroomAPI: BaseAPI {
       
     case let .deletChatroom(roomId):
       params["roomId"] = roomId
+      
+    case let .selectPosition(roomId, myPosition):
+      params["roomId"] = roomId
+      params["myPosition"] = myPosition
 
     case let .createChatroom(roomName, maxUserCount):
       params["rooomName"] = roomName
@@ -102,6 +111,8 @@ extension ChatroomAPI: BaseAPI {
     case .chatroomList:
       return URLEncoding.default
     case .deletChatroom:
+      return JSONEncoding.default
+    case .selectPosition:
       return JSONEncoding.default
     case .checkUserEntered:
       return URLEncoding.default

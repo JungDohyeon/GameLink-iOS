@@ -22,8 +22,8 @@ struct PositionSelectView: View {
       
       HStack(spacing: 8) {
         ForEach(LOLPosition.allCases, id: \.self) { tier in
-          if tier != .any {
-            Image(uiImage: tier.positionImage)
+          if let positionImage = tier.positionImage {
+            Image(uiImage: positionImage)
               .resizable()
               .frame(maxWidth: .infinity)
               .scaledToFit()
@@ -53,24 +53,26 @@ struct PositionSelectView: View {
               .stroke(selectedPosition == .any ? .glPrimary3 : .clear, lineWidth: 2)
           )
       }
-      .padding(.top, 20)
-
-      
-      Spacer()
+      .padding(.top, 16)
       
       GLButton(
         title: "선택하기",
         isValid: true,
-        action: { },
+        action: { viewModel.action(.tappedSelectPositionButton(self.selectedPosition)) },
         activeColor: .glPrimary3
       )
+      .padding(.top, 40)
+      .padding(.bottom, 20)
     }
     .padding(.horizontal, GridRules.globalHorizontalPadding)
+    .background(
+      RoundedRectangle(cornerRadius: 8)
+        .fill(.glBackground1)
+    )
   }
 }
 
 #Preview {
   PositionSelectView()
     .padding(.horizontal, GridRules.globalHorizontalPadding)
-    .background(.glBackground1)
 }

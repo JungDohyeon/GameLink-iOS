@@ -30,7 +30,6 @@ struct ChattingRoomCarouselView: View {
           UserCarouselCardView(userData: userData)
             .frame(width: width)
             .scaleEffect(isSelected ? 1.0 : 0.94)
-            .animation(.spring(), value: isSelected)
         }
       }
       .padding(.horizontal, (geo.size.width - width) / 2)

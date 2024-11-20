@@ -13,34 +13,49 @@ struct ChattingListView: View {
   
   var body: some View {
     NavigationStack(path: $viewModel.path) {
-      VStack(spacing: 0) {
-        header()
-          .padding(.top, 14)
-        
-        filterSection()
-        
-        roomList()
-      }
-      .onAppear {
-        viewModel.action(.mainViewAppear)
-      }
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .background(.background1, ignoresSafeAreaEdges: .all)
-      .navigationDestination(for: ChattingViewDestination.self) { destination in
-        switch destination {
-        case .main:
-          ChattingListView()
-            .environmentObject(viewModel)
+      ZStack {
+        VStack(spacing: 0) {
+          header()
+            .padding(.top, 14)
           
-        case .filterList:
-          ChattingFilterDetailView()
-            .environmentObject(viewModel)
-            .toolbar(.hidden, for: .tabBar)
+          filterSection()
           
-        case .userDetailCarousel:
-          ChattingRoomCarouselView()
-            .environmentObject(viewModel)
-            .toolbar(.hidden, for: .tabBar)
+          roomList()
+        }
+        .onAppear {
+          viewModel.action(.mainViewAppear)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.background1, ignoresSafeAreaEdges: .all)
+        .navigationDestination(for: ChattingViewDestination.self) { destination in
+          switch destination {
+          case .main:
+            ChattingListView()
+              .environmentObject(viewModel)
+            
+          case .filterList:
+            ChattingFilterDetailView()
+              .environmentObject(viewModel)
+              .toolbar(.hidden, for: .tabBar)
+            
+          case .userDetailCarousel:
+            ChattingRoomCarouselView()
+              .environmentObject(viewModel)
+              .toolbar(.hidden, for: .tabBar)
+          }
+        }
+        
+        if viewModel.showSelectPositionView {
+          ZStack {
+            Color.black.opacity(0.6).ignoresSafeArea()
+              .onTapGesture {
+                viewModel.action(._setSelectPositionView(false))
+              }
+            
+            PositionSelectView()
+              .environmentObject(viewModel)
+              .padding(.horizontal, GridRules.globalHorizontalPadding)
+          }
         }
       }
     }

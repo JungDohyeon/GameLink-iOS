@@ -9,10 +9,10 @@ import Foundation
 
 public struct ChampionDTO: Codable, Hashable {
   let championImageUrl: String
-  let kills: Int
-  let deaths: Int
-  let assists: Int
-  let winRate: Int
+  let kills: Double
+  let deaths: Double
+  let assists: Double
+  let winRate: Double
   let wins: Int
   let losses: Int
 }

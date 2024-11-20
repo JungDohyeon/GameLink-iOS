@@ -17,10 +17,13 @@ final class ChatViewModel: ObservableObject {
     // User Action
     case mainViewAppear
     case tappedChatroom(ChatroomEntity)
+    case tappedSelectPositionButton(LOLPosition)
     
     // Inner Business Action
     case _fetchChatList
     case _fetchNextPage
+    case _fetchUserDetailList
+    case _setSelectPositionView(_ isVisible: Bool)
     
     // pageAction
     case _moveFilterList
@@ -33,6 +36,7 @@ final class ChatViewModel: ObservableObject {
   private(set) var page: Int = 0
   private(set) var size: Int = 20
   
+  @Published private(set) var showSelectPositionView: Bool = false
   @Published private(set) var hasNext: Bool = false
   @Published private(set) var selectedChatroom: ChatroomEntity? = nil
   @Published private(set) var chatroomList: [ChatroomEntity] = []
@@ -55,7 +59,12 @@ final class ChatViewModel: ObservableObject {
       
     case let .tappedChatroom(chatroom):
       self.selectedChatroom = chatroom
-      self.fetchChatroomUserDetailInfo(roomId: chatroom.roomId)
+      self.showSelectPositionView = true
+      
+    case let .tappedSelectPositionButton(position):
+      if let roomId = self.selectedChatroom?.roomId {
+        self.selectPosition(roomId: roomId, position: position)
+      }
       
     case ._fetchChatList:
       self.fetchChatList(page: self.page, size: self.size)
@@ -63,6 +72,11 @@ final class ChatViewModel: ObservableObject {
     case ._fetchNextPage:
       self.page += 1
       self.action(._fetchChatList)
+      
+    case ._fetchUserDetailList:
+      if let roomId = self.selectedChatroom?.roomId {
+        self.fetchChatroomUserDetailInfo(roomId: roomId)
+      }
       
     case ._moveFilterList:
       self.path.append(.filterList)
@@ -74,6 +88,9 @@ final class ChatViewModel: ObservableObject {
       if path.count > 0 {
         path.removeLast()
       }
+      
+    case let ._setSelectPositionView(bool):
+      self.showSelectPositionView = bool
     }
   }
 }
@@ -99,6 +116,19 @@ private extension ChatViewModel {
         )
         
         self.hasNext = data.hasNext
+        
+      case let .failure(error):
+        print(error.localizedDescription)
+      }
+    }
+  }
+  
+  func selectPosition(roomId: String, position: LOLPosition) {
+    service.selectPosition(roomId: roomId, position: position) { result in
+      switch result {
+      case .success:
+        self.action(._setSelectPositionView(false))
+        self.action(._fetchUserDetailList)
         
       case let .failure(error):
         print(error.localizedDescription)

@@ -27,7 +27,7 @@ public enum LOLPosition: String, CaseIterable {
   case supporter = "SUPPORT"
   case any = "ANY"
   
-  public var positionImage: UIImage {
+  public var positionImage: UIImage? {
     switch self {
     case .top:
       return .icTop
@@ -40,7 +40,7 @@ public enum LOLPosition: String, CaseIterable {
     case .supporter:
       return .icSupport
     case .any:
-      return UIImage()
+      return nil
     }
   }
   
@@ -59,5 +59,19 @@ public enum LOLPosition: String, CaseIterable {
     case .any:
       return "상관없음"
     }
+  }
+}
+
+extension LOLPosition {
+  private static let positionMapping: [String: LOLPosition] = [
+    "TOP": .top,
+    "JUNGLE": .jungle,
+    "MID": .mid,
+    "ADC":.adcarry,
+    "SUPPORT": .supporter,
+  ]
+  
+  public static func stringToPosition(position: String) -> LOLPosition {
+    return positionMapping[position] ?? .any
   }
 }
