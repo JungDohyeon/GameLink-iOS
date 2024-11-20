@@ -35,6 +35,7 @@
 		CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */; };
 		CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1E2CD2B87A00E67E4E /* GridRules.swift */; };
 		CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F202CD2B9E700E67E4E /* GLButton.swift */; };
+		CDA1CBE72CEE24A20041116B /* PositionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBE62CEE24A20041116B /* PositionSelectView.swift */; };
 		CDC0C5812CEA61D1002988BF /* ChatroomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */; };
 		CDC0C5842CEA63E6002988BF /* ChatroomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */; };
 		CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5852CEA6733002988BF /* ChatroomView.swift */; };
@@ -128,6 +129,7 @@
 		CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + placeholder.swift"; sourceTree = "<group>"; };
 		CD929F1E2CD2B87A00E67E4E /* GridRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridRules.swift; sourceTree = "<group>"; };
 		CD929F202CD2B9E700E67E4E /* GLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLButton.swift; sourceTree = "<group>"; };
+		CDA1CBE62CEE24A20041116B /* PositionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionSelectView.swift; sourceTree = "<group>"; };
 		CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomDTO.swift; sourceTree = "<group>"; };
 		CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomEntity.swift; sourceTree = "<group>"; };
 		CDC0C5852CEA6733002988BF /* ChatroomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomView.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */,
 				CDF1F0A12CECFCF80033F03F /* ChattingRoomCarouselView.swift */,
 				CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */,
+				CDA1CBE62CEE24A20041116B /* PositionSelectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */,
 				CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */,
 				CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */,
+				CDA1CBE72CEE24A20041116B /* PositionSelectView.swift in Sources */,
 				CD277DAD2CCE255000BE57C4 /* TabBarView.swift in Sources */,
 				CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */,
 				CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */,
