@@ -14,20 +14,29 @@ struct ProfileMainView: View {
   @FocusState private var focusState: GLTextFieldType?
   
   var body: some View {
-    VStack(spacing: 0) {
-      noAccountView()
-      
-      Spacer()
-    }
-    .onAppear() {
-      viewModel.action(.mainViewAppear)
-    }
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(.glBackground1, ignoresSafeAreaEdges: .all)
+    contents()
+      .task {
+        viewModel.action(.mainViewAppear)
+      }
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .background(.glBackground1, ignoresSafeAreaEdges: .all)
   }
 }
 
 private extension ProfileMainView {
+  
+  @ViewBuilder
+  func contents() -> some View {
+    if let userData = viewModel.userProfileInfo {
+      UserProfileView(userData: userData)
+    } else {
+      VStack(spacing: 0) {
+        noAccountView()
+        
+        Spacer()
+      }
+    }
+  }
   
   @ViewBuilder
   func noAccountView() -> some View {

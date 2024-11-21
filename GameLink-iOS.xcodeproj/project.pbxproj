@@ -36,6 +36,11 @@
 		CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F1E2CD2B87A00E67E4E /* GridRules.swift */; };
 		CD929F212CD2B9E700E67E4E /* GLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F202CD2B9E700E67E4E /* GLButton.swift */; };
 		CDA1CBE72CEE24A20041116B /* PositionSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBE62CEE24A20041116B /* PositionSelectView.swift */; };
+		CDA1CBEB2CEF2C230041116B /* RankDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBEA2CEF2C230041116B /* RankDTO.swift */; };
+		CDA1CBED2CEF84850041116B /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBEC2CEF84850041116B /* UserProfileView.swift */; };
+		CDA1CBEF2CEF8FEB0041116B /* RankCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBEE2CEF8FEB0041116B /* RankCardView.swift */; };
+		CDA1CBF32CEF948E0041116B /* RankEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBF22CEF948E0041116B /* RankEntity.swift */; };
+		CDA1CBF52CEF95870041116B /* RankType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBF42CEF95870041116B /* RankType.swift */; };
 		CDC0C5812CEA61D1002988BF /* ChatroomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */; };
 		CDC0C5842CEA63E6002988BF /* ChatroomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */; };
 		CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5852CEA6733002988BF /* ChatroomView.swift */; };
@@ -130,6 +135,11 @@
 		CD929F1E2CD2B87A00E67E4E /* GridRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridRules.swift; sourceTree = "<group>"; };
 		CD929F202CD2B9E700E67E4E /* GLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLButton.swift; sourceTree = "<group>"; };
 		CDA1CBE62CEE24A20041116B /* PositionSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionSelectView.swift; sourceTree = "<group>"; };
+		CDA1CBEA2CEF2C230041116B /* RankDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankDTO.swift; sourceTree = "<group>"; };
+		CDA1CBEC2CEF84850041116B /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		CDA1CBEE2CEF8FEB0041116B /* RankCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankCardView.swift; sourceTree = "<group>"; };
+		CDA1CBF22CEF948E0041116B /* RankEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankEntity.swift; sourceTree = "<group>"; };
+		CDA1CBF42CEF95870041116B /* RankType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankType.swift; sourceTree = "<group>"; };
 		CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomDTO.swift; sourceTree = "<group>"; };
 		CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomEntity.swift; sourceTree = "<group>"; };
 		CDC0C5852CEA6733002988BF /* ChatroomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomView.swift; sourceTree = "<group>"; };
@@ -256,6 +266,7 @@
 				CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */,
 				CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */,
 				CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */,
+				CDA1CBF42CEF95870041116B /* RankType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -290,6 +301,7 @@
 				CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */,
 				CD8CD2B12CEC7BBB00DD7BB4 /* GLNavigationBar.swift */,
 				CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */,
+				CDA1CBEE2CEF8FEB0041116B /* RankCardView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -306,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */,
+				CDA1CBEC2CEF84850041116B /* UserProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */,
+				CDA1CBF22CEF948E0041116B /* RankEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -475,6 +489,7 @@
 				CDF1F0A32CECFD850033F03F /* ChatRoomUserListDetailDTO.swift */,
 				CDF1F0A72CECFE150033F03F /* GameInfoDTO.swift */,
 				CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */,
+				CDA1CBEA2CEF2C230041116B /* RankDTO.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -703,11 +718,14 @@
 				CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */,
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
 				CD8CD2A82CEBBB4600DD7BB4 /* FlowRowLayoutView.swift in Sources */,
+				CDA1CBF52CEF95870041116B /* RankType.swift in Sources */,
+				CDA1CBED2CEF84850041116B /* UserProfileView.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
 				CD277DB72CCE2A5E00BE57C4 /* RiotService.swift in Sources */,
 				CDF1F09C2CECFC930033F03F /* ImageCacheManager.swift in Sources */,
 				CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */,
 				CD8CD2AD2CEC796B00DD7BB4 /* ChattingViewDestination.swift in Sources */,
+				CDA1CBEF2CEF8FEB0041116B /* RankCardView.swift in Sources */,
 				CDF1F09E2CECFC9F0033F03F /* ImageCacheLoader.swift in Sources */,
 				CDF1F0A22CECFCF80033F03F /* ChattingRoomCarouselView.swift in Sources */,
 				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
@@ -726,11 +744,13 @@
 				CDF1F0A82CECFE150033F03F /* GameInfoDTO.swift in Sources */,
 				CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */,
 				CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */,
+				CDA1CBF32CEF948E0041116B /* RankEntity.swift in Sources */,
 				CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */,
 				CDCB98592C9DE61200DF9FD3 /* GameLink_iOSApp.swift in Sources */,
 				CDD5CD362CA483A900208740 /* UserService.swift in Sources */,
 				CD8CD2B22CEC7BBB00DD7BB4 /* GLNavigationBar.swift in Sources */,
 				CDCD34B42CBFF6670068E4F7 /* ChatroomAPI.swift in Sources */,
+				CDA1CBEB2CEF2C230041116B /* RankDTO.swift in Sources */,
 				CDD5CD312CA47C0A00208740 /* AuthProvider.swift in Sources */,
 				CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */,
 				CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */,
