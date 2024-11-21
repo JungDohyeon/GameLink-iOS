@@ -24,6 +24,7 @@ final class ProfileViewModel: ObservableObject {
     // Inner Business Action
     case _setNickname(String)
     case _setTag(String)
+    case _fetchUserInfo
   }
   
   private let service: RiotService
@@ -37,10 +38,13 @@ final class ProfileViewModel: ObservableObject {
   public func action(_ action: Action) {
     switch action {
     case .mainViewAppear:
-      self.fetchUserInfo()
+      self.action(._fetchUserInfo)
     
     case .tappedRegistButton:
       self.registerAccount(gameName: nickname, tagLine: tag)
+      
+    case ._fetchUserInfo:
+      self.fetchUserInfo()
       
     case let ._setNickname(text):
       self.setNickname(text: text)
@@ -87,11 +91,10 @@ private extension ProfileViewModel {
   func registerAccount(gameName: String, tagLine: String) {
     self.service.registerAccount(gameName: gameName, tagLine: tagLine) { [weak self] result in
       guard let self = self else { return }
-      
       switch result {
       case .success:
         print("SUCCESS!")
-        self.fetchUserInfo()
+        self.action(._fetchUserInfo)
         
       case let .failure(error):
         print(error.localizedDescription)

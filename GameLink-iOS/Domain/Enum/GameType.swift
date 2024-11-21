@@ -20,11 +20,11 @@ public enum LOLGameType: CaseIterable {
   public var korName: String {
     switch self {
       case .soloRank:
-        return "솔로랭크"
+        return "개인/2인 랭크"
       case .freeRank:
-        return "자유랭크"
+        return "자유 랭크"
       case .normal:
-        return "일반게임"
+        return "일반"
     }
   }
 }

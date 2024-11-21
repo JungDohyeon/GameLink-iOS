@@ -10,7 +10,7 @@ import Foundation
 public struct RiotAccountDTO: Codable {
   let userId: String
   let nickname: String
-  let profileImageUrl: [ProfileImage]
+  let backgroundImageUrl: String
   let email: String
   let puuid: String
   let summonerId: String
@@ -19,26 +19,7 @@ public struct RiotAccountDTO: Codable {
   let summonerIconUrl: String
   let revisionDate: String
   let summonerLevel: Int
-  let soloRank: Rank
-  let teamRank: Rank
-  
-  struct ProfileImage: Codable {
-    let id: String
-    let url: String
-    let originalName: String
-    let mimeType: String
-  }
-  
-  struct Rank: Codable {
-    let rankImageUrl: String
-    let tier: String
-    let rank: String
-    let leaguePoints: Int
-    let wins: Int
-    let losses: Int
-    let veteran: Bool
-    let inactive: Bool
-    let freshBlood: Bool
-    let hotStreak: Bool
-  }
+  let total: RankDTO
+  let soloRank: RankDTO
+  let teamRank: RankDTO
 }

@@ -32,7 +32,6 @@ public enum LOLTier: String, CaseIterable {
   case challenger
   
   public var tierImage: UIImage {
-    
     return UIImage(named: "ic_\(self.rawValue)") ?? UIImage()
   }
   
@@ -58,6 +57,16 @@ public enum LOLTier: String, CaseIterable {
       return "그랜드마스터"
     case .challenger:
       return "챌린저"
+    }
+  }
+  
+  public var engName: String {
+    switch self {
+    case .grandmaster:
+      return "GRANDMASTER"
+      
+    default:
+      return self.rawValue.uppercased()
     }
   }
 }
