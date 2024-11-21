@@ -212,8 +212,8 @@
 		CD277DAE2CCE25E800BE57C4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */,
-				CD277DB12CCE260900BE57C4 /* ProfileViewModel.swift */,
+				CDA1CBE82CEF2AF00041116B /* ViewModel */,
+				CDA1CBE92CEF2AF40041116B /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -292,6 +292,22 @@
 				CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		CDA1CBE82CEF2AF00041116B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD277DB12CCE260900BE57C4 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDA1CBE92CEF2AF40041116B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CDC0C5822CEA63DD002988BF /* Entity */ = {
