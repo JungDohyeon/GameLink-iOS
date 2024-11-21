@@ -32,7 +32,7 @@ private extension RankCardView {
   func topInfo() -> some View {
     HStack(spacing: 10) {
       VStack(alignment: .leading, spacing: 0) {
-        Text(rankData.type.korTitle)
+        Text(rankData.type.korName)
           .glFont(.body2Bold)
           .foregroundStyle(.glPrimary1)
           .padding(.vertical, 4)
@@ -89,7 +89,7 @@ private extension RankCardView {
 
 #Preview {
   RankCardView(rankData: RankEntity(
-    type: .solo,
+    type: .soloRank,
     tier: .bronze,
     rank: "III",
     leaguePoints: 40,

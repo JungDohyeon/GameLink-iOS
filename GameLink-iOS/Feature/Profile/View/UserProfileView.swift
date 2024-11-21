@@ -107,8 +107,8 @@ private extension UserProfileView {
   func rankInfo() -> some View {
     ScrollView(.horizontal, showsIndicators: false) {
       LazyHStack(spacing: 10) {
-        RankCardView(rankData: RankDTO.toRankEntity(type: .solo, data: userData.soloRank))
-        RankCardView(rankData: RankDTO.toRankEntity(type: .team, data: userData.teamRank))
+        RankCardView(rankData: RankDTO.toRankEntity(type: .soloRank, data: userData.soloRank))
+        RankCardView(rankData: RankDTO.toRankEntity(type: .freeRank, data: userData.teamRank))
       }
       .padding(.horizontal, GridRules.globalHorizontalPadding)
     }

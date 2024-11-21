@@ -8,7 +8,7 @@
 import Foundation
 
 public struct RankEntity: Hashable {
-  let type: RankType
+  let type: LOLGameType
   let tier: LOLTier
   let rank: String
   let leaguePoints: Int

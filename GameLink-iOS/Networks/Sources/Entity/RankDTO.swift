@@ -28,7 +28,7 @@ public struct RankDTO: Codable, Hashable {
 }
 
 public extension RankDTO {
-  static func toRankEntity(type: RankType, data: RankDTO) -> RankEntity {
+  static func toRankEntity(type: LOLGameType, data: RankDTO) -> RankEntity {
     return RankEntity(
       type: type,
       tier: LOLTier.stringToLOLTier(tier: data.tier),
