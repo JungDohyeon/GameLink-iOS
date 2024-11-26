@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD265A602CF5DCC300BFE128 /* SpeechBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD265A5F2CF5DCC300BFE128 /* SpeechBubble.swift */; };
+		CD265A622CF5DCDB00BFE128 /* SpeechBubbleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD265A612CF5DCDB00BFE128 /* SpeechBubbleType.swift */; };
+		CD265A642CF5DE7D00BFE128 /* CustomRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD265A632CF5DE7D00BFE128 /* CustomRoundedRectangle.swift */; };
 		CD277DAD2CCE255000BE57C4 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DAC2CCE255000BE57C4 /* TabBarView.swift */; };
 		CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */; };
 		CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DB12CCE260900BE57C4 /* ProfileViewModel.swift */; };
@@ -109,6 +112,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD265A5F2CF5DCC300BFE128 /* SpeechBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubble.swift; sourceTree = "<group>"; };
+		CD265A612CF5DCDB00BFE128 /* SpeechBubbleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubbleType.swift; sourceTree = "<group>"; };
+		CD265A632CF5DE7D00BFE128 /* CustomRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedRectangle.swift; sourceTree = "<group>"; };
 		CD277DAC2CCE255000BE57C4 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMainView.swift; sourceTree = "<group>"; };
 		CD277DB12CCE260900BE57C4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -225,6 +231,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD265A5E2CF5DC9000BFE128 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				CD265A5F2CF5DCC300BFE128 /* SpeechBubble.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		CD277DAE2CCE25E800BE57C4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +286,7 @@
 				CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */,
 				CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */,
 				CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */,
+				CD265A612CF5DCDB00BFE128 /* SpeechBubbleType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -279,6 +294,7 @@
 		CD8CD2AE2CEC79A500DD7BB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CD265A5E2CF5DC9000BFE128 /* Component */,
 				CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */,
 				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
 				CDC0C5852CEA6733002988BF /* ChatroomView.swift */,
@@ -308,6 +324,7 @@
 				CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */,
 				CDA1CBEE2CEF8FEB0041116B /* RankCardView.swift */,
 				CDA1CBFA2CEF9F7C0041116B /* MatchCardView.swift */,
+				CD265A632CF5DE7D00BFE128 /* CustomRoundedRectangle.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -328,6 +345,20 @@
 				CDA1CBF62CEF9D390041116B /* UserMatchListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CDA1CC002CF05D9C0041116B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CDA1CC012CF05DA60041116B /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		CDC0C5822CEA63DD002988BF /* Entity */ = {
@@ -397,6 +428,8 @@
 		CDCB98682C9DE6E600DF9FD3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CDA1CC012CF05DA60041116B /* UseCase */,
+				CDA1CC002CF05D9C0041116B /* Repository */,
 				CD3CCFB62CDB5CDD00691B5A /* Enum */,
 				CDC0C5822CEA63DD002988BF /* Entity */,
 			);
@@ -693,6 +726,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD277DB52CCE279600BE57C4 /* RiotAPI.swift in Sources */,
+				CD265A602CF5DCC300BFE128 /* SpeechBubble.swift in Sources */,
 				CDCD34C92CC00AFE0068E4F7 /* Fonts.swift in Sources */,
 				CD277DBD2CCE2DEC00BE57C4 /* VoidResponse.swift in Sources */,
 				CD3CCFB52CDB5C8400691B5A /* ChattingRoomCardView.swift in Sources */,
@@ -712,6 +746,7 @@
 				CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */,
 				CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */,
 				CDF1F0AA2CECFE220033F03F /* ChampionDTO.swift in Sources */,
+				CD265A622CF5DCDB00BFE128 /* SpeechBubbleType.swift in Sources */,
 				CD3CCFBA2CDB5D3F00691B5A /* GamePosition.swift in Sources */,
 				CD277DC62CCE2FCE00BE57C4 /* DefaultUserService.swift in Sources */,
 				CDD5CD3B2CA4859A00208740 /* OAuthRequestDTO.swift in Sources */,
@@ -734,6 +769,7 @@
 				CD277DB72CCE2A5E00BE57C4 /* RiotService.swift in Sources */,
 				CDA1CBF72CEF9D390041116B /* UserMatchListView.swift in Sources */,
 				CDF1F09C2CECFC930033F03F /* ImageCacheManager.swift in Sources */,
+				CD265A642CF5DE7D00BFE128 /* CustomRoundedRectangle.swift in Sources */,
 				CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */,
 				CD8CD2AD2CEC796B00DD7BB4 /* ChattingViewDestination.swift in Sources */,
 				CDA1CBEF2CEF8FEB0041116B /* RankCardView.swift in Sources */,
