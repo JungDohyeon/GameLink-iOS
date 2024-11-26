@@ -18,6 +18,7 @@ final class ChatViewModel: ObservableObject {
     case mainViewAppear
     case tappedChatroom(ChatroomEntity)
     case tappedSelectPositionButton(LOLPosition)
+    case tappedEnterChattingRoomButton
     
     // Inner Business Action
     case _fetchChatList
@@ -28,6 +29,7 @@ final class ChatViewModel: ObservableObject {
     // pageAction
     case _moveFilterList
     case _moveUserDetailCarousel
+    case _moveChatting
     case _moveBack
   }
   
@@ -83,6 +85,9 @@ final class ChatViewModel: ObservableObject {
       
     case ._moveUserDetailCarousel:
       self.path.append(.userDetailCarousel)
+      
+    case ._moveChatting:
+      print("채팅방 이동!")
       
     case ._moveBack:
       if path.count > 0 {
@@ -142,6 +147,22 @@ private extension ChatViewModel {
       case let .success(data):
         self.chatroomUserListDetail = data
         self.action(._moveUserDetailCarousel)
+        
+      case let .failure(error):
+        print(error.localizedDescription)
+      }
+    }
+  }
+  
+  func requestEnterChattingRoom(roomId: String) {
+    service.checkUserEntered(roomId: roomId) { result in
+      switch result {
+      case let .success(entered):
+        if entered {
+          self.action(._moveChatting)
+        } else {
+          print("채팅방 입장 실패")
+        }
         
       case let .failure(error):
         print(error.localizedDescription)
