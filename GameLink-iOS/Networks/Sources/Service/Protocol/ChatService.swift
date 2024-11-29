@@ -27,7 +27,7 @@ public protocol ChatService {
   
   func checkUserEntered(
     roomId: String,
-    completion: @escaping (NetworkResult<Bool>) -> Void
+    completion: @escaping (NetworkResult<ChatRoomEnterDTO>) -> Void
   )
   
   func checkManager(

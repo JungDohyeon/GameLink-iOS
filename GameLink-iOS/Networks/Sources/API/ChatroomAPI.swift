@@ -43,7 +43,7 @@ extension ChatroomAPI: BaseAPI {
     case let .selectPosition(roomId, myPosition):
       endPath += "/\(roomId)/position"
     case let .checkUserEntered(roomId):
-      endPath += "/checkUserCnt/\(roomId)"
+      endPath += "/check/\(roomId)/enter"
     case let .checkManager(roomId):
       endPath += "/confirm/manager/\(roomId)"
     case .createChatroom:

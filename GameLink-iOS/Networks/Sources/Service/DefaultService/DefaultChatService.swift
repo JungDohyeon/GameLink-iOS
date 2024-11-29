@@ -35,7 +35,7 @@ extension DefaultChatService: ChatService {
   
   public func checkUserEntered(
     roomId: String,
-    completion: @escaping (NetworkResult<Bool>) -> Void
+    completion: @escaping (NetworkResult<ChatRoomEnterDTO>) -> Void
   ) {
     return requestObjectWithNetworkError(.checkUserEntered(roomId: roomId), completion: completion)
   }
