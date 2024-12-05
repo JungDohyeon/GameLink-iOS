@@ -9,9 +9,13 @@ import SwiftUI
 
 struct PositionSelectView: View {
   
-  @EnvironmentObject private var viewModel: ChatViewModel
-  
   @State private(set) var selectedPosition: LOLPosition = .top
+
+  let enterAction: (LOLPosition) -> Void
+  
+  init(enterAction: @escaping (LOLPosition) -> Void) {
+    self.enterAction = enterAction
+  }
   
   var body: some View {
     VStack(spacing: 0) {
@@ -58,7 +62,7 @@ struct PositionSelectView: View {
       GLButton(
         title: "선택하기",
         isValid: true,
-        action: { viewModel.action(.tappedSelectPositionButton(self.selectedPosition)) },
+        action: { enterAction(self.selectedPosition) },
         activeColor: .glPrimary3
       )
       .padding(.top, 40)
@@ -73,6 +77,6 @@ struct PositionSelectView: View {
 }
 
 #Preview {
-  PositionSelectView()
+  PositionSelectView(enterAction: { _ in })
     .padding(.horizontal, GridRules.globalHorizontalPadding)
 }

@@ -9,56 +9,42 @@ import SwiftUI
 
 struct ChattingListView: View {
   
-  @EnvironmentObject private var viewModel: ChatViewModel
+  @ObservedObject private var viewModel: ChattingListViewModel
+  
+  init(viewModel: ChattingListViewModel) {
+    self.viewModel = viewModel
+  }
   
   var body: some View {
-    NavigationStack(path: $viewModel.path) {
-      ZStack {
-        VStack(spacing: 0) {
-          header()
-            .padding(.top, 14)
-          
-          filterSection()
-          
-          roomList()
-        }
-        .onAppear {
-          viewModel.action(.mainViewAppear)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.background1, ignoresSafeAreaEdges: .all)
-        .navigationDestination(for: ChattingViewDestination.self) { destination in
-          switch destination {
-          case .main:
-            ChattingListView()
-              .environmentObject(viewModel)
-            
-          case .filterList:
-            ChattingFilterDetailView()
-              .environmentObject(viewModel)
-              .toolbar(.hidden, for: .tabBar)
-            
-          case .userDetailCarousel:
-            ChattingRoomCarouselView()
-              .environmentObject(viewModel)
-              .toolbar(.hidden, for: .tabBar)
-          }
-        }
+    ZStack {
+      VStack(spacing: 0) {
+        header()
+          .padding(.top, 14)
         
-        if viewModel.showSelectPositionView {
-          ZStack {
-            Color.black.opacity(0.6).ignoresSafeArea()
-              .onTapGesture {
-                viewModel.action(._setSelectPositionView(false))
-              }
-            
-            PositionSelectView()
-              .environmentObject(viewModel)
-              .padding(.horizontal, GridRules.globalHorizontalPadding)
-          }
+        filterSection()
+        
+        roomList()
+      }
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .background(.background1, ignoresSafeAreaEdges: .all)
+      
+      if viewModel.showSelectPositionView {
+        ZStack {
+          Color.black.opacity(0.6).ignoresSafeArea()
+            .onTapGesture {
+              viewModel.action(._setSelectPositionView(false))
+            }
+          
+          PositionSelectView { position in viewModel.action(.tappedSelectPositionButton(position)) }
+            .padding(.horizontal, GridRules.globalHorizontalPadding)
         }
       }
     }
+    .navigationBarBackButtonHidden()
+    .task {
+      viewModel.action(.viewAppear)
+    }
+    
   }
 }
 
@@ -175,6 +161,10 @@ private extension ChattingListView {
 }
 
 #Preview {
-  ChattingListView()
-    .environmentObject(ChatViewModel(chatService: DefaultChatService()))
+  ChattingListView(
+    viewModel: ChattingListViewModel(
+      chatService: DefaultChatService(),
+      coordinator: ChatCoordinator(initialScene: .main)
+    )
+  )
 }

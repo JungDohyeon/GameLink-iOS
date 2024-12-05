@@ -10,6 +10,7 @@
 		CD265A602CF5DCC300BFE128 /* SpeechBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD265A5F2CF5DCC300BFE128 /* SpeechBubble.swift */; };
 		CD265A622CF5DCDB00BFE128 /* SpeechBubbleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD265A612CF5DCDB00BFE128 /* SpeechBubbleType.swift */; };
 		CD265A642CF5DE7D00BFE128 /* CustomRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD265A632CF5DE7D00BFE128 /* CustomRoundedRectangle.swift */; };
+		CD265A682CF5E10B00BFE128 /* InChattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD265A672CF5E10B00BFE128 /* InChattingView.swift */; };
 		CD277DAD2CCE255000BE57C4 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DAC2CCE255000BE57C4 /* TabBarView.swift */; };
 		CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */; };
 		CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD277DB12CCE260900BE57C4 /* ProfileViewModel.swift */; };
@@ -25,12 +26,27 @@
 		CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3CCFB72CDB5CEC00691B5A /* Tier.swift */; };
 		CD3CCFBA2CDB5D3F00691B5A /* GamePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */; };
 		CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */; };
+		CD7047112D019BDB00BAC164 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047102D019BDB00BAC164 /* CoordinatorProtocol.swift */; };
+		CD7047142D019C6400BAC164 /* ChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047132D019C6400BAC164 /* ChatCoordinator.swift */; };
+		CD7047162D019DCC00BAC164 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047152D019DCC00BAC164 /* BaseCoordinator.swift */; };
+		CD7047192D01BBE800BAC164 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047182D01BBE800BAC164 /* DependencyInjector.swift */; };
+		CD70472C2D01BCFA00BAC164 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CD70472B2D01BCFA00BAC164 /* Swinject */; };
+		CD70472F2D01BD0400BAC164 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD70472E2D01BD0400BAC164 /* Alamofire */; };
+		CD7047322D01BD3600BAC164 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CD7047312D01BD3600BAC164 /* CombineMoya */; };
+		CD7047342D01BD3600BAC164 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CD7047332D01BD3600BAC164 /* Moya */; };
+		CD7047372D01BD9E00BAC164 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CD7047362D01BD9E00BAC164 /* KakaoSDKAuth */; };
+		CD7047392D01BD9E00BAC164 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CD7047382D01BD9E00BAC164 /* KakaoSDKCommon */; };
+		CD70473B2D01BD9E00BAC164 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CD70473A2D01BD9E00BAC164 /* KakaoSDKUser */; };
+		CD7047402D01BE1100BAC164 /* ChatAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70473F2D01BE1100BAC164 /* ChatAssembly.swift */; };
+		CD7047442D0213F800BAC164 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047432D0213F800BAC164 /* BaseViewModel.swift */; };
+		CD7047462D02144200BAC164 /* ChattingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047452D02144200BAC164 /* ChattingListViewModel.swift */; };
+		CD7047482D021DC000BAC164 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047472D021DC000BAC164 /* ServiceAssembly.swift */; };
+		CD70474A2D021E8200BAC164 /* ChattingRoomCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047492D021E8200BAC164 /* ChattingRoomCarouselViewModel.swift */; };
 		CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */; };
 		CD8CD2A42CEBB35000DD7BB4 /* ChattingFilterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */; };
 		CD8CD2A62CEBB7C800DD7BB4 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */; };
 		CD8CD2A82CEBBB4600DD7BB4 /* FlowRowLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */; };
 		CD8CD2AA2CEBC02F00DD7BB4 /* GameFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */; };
-		CD8CD2AD2CEC796B00DD7BB4 /* ChattingViewDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */; };
 		CD8CD2B22CEC7BBB00DD7BB4 /* GLNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2B12CEC7BBB00DD7BB4 /* GLNavigationBar.swift */; };
 		CD8CD2B42CEC7D9100DD7BB4 /* View + Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2B32CEC7D9100DD7BB4 /* View + Navigation.swift */; };
 		CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD929F182CD2B23300E67E4E /* GLTextField.swift */; };
@@ -54,8 +70,6 @@
 		CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */; };
 		CDCB985D2C9DE61400DF9FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB985C2C9DE61400DF9FD3 /* Assets.xcassets */; };
 		CDCB98612C9DE61400DF9FD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCB98602C9DE61400DF9FD3 /* Preview Assets.xcassets */; };
-		CDCB98732C9DE8E700DF9FD3 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98722C9DE8E700DF9FD3 /* CombineMoya */; };
-		CDCB98752C9DE8E700DF9FD3 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98742C9DE8E700DF9FD3 /* Moya */; };
 		CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98822C9DE98000DF9FD3 /* ErrorResponse.swift */; };
 		CDCB98852C9DE98E00DF9FD3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98842C9DE98E00DF9FD3 /* NetworkError.swift */; };
 		CDCB98872C9DE99900DF9FD3 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98862C9DE99900DF9FD3 /* NetworkResult.swift */; };
@@ -63,11 +77,9 @@
 		CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB988C2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift */; };
 		CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98912C9DEAAA00DF9FD3 /* UserDefaultsList.swift */; };
 		CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98A12C9DEE3700DF9FD3 /* AuthInterceptor.swift */; };
-		CDCB98AD2C9DF14800DF9FD3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDCB98AC2C9DF14800DF9FD3 /* Alamofire */; };
 		CDCD34B42CBFF6670068E4F7 /* ChatroomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B32CBFF6670068E4F7 /* ChatroomAPI.swift */; };
 		CDCD34B62CBFFDD00068E4F7 /* ChatRoomListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B52CBFFDD00068E4F7 /* ChatRoomListDTO.swift */; };
 		CDCD34B82CBFFE250068E4F7 /* CreateChatRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B72CBFFE250068E4F7 /* CreateChatRoomDTO.swift */; };
-		CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */; };
 		CDCD34BC2CBFFE860068E4F7 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34BB2CBFFE860068E4F7 /* ChatService.swift */; };
 		CDCD34C92CC00AFE0068E4F7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD34C82CC00AFE0068E4F7 /* Fonts.swift */; };
 		CDCD34CA2CC00CAB0068E4F7 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C42CC00AE60068E4F7 /* Pretendard-Black.otf */; };
@@ -79,15 +91,6 @@
 		CDCD34D02CC00CB70068E4F7 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C62CC00AE60068E4F7 /* Pretendard-Regular.otf */; };
 		CDCD34D12CC00CB90068E4F7 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34C72CC00AE60068E4F7 /* Pretendard-SemiBold.otf */; };
 		CDCD34D22CC00CBB0068E4F7 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CDCD34BF2CC00AE60068E4F7 /* Pretendard-Thin.otf */; };
-		CDD5CD152CA4794800208740 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD142CA4794800208740 /* KakaoSDK */; };
-		CDD5CD172CA4794800208740 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD162CA4794800208740 /* KakaoSDKAuth */; };
-		CDD5CD192CA4794800208740 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD182CA4794800208740 /* KakaoSDKCert */; };
-		CDD5CD1B2CA4794800208740 /* KakaoSDKCertCore in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD1A2CA4794800208740 /* KakaoSDKCertCore */; };
-		CDD5CD1D2CA4794800208740 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD1C2CA4794800208740 /* KakaoSDKCommon */; };
-		CDD5CD1F2CA4794800208740 /* KakaoSDKFriend in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD1E2CA4794800208740 /* KakaoSDKFriend */; };
-		CDD5CD212CA4794800208740 /* KakaoSDKFriendCore in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD202CA4794800208740 /* KakaoSDKFriendCore */; };
-		CDD5CD232CA4794800208740 /* KakaoSDKShare in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD222CA4794800208740 /* KakaoSDKShare */; };
-		CDD5CD252CA4794800208740 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = CDD5CD242CA4794800208740 /* KakaoSDKUser */; };
 		CDD5CD272CA4798F00208740 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD262CA4798F00208740 /* SceneDelegate.swift */; };
 		CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD282CA479A200208740 /* AppDelegate.swift */; };
 		CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD2B2CA47B0D00208740 /* AuthView.swift */; };
@@ -108,12 +111,16 @@
 		CDF1F0A82CECFE150033F03F /* GameInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A72CECFE150033F03F /* GameInfoDTO.swift */; };
 		CDF1F0AA2CECFE220033F03F /* ChampionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */; };
 		CDF1F0AC2CED103C0033F03F /* UserCarouselCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */; };
+		CDF300042CF9B54F004965D7 /* ChatRoomEnterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF300032CF9B54F004965D7 /* ChatRoomEnterDTO.swift */; };
+		CDF300062CF9B64B004965D7 /* ChatMessageListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF300052CF9B64B004965D7 /* ChatMessageListDTO.swift */; };
+		CDF300082CF9B68A004965D7 /* ChatContentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF300072CF9B68A004965D7 /* ChatContentDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD265A5F2CF5DCC300BFE128 /* SpeechBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubble.swift; sourceTree = "<group>"; };
 		CD265A612CF5DCDB00BFE128 /* SpeechBubbleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubbleType.swift; sourceTree = "<group>"; };
 		CD265A632CF5DE7D00BFE128 /* CustomRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedRectangle.swift; sourceTree = "<group>"; };
+		CD265A672CF5E10B00BFE128 /* InChattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InChattingView.swift; sourceTree = "<group>"; };
 		CD277DAC2CCE255000BE57C4 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		CD277DAF2CCE25F300BE57C4 /* ProfileMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMainView.swift; sourceTree = "<group>"; };
 		CD277DB12CCE260900BE57C4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -129,12 +136,20 @@
 		CD3CCFB72CDB5CEC00691B5A /* Tier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tier.swift; sourceTree = "<group>"; };
 		CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePosition.swift; sourceTree = "<group>"; };
 		CD534BF82CD3EA60003F3CA6 /* ReissueDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReissueDTO.swift; sourceTree = "<group>"; };
+		CD7047102D019BDB00BAC164 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		CD7047132D019C6400BAC164 /* ChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCoordinator.swift; sourceTree = "<group>"; };
+		CD7047152D019DCC00BAC164 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		CD7047182D01BBE800BAC164 /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
+		CD70473F2D01BE1100BAC164 /* ChatAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAssembly.swift; sourceTree = "<group>"; };
+		CD7047432D0213F800BAC164 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		CD7047452D02144200BAC164 /* ChattingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingListViewModel.swift; sourceTree = "<group>"; };
+		CD7047472D021DC000BAC164 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		CD7047492D021E8200BAC164 /* ChattingRoomCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomCarouselViewModel.swift; sourceTree = "<group>"; };
 		CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLColor.swift; sourceTree = "<group>"; };
 		CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingFilterDetailView.swift; sourceTree = "<group>"; };
 		CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		CD8CD2A72CEBBB4600DD7BB4 /* FlowRowLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowRowLayoutView.swift; sourceTree = "<group>"; };
 		CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFilter.swift; sourceTree = "<group>"; };
-		CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewDestination.swift; sourceTree = "<group>"; };
 		CD8CD2B12CEC7BBB00DD7BB4 /* GLNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLNavigationBar.swift; sourceTree = "<group>"; };
 		CD8CD2B32CEC7D9100DD7BB4 /* View + Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Navigation.swift"; sourceTree = "<group>"; };
 		CD929F182CD2B23300E67E4E /* GLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLTextField.swift; sourceTree = "<group>"; };
@@ -175,7 +190,6 @@
 		CDCD34B32CBFF6670068E4F7 /* ChatroomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomAPI.swift; sourceTree = "<group>"; };
 		CDCD34B52CBFFDD00068E4F7 /* ChatRoomListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomListDTO.swift; sourceTree = "<group>"; };
 		CDCD34B72CBFFE250068E4F7 /* CreateChatRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChatRoomDTO.swift; sourceTree = "<group>"; };
-		CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		CDCD34BB2CBFFE860068E4F7 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		CDCD34BF2CC00AE60068E4F7 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		CDCD34C02CC00AE60068E4F7 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -204,6 +218,9 @@
 		CDF1F0A72CECFE150033F03F /* GameInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoDTO.swift; sourceTree = "<group>"; };
 		CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDTO.swift; sourceTree = "<group>"; };
 		CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCarouselCardView.swift; sourceTree = "<group>"; };
+		CDF300032CF9B54F004965D7 /* ChatRoomEnterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomEnterDTO.swift; sourceTree = "<group>"; };
+		CDF300052CF9B64B004965D7 /* ChatMessageListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageListDTO.swift; sourceTree = "<group>"; };
+		CDF300072CF9B68A004965D7 /* ChatContentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContentDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,18 +228,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDD5CD1D2CA4794800208740 /* KakaoSDKCommon in Frameworks */,
-				CDCB98AD2C9DF14800DF9FD3 /* Alamofire in Frameworks */,
-				CDD5CD1F2CA4794800208740 /* KakaoSDKFriend in Frameworks */,
-				CDD5CD152CA4794800208740 /* KakaoSDK in Frameworks */,
-				CDCB98752C9DE8E700DF9FD3 /* Moya in Frameworks */,
-				CDD5CD232CA4794800208740 /* KakaoSDKShare in Frameworks */,
-				CDD5CD192CA4794800208740 /* KakaoSDKCert in Frameworks */,
-				CDCB98732C9DE8E700DF9FD3 /* CombineMoya in Frameworks */,
-				CDD5CD252CA4794800208740 /* KakaoSDKUser in Frameworks */,
-				CDD5CD172CA4794800208740 /* KakaoSDKAuth in Frameworks */,
-				CDD5CD212CA4794800208740 /* KakaoSDKFriendCore in Frameworks */,
-				CDD5CD1B2CA4794800208740 /* KakaoSDKCertCore in Frameworks */,
+				CD70472C2D01BCFA00BAC164 /* Swinject in Frameworks */,
+				CD70472F2D01BD0400BAC164 /* Alamofire in Frameworks */,
+				CD7047342D01BD3600BAC164 /* Moya in Frameworks */,
+				CD70473B2D01BD9E00BAC164 /* KakaoSDKUser in Frameworks */,
+				CD7047322D01BD3600BAC164 /* CombineMoya in Frameworks */,
+				CD7047392D01BD9E00BAC164 /* KakaoSDKCommon in Frameworks */,
+				CD7047372D01BD9E00BAC164 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +244,9 @@
 		CD265A5E2CF5DC9000BFE128 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */,
+				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
+				CDC0C5852CEA6733002988BF /* ChatroomView.swift */,
 				CD265A5F2CF5DCC300BFE128 /* SpeechBubble.swift */,
 			);
 			path = Component;
@@ -283,10 +298,44 @@
 				CD3CCFB92CDB5D3F00691B5A /* GamePosition.swift */,
 				CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */,
 				CD8CD2A92CEBC02F00DD7BB4 /* GameFilter.swift */,
-				CD8CD2AC2CEC796B00DD7BB4 /* ChattingViewDestination.swift */,
 				CD265A612CF5DCDB00BFE128 /* SpeechBubbleType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		CD7047122D019C5C00BAC164 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CD7047132D019C6400BAC164 /* ChatCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CD70473C2D01BDBE00BAC164 /* Inject */ = {
+			isa = PBXGroup;
+			children = (
+				CD70473E2D01BDF000BAC164 /* Assembly */,
+				CD7047182D01BBE800BAC164 /* DependencyInjector.swift */,
+			);
+			path = Inject;
+			sourceTree = "<group>";
+		};
+		CD70473D2D01BDCA00BAC164 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CD7047102D019BDB00BAC164 /* CoordinatorProtocol.swift */,
+				CD7047152D019DCC00BAC164 /* BaseCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CD70473E2D01BDF000BAC164 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				CD70473F2D01BE1100BAC164 /* ChatAssembly.swift */,
+				CD7047472D021DC000BAC164 /* ServiceAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		CD8CD2AE2CEC79A500DD7BB4 /* View */ = {
@@ -294,12 +343,10 @@
 			children = (
 				CD265A5E2CF5DC9000BFE128 /* Component */,
 				CDCB985A2C9DE61200DF9FD3 /* ChattingListView.swift */,
-				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
-				CDC0C5852CEA6733002988BF /* ChatroomView.swift */,
 				CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */,
 				CDF1F0A12CECFCF80033F03F /* ChattingRoomCarouselView.swift */,
-				CDF1F0AB2CED103C0033F03F /* UserCarouselCardView.swift */,
 				CDA1CBE62CEE24A20041116B /* PositionSelectView.swift */,
+				CD265A672CF5E10B00BFE128 /* InChattingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,7 +354,8 @@
 		CD8CD2AF2CEC79A900DD7BB4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CDCD34B92CBFFE540068E4F7 /* ChatViewModel.swift */,
+				CD7047452D02144200BAC164 /* ChattingListViewModel.swift */,
+				CD7047492D021E8200BAC164 /* ChattingRoomCarouselViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -481,6 +529,8 @@
 		CDCB98892C9DEA4200DF9FD3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CD70473D2D01BDCA00BAC164 /* Coordinator */,
+				CD70473C2D01BDBE00BAC164 /* Inject */,
 				CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */,
 				CDCD34AD2CBFF0A90068E4F7 /* Extension */,
 				CDD5CD3E2CA48AE400208740 /* Utils.swift */,
@@ -491,6 +541,7 @@
 				CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */,
 				CDF1F09B2CECFC930033F03F /* ImageCacheManager.swift */,
 				CDF1F09D2CECFC9F0033F03F /* ImageCacheLoader.swift */,
+				CD7047432D0213F800BAC164 /* BaseViewModel.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -529,6 +580,9 @@
 				CDF1F0A92CECFE220033F03F /* ChampionDTO.swift */,
 				CDA1CBEA2CEF2C230041116B /* RankDTO.swift */,
 				CDA1CBF82CEF9D5D0041116B /* LOLMatchDTO.swift */,
+				CDF300032CF9B54F004965D7 /* ChatRoomEnterDTO.swift */,
+				CDF300052CF9B64B004965D7 /* ChatMessageListDTO.swift */,
+				CDF300072CF9B68A004965D7 /* ChatContentDTO.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -565,6 +619,7 @@
 		CDCD34B22CBFF3DD0068E4F7 /* Chatting */ = {
 			isa = PBXGroup;
 			children = (
+				CD7047122D019C5C00BAC164 /* Coordinator */,
 				CD8CD2AF2CEC79A900DD7BB4 /* ViewModel */,
 				CD8CD2AE2CEC79A500DD7BB4 /* View */,
 			);
@@ -641,18 +696,13 @@
 			);
 			name = "GameLink-iOS";
 			packageProductDependencies = (
-				CDCB98722C9DE8E700DF9FD3 /* CombineMoya */,
-				CDCB98742C9DE8E700DF9FD3 /* Moya */,
-				CDCB98AC2C9DF14800DF9FD3 /* Alamofire */,
-				CDD5CD142CA4794800208740 /* KakaoSDK */,
-				CDD5CD162CA4794800208740 /* KakaoSDKAuth */,
-				CDD5CD182CA4794800208740 /* KakaoSDKCert */,
-				CDD5CD1A2CA4794800208740 /* KakaoSDKCertCore */,
-				CDD5CD1C2CA4794800208740 /* KakaoSDKCommon */,
-				CDD5CD1E2CA4794800208740 /* KakaoSDKFriend */,
-				CDD5CD202CA4794800208740 /* KakaoSDKFriendCore */,
-				CDD5CD222CA4794800208740 /* KakaoSDKShare */,
-				CDD5CD242CA4794800208740 /* KakaoSDKUser */,
+				CD70472B2D01BCFA00BAC164 /* Swinject */,
+				CD70472E2D01BD0400BAC164 /* Alamofire */,
+				CD7047312D01BD3600BAC164 /* CombineMoya */,
+				CD7047332D01BD3600BAC164 /* Moya */,
+				CD7047362D01BD9E00BAC164 /* KakaoSDKAuth */,
+				CD7047382D01BD9E00BAC164 /* KakaoSDKCommon */,
+				CD70473A2D01BD9E00BAC164 /* KakaoSDKUser */,
 			);
 			productName = "GameLink-iOS";
 			productReference = CDCB98552C9DE61200DF9FD3 /* GameLink-iOS.app */;
@@ -683,9 +733,10 @@
 			);
 			mainGroup = CDCB984C2C9DE61200DF9FD3;
 			packageReferences = (
-				CDCB98712C9DE8E700DF9FD3 /* XCRemoteSwiftPackageReference "Moya" */,
-				CDCB98AB2C9DF14800DF9FD3 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				CD70472A2D01BCFA00BAC164 /* XCRemoteSwiftPackageReference "Swinject" */,
+				CD70472D2D01BD0400BAC164 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CD7047302D01BD3600BAC164 /* XCRemoteSwiftPackageReference "Moya" */,
+				CD7047352D01BD9E00BAC164 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = CDCB98562C9DE61200DF9FD3 /* Products */;
 			projectDirPath = "";
@@ -722,13 +773,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7047462D02144200BAC164 /* ChattingListViewModel.swift in Sources */,
 				CD277DB52CCE279600BE57C4 /* RiotAPI.swift in Sources */,
 				CD265A602CF5DCC300BFE128 /* SpeechBubble.swift in Sources */,
 				CDCD34C92CC00AFE0068E4F7 /* Fonts.swift in Sources */,
 				CD277DBD2CCE2DEC00BE57C4 /* VoidResponse.swift in Sources */,
 				CD3CCFB52CDB5C8400691B5A /* ChattingRoomCardView.swift in Sources */,
-				CDCD34BA2CBFFE540068E4F7 /* ChatViewModel.swift in Sources */,
 				CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */,
+				CDF300082CF9B68A004965D7 /* ChatContentDTO.swift in Sources */,
 				CDD5CD292CA479A200208740 /* AppDelegate.swift in Sources */,
 				CDA1CBE72CEE24A20041116B /* PositionSelectView.swift in Sources */,
 				CD277DAD2CCE255000BE57C4 /* TabBarView.swift in Sources */,
@@ -743,6 +795,7 @@
 				CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */,
 				CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */,
 				CDF1F0AA2CECFE220033F03F /* ChampionDTO.swift in Sources */,
+				CD7047402D01BE1100BAC164 /* ChatAssembly.swift in Sources */,
 				CD265A622CF5DCDB00BFE128 /* SpeechBubbleType.swift in Sources */,
 				CD3CCFBA2CDB5D3F00691B5A /* GamePosition.swift in Sources */,
 				CD277DC62CCE2FCE00BE57C4 /* DefaultUserService.swift in Sources */,
@@ -757,20 +810,27 @@
 				CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */,
 				CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */,
 				CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */,
+				CDF300042CF9B54F004965D7 /* ChatRoomEnterDTO.swift in Sources */,
 				CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */,
 				CDCB988D2C9DEA5C00DF9FD3 /* UserDefaultsWrapper.swift in Sources */,
 				CD8CD2A82CEBBB4600DD7BB4 /* FlowRowLayoutView.swift in Sources */,
+				CD7047162D019DCC00BAC164 /* BaseCoordinator.swift in Sources */,
 				CDA1CBED2CEF84850041116B /* UserProfileView.swift in Sources */,
+				CD265A682CF5E10B00BFE128 /* InChattingView.swift in Sources */,
 				CDCB988B2C9DEA4A00DF9FD3 /* Config.swift in Sources */,
+				CD7047442D0213F800BAC164 /* BaseViewModel.swift in Sources */,
 				CD277DB72CCE2A5E00BE57C4 /* RiotService.swift in Sources */,
+				CD7047142D019C6400BAC164 /* ChatCoordinator.swift in Sources */,
+				CD7047192D01BBE800BAC164 /* DependencyInjector.swift in Sources */,
 				CDA1CBF72CEF9D390041116B /* UserMatchListView.swift in Sources */,
 				CDF1F09C2CECFC930033F03F /* ImageCacheManager.swift in Sources */,
 				CD265A642CF5DE7D00BFE128 /* CustomRoundedRectangle.swift in Sources */,
 				CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */,
-				CD8CD2AD2CEC796B00DD7BB4 /* ChattingViewDestination.swift in Sources */,
 				CDA1CBEF2CEF8FEB0041116B /* RankCardView.swift in Sources */,
 				CDF1F09E2CECFC9F0033F03F /* ImageCacheLoader.swift in Sources */,
+				CD7047112D019BDB00BAC164 /* CoordinatorProtocol.swift in Sources */,
 				CDF1F0A22CECFCF80033F03F /* ChattingRoomCarouselView.swift in Sources */,
+				CD70474A2D021E8200BAC164 /* ChattingRoomCarouselViewModel.swift in Sources */,
 				CDCB98922C9DEAAA00DF9FD3 /* UserDefaultsList.swift in Sources */,
 				CDCD34BC2CBFFE860068E4F7 /* ChatService.swift in Sources */,
 				CD929F192CD2B23300E67E4E /* GLTextField.swift in Sources */,
@@ -787,6 +847,7 @@
 				CDCD34B62CBFFDD00068E4F7 /* ChatRoomListDTO.swift in Sources */,
 				CDF1F0A82CECFE150033F03F /* GameInfoDTO.swift in Sources */,
 				CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */,
+				CD7047482D021DC000BAC164 /* ServiceAssembly.swift in Sources */,
 				CD929F1D2CD2B33800E67E4E /* View + placeholder.swift in Sources */,
 				CDA1CBF32CEF948E0041116B /* RankEntity.swift in Sources */,
 				CDD5CD2E2CA47B1A00208740 /* AuthViewModel.swift in Sources */,
@@ -800,6 +861,7 @@
 				CDCB98832C9DE98000DF9FD3 /* ErrorResponse.swift in Sources */,
 				CD277DBB2CCE2B7500BE57C4 /* RiotRecordDTO.swift in Sources */,
 				CDCD34B82CBFFE250068E4F7 /* CreateChatRoomDTO.swift in Sources */,
+				CDF300062CF9B64B004965D7 /* ChatMessageListDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,7 +1088,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CDCB98712C9DE8E700DF9FD3 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		CD70472A2D01BCFA00BAC164 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		CD70472D2D01BD0400BAC164 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		CD7047302D01BD3600BAC164 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
 			requirement = {
@@ -1034,83 +1112,50 @@
 				minimumVersion = 15.0.3;
 			};
 		};
-		CDCB98AB2C9DF14800DF9FD3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
-			};
-		};
-		CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+		CD7047352D01BD9E00BAC164 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.22.7;
+				minimumVersion = 2.23.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CDCB98722C9DE8E700DF9FD3 /* CombineMoya */ = {
+		CD70472B2D01BCFA00BAC164 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDCB98712C9DE8E700DF9FD3 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = CombineMoya;
+			package = CD70472A2D01BCFA00BAC164 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
-		CDCB98742C9DE8E700DF9FD3 /* Moya */ = {
+		CD70472E2D01BD0400BAC164 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDCB98712C9DE8E700DF9FD3 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
-		CDCB98AC2C9DF14800DF9FD3 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDCB98AB2C9DF14800DF9FD3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = CD70472D2D01BD0400BAC164 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		CDD5CD142CA4794800208740 /* KakaoSDK */ = {
+		CD7047312D01BD3600BAC164 /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDK;
+			package = CD7047302D01BD3600BAC164 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
 		};
-		CDD5CD162CA4794800208740 /* KakaoSDKAuth */ = {
+		CD7047332D01BD3600BAC164 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			package = CD7047302D01BD3600BAC164 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		CD7047362D01BD9E00BAC164 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7047352D01BD9E00BAC164 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKAuth;
 		};
-		CDD5CD182CA4794800208740 /* KakaoSDKCert */ = {
+		CD7047382D01BD9E00BAC164 /* KakaoSDKCommon */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKCert;
-		};
-		CDD5CD1A2CA4794800208740 /* KakaoSDKCertCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKCertCore;
-		};
-		CDD5CD1C2CA4794800208740 /* KakaoSDKCommon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			package = CD7047352D01BD9E00BAC164 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKCommon;
 		};
-		CDD5CD1E2CA4794800208740 /* KakaoSDKFriend */ = {
+		CD70473A2D01BD9E00BAC164 /* KakaoSDKUser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKFriend;
-		};
-		CDD5CD202CA4794800208740 /* KakaoSDKFriendCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKFriendCore;
-		};
-		CDD5CD222CA4794800208740 /* KakaoSDKShare */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKShare;
-		};
-		CDD5CD242CA4794800208740 /* KakaoSDKUser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDD5CD132CA4794800208740 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			package = CD7047352D01BD9E00BAC164 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKUser;
 		};
 /* End XCSwiftPackageProductDependency section */

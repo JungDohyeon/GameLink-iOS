@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ChattingRoomCarouselView: View {
   
-  @EnvironmentObject private var viewModel: ChatViewModel
-  
   @GestureState var offset: CGFloat = 0
   @State private(set) var currentIdx: Int = 0
+  
+  @ObservedObject private var viewModel: ChattingRoomCarouselViewModel
+  
+  let roomData: ChatroomEntity
+  
+  init(viewModel: ChattingRoomCarouselViewModel, roomData: ChatroomEntity) {
+    self.viewModel = viewModel
+    self.roomData = roomData
+  }
   
   var body: some View {
     GeometryReader { geo in
@@ -54,7 +61,7 @@ struct ChattingRoomCarouselView: View {
     .padding(.horizontal, GridRules.globalHorizontalPadding)
     .glNavigation(
       centerContent: {
-        Text(viewModel.selectedChatroom?.roomName ?? "채팅방 정보 오류")
+        Text(self.roomData.roomName)
           .glFont(.body1Bold)
           .foregroundStyle(.white)
       },
@@ -69,7 +76,7 @@ struct ChattingRoomCarouselView: View {
       },
       rightContent: {
         Button {
-          // TODO: Chatting 방 참가
+          viewModel.action(.tappedEnterButton(self.roomData.roomId))
         } label: {
           Text("참여")
             .glFont(.body1Bold)
@@ -77,10 +84,38 @@ struct ChattingRoomCarouselView: View {
         }
       }
     )
+    .task {
+      viewModel.action(._viewAppear(self.roomData.roomId))
+    }
   }
 }
 
 #Preview {
-  ChattingRoomCarouselView()
-    .environmentObject(ChatViewModel(chatService: DefaultChatService()))
+  ChattingRoomCarouselView(
+    viewModel: ChattingRoomCarouselViewModel(
+      chatService: DefaultChatService(),
+      coordinator: ChatCoordinator(
+        initialScene: .userCarousel(
+          ChatroomEntity(
+            roomId: "test",
+            roomName: "test",
+            userCount: 1,
+            maxUserCount: 3,
+            leaderTierText: "S1",
+            leaderTier: .silver,
+            positions: [.adcarry]
+          )
+        )
+      )
+    ),
+    roomData: ChatroomEntity(
+      roomId: "test",
+      roomName: "test",
+      userCount: 1,
+      maxUserCount: 3,
+      leaderTierText: "S1",
+      leaderTier: .silver,
+      positions: [.adcarry]
+    )
+  )
 }
