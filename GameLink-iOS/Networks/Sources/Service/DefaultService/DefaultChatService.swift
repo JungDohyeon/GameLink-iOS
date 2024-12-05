@@ -61,4 +61,13 @@ extension DefaultChatService: ChatService {
   ) {
     return requestObjectWithNetworkError(.chatroomUserDetailInfo(roomId: roomId), completion: completion)
   }
+  
+  public func fetchChatMessage(
+    roomId: String,
+    page: Int,
+    size: Int,
+    completion: @escaping (NetworkResult<ChatMessageListDTO>) -> Void
+  ) {
+    return requestObjectWithNetworkError(.chatMessageList(roomId: roomId, page: page, size: size), completion: completion)
+  }
 }

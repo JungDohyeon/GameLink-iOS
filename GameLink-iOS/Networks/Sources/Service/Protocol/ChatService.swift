@@ -45,4 +45,11 @@ public protocol ChatService {
     roomId: String,
     completion: @escaping (NetworkResult<[ChatRoomUserListDetailDTO]>) -> Void
   )
+  
+  func fetchChatMessage(
+    roomId: String,
+    page: Int,
+    size: Int,
+    completion: @escaping (NetworkResult<ChatMessageListDTO>) -> Void
+  )
 }
