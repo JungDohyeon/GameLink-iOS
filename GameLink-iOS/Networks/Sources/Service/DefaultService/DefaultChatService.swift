@@ -35,7 +35,7 @@ extension DefaultChatService: ChatService {
   
   public func checkUserEntered(
     roomId: String,
-    completion: @escaping (NetworkResult<Bool>) -> Void
+    completion: @escaping (NetworkResult<ChatRoomEnterDTO>) -> Void
   ) {
     return requestObjectWithNetworkError(.checkUserEntered(roomId: roomId), completion: completion)
   }
@@ -60,5 +60,14 @@ extension DefaultChatService: ChatService {
     completion: @escaping (NetworkResult<[ChatRoomUserListDetailDTO]>) -> Void
   ) {
     return requestObjectWithNetworkError(.chatroomUserDetailInfo(roomId: roomId), completion: completion)
+  }
+  
+  public func fetchChatMessage(
+    roomId: String,
+    page: Int,
+    size: Int,
+    completion: @escaping (NetworkResult<ChatMessageListDTO>) -> Void
+  ) {
+    return requestObjectWithNetworkError(.chatMessageList(roomId: roomId, page: page, size: size), completion: completion)
   }
 }

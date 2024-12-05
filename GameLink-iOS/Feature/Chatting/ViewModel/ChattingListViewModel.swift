@@ -1,28 +1,24 @@
 //
-//  ChatViewModel.swift
+//  ChattingListViewModel.swift
 //  GameLink-iOS
 //
-//  Created by 정도현 on 10/16/24.
+//  Created by 정도현 on 12/6/24.
 //
 
 import Combine
 import Foundation
 
-@MainActor
-final class ChatViewModel: ObservableObject {
-  
-  @Published var path: [ChattingViewDestination] = []
+final class ChattingListViewModel: BaseViewModel<ChatCoordinator>, ObservableObject {
   
   public enum Action {
     // User Action
-    case mainViewAppear
+    case viewAppear
     case tappedChatroom(ChatroomEntity)
     case tappedSelectPositionButton(LOLPosition)
     
     // Inner Business Action
-    case _fetchChatList
+    case _fetchChatroomList
     case _fetchNextPage
-    case _fetchUserDetailList
     case _setSelectPositionView(_ isVisible: Bool)
     
     // pageAction
@@ -35,27 +31,28 @@ final class ChatViewModel: ObservableObject {
   
   private(set) var page: Int = 0
   private(set) var size: Int = 20
+  private(set) var hasNext: Bool = false
   
   @Published private(set) var showSelectPositionView: Bool = false
-  @Published private(set) var hasNext: Bool = false
   @Published private(set) var selectedChatroom: ChatroomEntity? = nil
   @Published private(set) var chatroomList: [ChatroomEntity] = []
-  @Published private(set) var chatroomUserListDetail: [ChatRoomUserListDetailDTO] = []
   
   public init(
-    chatService: ChatService
+    chatService: ChatService,
+    coordinator: ChatCoordinator
   ) {
     self.service = chatService
+    super.init(coordinator: coordinator)
   }
   
   public func action(_ action: Action) {
     switch action {
-    case .mainViewAppear:
+    case .viewAppear:
       self.selectedChatroom = nil
       self.page = 0
       self.hasNext = false
       self.chatroomList = []
-      self.action(._fetchChatList)
+      self.action(._fetchChatroomList)
       
     case let .tappedChatroom(chatroom):
       self.selectedChatroom = chatroom
@@ -63,31 +60,31 @@ final class ChatViewModel: ObservableObject {
       
     case let .tappedSelectPositionButton(position):
       if let roomId = self.selectedChatroom?.roomId {
-        self.selectPosition(roomId: roomId, position: position)
+        Task {
+          await self.selectPosition(roomId: roomId, position: position)
+        }
       }
       
-    case ._fetchChatList:
-      self.fetchChatList(page: self.page, size: self.size)
+    case ._fetchChatroomList:
+      Task {
+        await self.fetchChatList(page: self.page, size: self.size)
+      }
       
     case ._fetchNextPage:
       self.page += 1
-      self.action(._fetchChatList)
-      
-    case ._fetchUserDetailList:
-      if let roomId = self.selectedChatroom?.roomId {
-        self.fetchChatroomUserDetailInfo(roomId: roomId)
-      }
+      self.action(._fetchChatroomList)
       
     case ._moveFilterList:
-      self.path.append(.filterList)
+      self.coordinator.push(page: .filterList)
       
     case ._moveUserDetailCarousel:
-      self.path.append(.userDetailCarousel)
+      if let roomData = self.selectedChatroom {
+        print("이동!@!@!")
+        self.coordinator.push(page: .userCarousel(roomData))
+      }
       
     case ._moveBack:
-      if path.count > 0 {
-        path.removeLast()
-      }
+      self.coordinator.pop()
       
     case let ._setSelectPositionView(bool):
       self.showSelectPositionView = bool
@@ -95,23 +92,18 @@ final class ChatViewModel: ObservableObject {
   }
 }
 
-private extension ChatViewModel {
+private extension ChattingListViewModel {
   
-  func fetchChatList(page: Int, size: Int) {
-    service.chatroomList(page: page, size: size) { result in
+  @MainActor
+  func fetchChatList(page: Int, size: Int) async {
+    service.chatroomList(page: page, size: size) { [weak self] result in
+      guard let self = self else { return }
+      
       switch result {
       case let .success(data):
         self.chatroomList.append(
           contentsOf: data.content.map {
-            ChatroomEntity(
-              roomId: $0.roomId,
-              roomName: $0.roomName,
-              userCount: $0.userCount,
-              maxUserCount: $0.maxUserCount,
-              leaderTierText: $0.leaderTier,
-              leaderTier: LOLTier.stringToLOLTier(tier: String($0.leaderTier.first!)),
-              positions: [.adcarry]
-            )
+            ChatroomEntity.init(dto: $0)
           }
         )
         
@@ -123,24 +115,14 @@ private extension ChatViewModel {
     }
   }
   
-  func selectPosition(roomId: String, position: LOLPosition) {
-    service.selectPosition(roomId: roomId, position: position) { result in
+  @MainActor
+  func selectPosition(roomId: String, position: LOLPosition) async {
+    service.selectPosition(roomId: roomId, position: position) { [weak self] result in
+      guard let self = self else { return }
+      
       switch result {
       case .success:
         self.action(._setSelectPositionView(false))
-        self.action(._fetchUserDetailList)
-        
-      case let .failure(error):
-        print(error.localizedDescription)
-      }
-    }
-  }
-  
-  func fetchChatroomUserDetailInfo(roomId: String) {
-    service.chatroomUserDetailInfo(roomId: roomId) { result in
-      switch result {
-      case let .success(data):
-        self.chatroomUserListDetail = data
         self.action(._moveUserDetailCarousel)
         
       case let .failure(error):

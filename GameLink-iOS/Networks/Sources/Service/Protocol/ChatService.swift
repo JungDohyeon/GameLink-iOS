@@ -27,7 +27,7 @@ public protocol ChatService {
   
   func checkUserEntered(
     roomId: String,
-    completion: @escaping (NetworkResult<Bool>) -> Void
+    completion: @escaping (NetworkResult<ChatRoomEnterDTO>) -> Void
   )
   
   func checkManager(
@@ -44,5 +44,12 @@ public protocol ChatService {
   func chatroomUserDetailInfo(
     roomId: String,
     completion: @escaping (NetworkResult<[ChatRoomUserListDetailDTO]>) -> Void
+  )
+  
+  func fetchChatMessage(
+    roomId: String,
+    page: Int,
+    size: Int,
+    completion: @escaping (NetworkResult<ChatMessageListDTO>) -> Void
   )
 }

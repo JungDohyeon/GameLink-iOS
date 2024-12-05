@@ -17,6 +17,7 @@ import Moya
   case checkManager(roomId: String)
   case createChatroom(roomName: String, maxUserCount: Int)
   case chatroomUserDetailInfo(roomId: String)
+  case chatMessageList(roomId: String, page: Int, size: Int)
 }
 
 extension ChatroomAPI: BaseAPI {
@@ -43,13 +44,15 @@ extension ChatroomAPI: BaseAPI {
     case let .selectPosition(roomId, myPosition):
       endPath += "/\(roomId)/position"
     case let .checkUserEntered(roomId):
-      endPath += "/checkUserCnt/\(roomId)"
+      endPath += "/check/\(roomId)/enter"
     case let .checkManager(roomId):
       endPath += "/confirm/manager/\(roomId)"
     case .createChatroom:
       endPath += "create"
     case .chatroomUserDetailInfo:
       endPath += "/users/info"
+    case .chatMessageList:
+      endPath += "/message/list"
     }
     
     return endPath
@@ -71,6 +74,8 @@ extension ChatroomAPI: BaseAPI {
     case .createChatroom:
       return .post
     case .chatroomUserDetailInfo:
+      return .get
+    case .chatMessageList:
       return .get
     }
   }
@@ -99,6 +104,11 @@ extension ChatroomAPI: BaseAPI {
     case let .chatroomUserDetailInfo(roomId):
       params["roomId"] = roomId
 
+    case let .chatMessageList(roomId, page, size):
+      params["roomId"] = roomId
+      params["page"] = page
+      params["size"] = size
+      
     default:
       break
     }
@@ -122,13 +132,18 @@ extension ChatroomAPI: BaseAPI {
       return JSONEncoding.default
     case .chatroomUserDetailInfo:
       return URLEncoding.default
+    case .chatMessageList:
+      return URLEncoding.default
     }
   }
   
   public var task: Task {
     switch self {
     default:
-        return .requestParameters(parameters: bodyParameters ?? [:], encoding: parameterEncoding)
+      return .requestParameters(
+        parameters: bodyParameters ?? [:],
+        encoding: parameterEncoding
+      )
     }
   }
   

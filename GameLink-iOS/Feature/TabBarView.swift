@@ -10,7 +10,12 @@ import SwiftUI
 struct TabBarView: View {
   
   @StateObject private var profileViewModel: ProfileViewModel = ProfileViewModel(service: DefaultRiotService())
-  @StateObject private var chatViewModel: ChatViewModel = ChatViewModel(chatService: DefaultChatService())
+  
+  @ObservedObject private var chatCoordinator: ChatCoordinator
+  
+  init(chatCoordinator: ChatCoordinator) {
+    self.chatCoordinator = chatCoordinator
+  }
   
   @State private var selection = 1
   
@@ -20,10 +25,14 @@ struct TabBarView: View {
         .tabItem { Text("카테고리 뷰") }
         .tag(1)
       
-      ChattingListView()
-        .environmentObject(chatViewModel)
-        .tabItem { Text("채팅") }
-        .tag(2)
+      NavigationStack(path: $chatCoordinator.path) {
+        chatCoordinator.buildInitialScene()
+          .navigationDestination(for: ChatScene.self) { destination in
+            chatCoordinator.buildScene(scene: destination)
+          }
+      }
+      .tabItem { Text("채팅") }
+      .tag(2)
       
       ProfileMainView()
         .environmentObject(profileViewModel)
@@ -38,5 +47,5 @@ struct TabBarView: View {
 }
 
 #Preview {
-  TabBarView()
+  TabBarView(chatCoordinator: ChatCoordinator(initialScene: .filterList))
 }

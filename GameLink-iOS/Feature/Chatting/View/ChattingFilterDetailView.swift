@@ -9,7 +9,11 @@ import SwiftUI
 
 public struct ChattingFilterDetailView: View {
   
-  @EnvironmentObject private var viewModel: ChatViewModel
+  @ObservedObject private var viewModel: ChattingListViewModel
+  
+  init(viewModel: ChattingListViewModel) {
+    self.viewModel = viewModel
+  }
   
   @State var positionSelect: Set<LOLPosition> = []
   @State var gameTypeSelect: Set<LOLGameType> = []
@@ -151,5 +155,10 @@ private extension ChattingFilterDetailView {
 
 
 #Preview {
-  ChattingFilterDetailView()
+  ChattingFilterDetailView(
+    viewModel: ChattingListViewModel(
+      chatService: DefaultChatService(),
+      coordinator: ChatCoordinator(initialScene: .filterList)
+    )
+  )
 }
