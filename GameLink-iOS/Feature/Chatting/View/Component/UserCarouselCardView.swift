@@ -73,7 +73,7 @@ private extension UserCarouselCardView {
         }
       
       HStack(alignment: .center, spacing: 8) {
-        Text(userData.nickname)
+        Text(userData.summonerName)
           .glFont(.title1)
           .foregroundStyle(.white)
         
