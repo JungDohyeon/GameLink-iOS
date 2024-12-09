@@ -14,5 +14,14 @@ public struct ServiceAssembly: Assembly {
     container.register(DefaultChatService.self) { _ in
       DefaultChatService()
     }
+    
+    container.register(DefaultRiotService.self) { _ in
+      DefaultRiotService()
+    }
+    
+    container.register(DefaultStompService.self) { resolver in
+      let service = resolver.resolve(DefaultChatService.self)!
+      return DefaultStompService(service: service)
+    }
   }
 }
