@@ -104,6 +104,7 @@ private extension InChattingView {
               .fill(.primary1)
           )
       }
+      .disabled(self.userInput.isEmpty)
     }
     .padding(.horizontal, 16)
     .background(
