@@ -55,10 +55,9 @@ struct ChattingListView: View {
       action: { }
     )
     .navigationBarBackButtonHidden()
-    .task {
+    .onAppear {
       viewModel.action(.viewAppear)
     }
-    
   }
 }
 
@@ -141,7 +140,7 @@ private extension ChattingListView {
     ScrollView {
       LazyVStack(spacing: 0) {
         if !viewModel.isMy {
-          ForEach(viewModel.chatroomList, id: \.self) { chatroom in
+          ForEach(viewModel.chatroomList, id: \.roomId) { chatroom in
             VStack(spacing: 0) {
               ChatroomView(roomData: chatroom)
               
@@ -160,7 +159,7 @@ private extension ChattingListView {
             }
           }
         } else {
-          ForEach(viewModel.myRoomList, id: \.self) { chatroom in
+          ForEach(viewModel.myRoomList, id: \.roomId) { chatroom in
             VStack(spacing: 0) {
               InChatroomView(roomData: chatroom)
               
