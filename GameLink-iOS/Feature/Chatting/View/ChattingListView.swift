@@ -40,6 +40,20 @@ struct ChattingListView: View {
         }
       }
     }
+    .onChange(of: viewModel.isMy, { _, newValue in
+      viewModel.action(._setPage(page: 0))
+      viewModel.action(._fetchChatroomList(isMy: newValue))
+    })
+    .failureAlert(
+      isAlert: Binding(
+        get: { viewModel.errorMsg != nil },
+        set: { value in
+          viewModel.errorMsg = nil
+        }
+      ),
+      description: viewModel.errorMsg ?? "TEST",
+      action: { }
+    )
     .navigationBarBackButtonHidden()
     .task {
       viewModel.action(.viewAppear)
@@ -52,12 +66,26 @@ private extension ChattingListView {
   
   @ViewBuilder
   func header() -> some View {
-    Text("Game-Link")
-      .frame(maxWidth: .infinity, alignment: .leading)
-      .frame(height: 60)
-      .glFont(.head2)
-      .foregroundStyle(.primary2)
-      .padding(.horizontal, GridRules.globalHorizontalPadding)
+    HStack {
+      Text("Game-Link")
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(height: 60)
+        .glFont(.head2)
+        .foregroundStyle(.primary2)
+      
+      Spacer()
+      
+      Toggle(
+        isOn: $viewModel.isMy,
+        label: {
+          Text("내가 속한 방 보기")
+            .glFont(.body1Bold)
+            .foregroundStyle(.white)
+        }
+      )
+      .tint(.glPrimary1)
+    }
+    .padding(.horizontal, GridRules.globalHorizontalPadding)
   }
   
   @ViewBuilder
@@ -112,25 +140,47 @@ private extension ChattingListView {
   func roomList() -> some View {
     ScrollView {
       LazyVStack(spacing: 0) {
-        ForEach(viewModel.chatroomList, id: \.self) { chatroom in
-          VStack(spacing: 0) {
-            ChatroomView(roomData: chatroom)
-            
-            Divider()
-              .frame(height: 0.8)
-              .overlay(Color.glGray2)
+        if !viewModel.isMy {
+          ForEach(viewModel.chatroomList, id: \.self) { chatroom in
+            VStack(spacing: 0) {
+              ChatroomView(roomData: chatroom)
+              
+              Divider()
+                .frame(height: 0.8)
+                .overlay(Color.glGray2)
+            }
+            .background(.glBackground1)
+            .onTapGesture {
+              viewModel.action(.tappedChatroom(chatroom))
+            }
+            .onAppear {
+              if viewModel.hasNext && chatroom == viewModel.chatroomList.last {
+                viewModel.action(._fetchNextPage)
+              }
+            }
           }
-          .background(.glBackground1)
-          .onTapGesture {
-            viewModel.action(.tappedChatroom(chatroom))
-          }
-          .onAppear {
-            if viewModel.hasNext && chatroom == viewModel.chatroomList.last {
-              viewModel.action(._fetchNextPage)
+        } else {
+          ForEach(viewModel.myRoomList, id: \.self) { chatroom in
+            VStack(spacing: 0) {
+              InChatroomView(roomData: chatroom)
+              
+              Divider()
+                .frame(height: 0.8)
+                .overlay(Color.glGray2)
+            }
+            .background(.glBackground1)
+            .onTapGesture {
+              viewModel.action(.tappedMyRoom(chatroom))
+            }
+            .onAppear {
+              if viewModel.hasNext && chatroom == viewModel.myRoomList.last {
+                viewModel.action(._fetchNextPage)
+              }
             }
           }
         }
       }
+      .frame(maxHeight: .infinity)
     }
   }
   
@@ -164,6 +214,7 @@ private extension ChattingListView {
   ChattingListView(
     viewModel: ChattingListViewModel(
       chatService: DefaultChatService(),
+      riotService: DefaultRiotService(),
       coordinator: ChatCoordinator(initialScene: .main)
     )
   )

@@ -52,4 +52,10 @@ public protocol ChatService {
     size: Int,
     completion: @escaping (NetworkResult<ChatMessageListDTO>) -> Void
   )
+  
+  func fetchMyRoom(
+    page: Int,
+    size: Int,
+    completion: @escaping (NetworkResult<MyChatroomDTO>) -> Void
+  )
 }

@@ -18,20 +18,30 @@ public struct SpeechBubble: View {
   }
   
   public var body: some View {
-    Text(text)
-      .glFont(.body1)
-      .foregroundStyle(type.textColor)
-      .padding(.vertical, 8)
-      .padding(.horizontal, 16)
-      .background(
-        CustomRoundedRectangle(
-          topLeft: type == .mine ? 16 : 2,
-          topRight: type == .mine ? 2 : 16,
-          bottomLeft: 16,
-          bottomRight: 16
+    HStack {
+      if type == .mine {
+        Spacer()
+      }
+      
+      Text(text)
+        .glFont(.body1)
+        .foregroundStyle(type.textColor)
+        .padding(.vertical, 8)
+        .padding(.horizontal, 16)
+        .background(
+          CustomRoundedRectangle(
+            topLeft: type == .mine ? 16 : 2,
+            topRight: type == .mine ? 2 : 16,
+            bottomLeft: 16,
+            bottomRight: 16
+          )
+          .fill(type.bubbleColor)
         )
-        .fill(type.bubbleColor)
-      )
+      
+      if type == .others {
+        Spacer()
+      }
+    }
   }
 }
 

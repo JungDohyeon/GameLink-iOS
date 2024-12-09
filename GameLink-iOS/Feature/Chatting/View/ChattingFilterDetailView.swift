@@ -158,6 +158,7 @@ private extension ChattingFilterDetailView {
   ChattingFilterDetailView(
     viewModel: ChattingListViewModel(
       chatService: DefaultChatService(),
+      riotService: DefaultRiotService(),
       coordinator: ChatCoordinator(initialScene: .filterList)
     )
   )

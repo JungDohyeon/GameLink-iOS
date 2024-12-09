@@ -76,7 +76,7 @@ struct ChattingRoomCarouselView: View {
       },
       rightContent: {
         Button {
-          viewModel.action(.tappedEnterButton(self.roomData.roomId))
+          viewModel.action(.tappedEnterButton)
         } label: {
           Text("참여")
             .glFont(.body1Bold)
@@ -85,7 +85,7 @@ struct ChattingRoomCarouselView: View {
       }
     )
     .task {
-      viewModel.action(._viewAppear(self.roomData.roomId))
+      viewModel.action(._viewAppear(self.roomData))
     }
   }
 }
