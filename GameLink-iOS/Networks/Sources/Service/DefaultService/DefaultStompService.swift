@@ -41,10 +41,8 @@ final class DefaultStompService {
     messageSubject.eraseToAnyPublisher()
   }
   
-  private let pageSubject = PassthroughSubject<Bool, Error>()
-  var pagePublisher: AnyPublisher<Bool, Error> {
-    pageSubject.eraseToAnyPublisher()
-  }
+  private(set) var page: Int = -1
+  private(set) var hasNext: Bool = true
   
   init(service: ChatService) {
     self.service = service
@@ -54,12 +52,19 @@ final class DefaultStompService {
     guard let roomId = self.roomId else { return }
     
     service.fetchChatMessage(roomId: roomId, page: page, size: size) { [weak self] result in
+      guard let self = self else { return }
+      
       switch result {
       case .success(let data):
-        self?.messageSubject.send(data.content)
-        self?.pageSubject.send(data.hasNext)
+        self.hasNext = data.hasNext
+        self.messageSubject.send(data.content)
+        
+        if data.hasNext {
+          self.fetchPreviousMessages(page: page + 1, size: size)
+        }
+        
       case .failure(let error):
-        self?.messageSubject.send(completion: .failure(error))
+        self.messageSubject.send(completion: .failure(error))
       }
     }
   }
@@ -74,6 +79,8 @@ extension DefaultStompService: StompService {
     
     var request = URLRequest(url: URL(string: serverURL)!)
     request.timeoutInterval = 5
+    
+    self.page = -1
     
     socket = WebSocket(request: request)
     socket?.delegate = self
@@ -161,8 +168,9 @@ extension DefaultStompService: WebSocketDelegate {
       sendConnectFrame()
       subscribeRoom()
       sendEnterMessage()
-      self.fetchPreviousMessages(page: 0, size: 10)
-      print("WebSocket connected")
+      
+      page += 1
+      self.fetchPreviousMessages(page: self.page, size: 10)
       
     case .text(let string):
       handleTextMessage(string)
@@ -190,7 +198,7 @@ extension DefaultStompService: WebSocketDelegate {
     
     // 헤더 출력
     print("Headers: \(headers)")
-    print("!@#!@#\(body)")
+    print("Body: \(body)")
     
     // Body를 JSON으로 디코딩
     guard let data = body.data(using: .utf8) else {

@@ -22,20 +22,26 @@ struct InChattingView: View {
   
   var body: some View {
     VStack(spacing: 0) {
-      ScrollView {
-        if let userId = viewModel.userId {
-          LazyVStack(spacing: 10) {
-            ForEach(viewModel.chatMessages.compactMap { $0.content != nil ? $0 : nil }, id: \.chatMessageId) { message in
-              SpeechBubble(type: message.userId == userId ? .mine : .others, text: message.content!)
-                .onAppear {
-                  if viewModel.hasNext && message.chatMessageId == viewModel.chatMessages.last?.chatMessageId {
-                    viewModel.action(._fetchMessage)
-                  }
-                }
+      ScrollViewReader { proxy in
+        ScrollView {
+          if let userId = viewModel.userId {
+            LazyVStack(spacing: 10) {
+              ForEach(viewModel.chatMessages.compactMap { $0.content != nil ? $0 : nil }, id: \.chatMessageId) { message in
+                SpeechBubble(
+                  type: message.userId == userId ? .mine : .others,
+                  data: message
+                )
+                .id(message.chatMessageId)
+              }
+            }
+            .padding(.vertical, 14)
+            .padding(.horizontal, GridRules.globalHorizontalPadding)
+            .onChange(of: viewModel.chatMessages) { _ in
+              if let lastMessage = viewModel.chatMessages.last {
+                proxy.scrollTo(lastMessage.chatMessageId, anchor: .bottom)
+              }
             }
           }
-          .padding(.vertical, 14)
-          .padding(.horizontal, GridRules.globalHorizontalPadding)
         }
       }
       

@@ -15,7 +15,6 @@ final class InChattingViewModel: BaseViewModel<ChatCoordinator>, ObservableObjec
     
     // Inner Business Action
     case _viewAppear(_ roomData: ChatroomEntity)
-    case _fetchMessage
     case _stompConnect
     case _sendMessage(_ text: String)
     case _stompDisconnect
@@ -58,19 +57,6 @@ final class InChattingViewModel: BaseViewModel<ChatCoordinator>, ObservableObjec
         self.chatMessages.append(contentsOf: messages)
       }
       .store(in: &cancellables)
-    
-    self.stompService.pagePublisher
-      .sink { completion in
-        switch completion {
-        case .finished:
-          print("Finished receiving messages.")
-        case .failure(let error):
-          print("Error occurred: \(error)")
-        }
-      } receiveValue: { messages in
-        self.hasNext = messages
-      }
-      .store(in: &cancellables)
   }
   
   public func action(_ action: Action) {
@@ -87,11 +73,6 @@ final class InChattingViewModel: BaseViewModel<ChatCoordinator>, ObservableObjec
         self.action(._stompConnect)
       } else {
         print("계정 정보가 없습니다.")
-      }
-      
-    case ._fetchMessage:
-      Task {
-        await self.fetchMessage()
       }
       
     case ._stompConnect:
@@ -136,14 +117,6 @@ private extension InChattingViewModel {
   
   func stompDisconnect() async {
     self.stompService.disconnect()
-  }
-  
-  func fetchMessage() async {
-    self.page += 1
-    
-    if self.roomData != nil {
-      self.stompService.fetchPreviousMessages(page: self.page, size: self.size)
-    }
   }
 }
 
