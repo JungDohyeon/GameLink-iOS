@@ -8,15 +8,15 @@
 import Foundation
 
 public struct ChatContentDTO: Codable {
-  let chatMessgaeId: String
+  let chatMessageId: String
   let userId: String
   let nickname: String
   let summonerIconUrl: String
-  let content: String
+  let content: String?
   let type: String
   let createdAt: String
-  let fileName: String
-  let fileUrl: String
+  let fileName: String?
+  let fileUrl: String?
   let fileType: String
   let timeNotation: Bool
   let continuous: Bool
