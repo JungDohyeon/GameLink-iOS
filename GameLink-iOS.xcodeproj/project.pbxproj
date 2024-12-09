@@ -42,6 +42,10 @@
 		CD7047462D02144200BAC164 /* ChattingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047452D02144200BAC164 /* ChattingListViewModel.swift */; };
 		CD7047482D021DC000BAC164 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047472D021DC000BAC164 /* ServiceAssembly.swift */; };
 		CD70474A2D021E8200BAC164 /* ChattingRoomCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047492D021E8200BAC164 /* ChattingRoomCarouselViewModel.swift */; };
+		CD70474C2D02E38600BAC164 /* InChattingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70474B2D02E38600BAC164 /* InChattingViewModel.swift */; };
+		CD70474E2D02E46E00BAC164 /* StompService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70474D2D02E46E00BAC164 /* StompService.swift */; };
+		CD7047512D02E4C300BAC164 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = CD7047502D02E4C300BAC164 /* Starscream */; };
+		CD7047532D02E4F800BAC164 /* DefaultStompService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7047522D02E4F800BAC164 /* DefaultStompService.swift */; };
 		CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */; };
 		CD8CD2A42CEBB35000DD7BB4 /* ChattingFilterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */; };
 		CD8CD2A62CEBB7C800DD7BB4 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */; };
@@ -63,6 +67,9 @@
 		CDA1CBF92CEF9D5D0041116B /* LOLMatchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBF82CEF9D5D0041116B /* LOLMatchDTO.swift */; };
 		CDA1CBFB2CEF9F7C0041116B /* MatchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBFA2CEF9F7C0041116B /* MatchCardView.swift */; };
 		CDA1CBFD2CEFA0820041116B /* LOLMatchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1CBFC2CEFA0820041116B /* LOLMatchEntity.swift */; };
+		CDBD1F9B2D056D04004FBD9F /* AlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD1F9A2D056D04004FBD9F /* AlertModifier.swift */; };
+		CDBD1F9D2D056D17004FBD9F /* View + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD1F9C2D056D17004FBD9F /* View + Alert.swift */; };
+		CDBD1F9F2D057D9C004FBD9F /* MyChatroomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBD1F9E2D057D9C004FBD9F /* MyChatroomDTO.swift */; };
 		CDC0C5812CEA61D1002988BF /* ChatroomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */; };
 		CDC0C5842CEA63E6002988BF /* ChatroomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */; };
 		CDC0C5862CEA6733002988BF /* ChatroomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0C5852CEA6733002988BF /* ChatroomView.swift */; };
@@ -103,6 +110,7 @@
 		CDD5CD392CA4851200208740 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB98B22C9DF1AE00DF9FD3 /* NetworkLogger.swift */; };
 		CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD3C2CA4864700208740 /* OAuthDTO.swift */; };
 		CDD5CD3F2CA48AE400208740 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5CD3E2CA48AE400208740 /* Utils.swift */; };
+		CDF01DF72D0618A6008F1E4B /* InChatroomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF01DF62D0618A6008F1E4B /* InChatroomView.swift */; };
 		CDF1F09C2CECFC930033F03F /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F09B2CECFC930033F03F /* ImageCacheManager.swift */; };
 		CDF1F09E2CECFC9F0033F03F /* ImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F09D2CECFC9F0033F03F /* ImageCacheLoader.swift */; };
 		CDF1F0A02CECFCBF0033F03F /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */; };
@@ -145,6 +153,9 @@
 		CD7047452D02144200BAC164 /* ChattingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingListViewModel.swift; sourceTree = "<group>"; };
 		CD7047472D021DC000BAC164 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		CD7047492D021E8200BAC164 /* ChattingRoomCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomCarouselViewModel.swift; sourceTree = "<group>"; };
+		CD70474B2D02E38600BAC164 /* InChattingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InChattingViewModel.swift; sourceTree = "<group>"; };
+		CD70474D2D02E46E00BAC164 /* StompService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StompService.swift; sourceTree = "<group>"; };
+		CD7047522D02E4F800BAC164 /* DefaultStompService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStompService.swift; sourceTree = "<group>"; };
 		CD760A3D2CE5E9CF006AEB85 /* GLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLColor.swift; sourceTree = "<group>"; };
 		CD8CD2A32CEBB35000DD7BB4 /* ChattingFilterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingFilterDetailView.swift; sourceTree = "<group>"; };
 		CD8CD2A52CEBB7C800DD7BB4 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
@@ -166,6 +177,9 @@
 		CDA1CBF82CEF9D5D0041116B /* LOLMatchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLMatchDTO.swift; sourceTree = "<group>"; };
 		CDA1CBFA2CEF9F7C0041116B /* MatchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCardView.swift; sourceTree = "<group>"; };
 		CDA1CBFC2CEFA0820041116B /* LOLMatchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLMatchEntity.swift; sourceTree = "<group>"; };
+		CDBD1F9A2D056D04004FBD9F /* AlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModifier.swift; sourceTree = "<group>"; };
+		CDBD1F9C2D056D17004FBD9F /* View + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Alert.swift"; sourceTree = "<group>"; };
+		CDBD1F9E2D057D9C004FBD9F /* MyChatroomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatroomDTO.swift; sourceTree = "<group>"; };
 		CDC0C5802CEA61D1002988BF /* ChatroomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomDTO.swift; sourceTree = "<group>"; };
 		CDC0C5832CEA63E6002988BF /* ChatroomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomEntity.swift; sourceTree = "<group>"; };
 		CDC0C5852CEA6733002988BF /* ChatroomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomView.swift; sourceTree = "<group>"; };
@@ -210,6 +224,7 @@
 		CDD5CD352CA483A900208740 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CDD5CD3C2CA4864700208740 /* OAuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthDTO.swift; sourceTree = "<group>"; };
 		CDD5CD3E2CA48AE400208740 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CDF01DF62D0618A6008F1E4B /* InChatroomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InChatroomView.swift; sourceTree = "<group>"; };
 		CDF1F09B2CECFC930033F03F /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		CDF1F09D2CECFC9F0033F03F /* ImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoader.swift; sourceTree = "<group>"; };
 		CDF1F09F2CECFCBF0033F03F /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
@@ -235,6 +250,7 @@
 				CD7047322D01BD3600BAC164 /* CombineMoya in Frameworks */,
 				CD7047392D01BD9E00BAC164 /* KakaoSDKCommon in Frameworks */,
 				CD7047372D01BD9E00BAC164 /* KakaoSDKAuth in Frameworks */,
+				CD7047512D02E4C300BAC164 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +264,7 @@
 				CD3CCFB42CDB5C8400691B5A /* ChattingRoomCardView.swift */,
 				CDC0C5852CEA6733002988BF /* ChatroomView.swift */,
 				CD265A5F2CF5DCC300BFE128 /* SpeechBubble.swift */,
+				CDF01DF62D0618A6008F1E4B /* InChatroomView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -267,6 +284,7 @@
 				CDD5CD352CA483A900208740 /* UserService.swift */,
 				CDCD34BB2CBFFE860068E4F7 /* ChatService.swift */,
 				CD277DB62CCE2A5E00BE57C4 /* RiotService.swift */,
+				CD70474D2D02E46E00BAC164 /* StompService.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -277,6 +295,7 @@
 				CD277DC12CCE2F5B00BE57C4 /* DefaultRiotService.swift */,
 				CD277DC32CCE2F9B00BE57C4 /* DefaultChatService.swift */,
 				CD277DC52CCE2FCE00BE57C4 /* DefaultUserService.swift */,
+				CD7047522D02E4F800BAC164 /* DefaultStompService.swift */,
 			);
 			path = DefaultService;
 			sourceTree = "<group>";
@@ -356,6 +375,7 @@
 			children = (
 				CD7047452D02144200BAC164 /* ChattingListViewModel.swift */,
 				CD7047492D021E8200BAC164 /* ChattingRoomCarouselViewModel.swift */,
+				CD70474B2D02E38600BAC164 /* InChattingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -405,6 +425,14 @@
 			children = (
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		CDBD1F992D056CFF004FBD9F /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				CDBD1F9A2D056D04004FBD9F /* AlertModifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 		CDC0C5822CEA63DD002988BF /* Entity */ = {
@@ -529,6 +557,7 @@
 		CDCB98892C9DEA4200DF9FD3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CDBD1F992D056CFF004FBD9F /* Modifier */,
 				CD70473D2D01BDCA00BAC164 /* Coordinator */,
 				CD70473C2D01BDBE00BAC164 /* Inject */,
 				CDCB98A92C9DF0D500DF9FD3 /* Development.xcconfig */,
@@ -583,6 +612,7 @@
 				CDF300032CF9B54F004965D7 /* ChatRoomEnterDTO.swift */,
 				CDF300052CF9B64B004965D7 /* ChatMessageListDTO.swift */,
 				CDF300072CF9B68A004965D7 /* ChatContentDTO.swift */,
+				CDBD1F9E2D057D9C004FBD9F /* MyChatroomDTO.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -612,6 +642,7 @@
 			children = (
 				CD929F1C2CD2B33800E67E4E /* View + placeholder.swift */,
 				CD8CD2B32CEC7D9100DD7BB4 /* View + Navigation.swift */,
+				CDBD1F9C2D056D17004FBD9F /* View + Alert.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -703,6 +734,7 @@
 				CD7047362D01BD9E00BAC164 /* KakaoSDKAuth */,
 				CD7047382D01BD9E00BAC164 /* KakaoSDKCommon */,
 				CD70473A2D01BD9E00BAC164 /* KakaoSDKUser */,
+				CD7047502D02E4C300BAC164 /* Starscream */,
 			);
 			productName = "GameLink-iOS";
 			productReference = CDCB98552C9DE61200DF9FD3 /* GameLink-iOS.app */;
@@ -737,6 +769,7 @@
 				CD70472D2D01BD0400BAC164 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CD7047302D01BD3600BAC164 /* XCRemoteSwiftPackageReference "Moya" */,
 				CD7047352D01BD9E00BAC164 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				CD70474F2D02E4C300BAC164 /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = CDCB98562C9DE61200DF9FD3 /* Products */;
 			projectDirPath = "";
@@ -792,6 +825,7 @@
 				CD8CD2B42CEC7D9100DD7BB4 /* View + Navigation.swift in Sources */,
 				CDCB98A52C9DEE3700DF9FD3 /* AuthInterceptor.swift in Sources */,
 				CD929F1F2CD2B87A00E67E4E /* GridRules.swift in Sources */,
+				CD70474C2D02E38600BAC164 /* InChattingViewModel.swift in Sources */,
 				CD3CCFB82CDB5CEC00691B5A /* Tier.swift in Sources */,
 				CDD5CD372CA4846D00208740 /* BaseAPI.swift in Sources */,
 				CDF1F0AA2CECFE220033F03F /* ChampionDTO.swift in Sources */,
@@ -802,6 +836,7 @@
 				CDF1F0A02CECFCBF0033F03F /* CachedImageView.swift in Sources */,
 				CDF1F0AC2CED103C0033F03F /* UserCarouselCardView.swift in Sources */,
 				CD277DB02CCE25F300BE57C4 /* ProfileMainView.swift in Sources */,
+				CDF01DF72D0618A6008F1E4B /* InChatroomView.swift in Sources */,
 				CDA1CBFD2CEFA0820041116B /* LOLMatchEntity.swift in Sources */,
 				CDD5CD2C2CA47B0D00208740 /* AuthView.swift in Sources */,
 				CD534BF92CD3EA60003F3CA6 /* ReissueDTO.swift in Sources */,
@@ -809,6 +844,7 @@
 				CDA1CBF92CEF9D5D0041116B /* LOLMatchDTO.swift in Sources */,
 				CDCB985B2C9DE61200DF9FD3 /* ChattingListView.swift in Sources */,
 				CDD5CD3D2CA4864700208740 /* OAuthDTO.swift in Sources */,
+				CD7047532D02E4F800BAC164 /* DefaultStompService.swift in Sources */,
 				CD760A3E2CE5E9CF006AEB85 /* GLColor.swift in Sources */,
 				CDF300042CF9B54F004965D7 /* ChatRoomEnterDTO.swift in Sources */,
 				CD929F1B2CD2B27400E67E4E /* GLTextFieldType.swift in Sources */,
@@ -823,7 +859,10 @@
 				CD7047142D019C6400BAC164 /* ChatCoordinator.swift in Sources */,
 				CD7047192D01BBE800BAC164 /* DependencyInjector.swift in Sources */,
 				CDA1CBF72CEF9D390041116B /* UserMatchListView.swift in Sources */,
+				CDBD1F9B2D056D04004FBD9F /* AlertModifier.swift in Sources */,
+				CD70474E2D02E46E00BAC164 /* StompService.swift in Sources */,
 				CDF1F09C2CECFC930033F03F /* ImageCacheManager.swift in Sources */,
+				CDBD1F9F2D057D9C004FBD9F /* MyChatroomDTO.swift in Sources */,
 				CD265A642CF5DE7D00BFE128 /* CustomRoundedRectangle.swift in Sources */,
 				CD277DB22CCE260900BE57C4 /* ProfileViewModel.swift in Sources */,
 				CDA1CBEF2CEF8FEB0041116B /* RankCardView.swift in Sources */,
@@ -862,6 +901,7 @@
 				CD277DBB2CCE2B7500BE57C4 /* RiotRecordDTO.swift in Sources */,
 				CDCD34B82CBFFE250068E4F7 /* CreateChatRoomDTO.swift in Sources */,
 				CDF300062CF9B64B004965D7 /* ChatMessageListDTO.swift in Sources */,
+				CDBD1F9D2D056D17004FBD9F /* View + Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,6 +1160,14 @@
 				minimumVersion = 2.23.0;
 			};
 		};
+		CD70474F2D02E4C300BAC164 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1157,6 +1205,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD7047352D01BD9E00BAC164 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDKUser;
+		};
+		CD7047502D02E4C300BAC164 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD70474F2D02E4C300BAC164 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
