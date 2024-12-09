@@ -12,6 +12,7 @@ public enum Config {
     public enum Plist {
       static let baseURL = "BASE_URL"
       static let kakaoKey = "KAKAO_APP_KEY"
+      static let socketURL = "SOCKET_URL"
     }
   }
   
@@ -35,6 +36,14 @@ extension Config {
   public static let kakaoKey: String = {
     guard let key = Config.infoDictionary[Keys.Plist.kakaoKey] as? String else {
       fatalError("KakaoKey is not set in plist for this configuration.")
+    }
+    
+    return key
+  }()
+  
+  public static let socketURL: String = {
+    guard let key = Config.infoDictionary[Keys.Plist.socketURL] as? String else {
+      fatalError("socketURL is not set in plist for this configuration.")
     }
     
     return key

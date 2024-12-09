@@ -9,7 +9,7 @@ import Foundation
 
 public struct GameInfoDTO: Codable, Hashable {
   let gameType: String
-  let rankImageUrl: String
+  let rankImageUrl: String?
   let tier: String
   let rank: String
   let leaguePoints: Int

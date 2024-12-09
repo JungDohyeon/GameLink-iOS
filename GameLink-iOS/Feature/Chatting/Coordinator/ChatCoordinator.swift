@@ -11,7 +11,7 @@ public enum ChatScene: Hashable {
   case main
   case filterList
   case userCarousel(_ roomData: ChatroomEntity)
-  case inChatting
+  case inChatting(_ roomData: ChatroomEntity)
 }
 
 final class ChatCoordinator: BaseCoordinator<ChatScene> {
@@ -37,8 +37,8 @@ final class ChatCoordinator: BaseCoordinator<ChatScene> {
       injector?.resolve(ChattingFilterDetailView.self)
     case let .userCarousel(roomData):
       injector?.resolve(ChattingRoomCarouselView.self, argument: roomData)
-    case .inChatting:
-      injector?.resolve(ChattingListView.self)
+    case let .inChatting(roomData):
+      injector?.resolve(InChattingView.self, argument: roomData)
     }
   }
 }

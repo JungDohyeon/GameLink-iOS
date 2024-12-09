@@ -12,11 +12,11 @@ final class ChattingRoomCarouselViewModel: BaseViewModel<ChatCoordinator>, Obser
   
   public enum Action {
     // User Action
-    case tappedEnterButton(_ roomId: String)
+    case tappedEnterButton
     
     // Inner Business Action
-    case _viewAppear(_ roomId: String)
-    case _fetchUserInfo(_ roomId: String)
+    case _viewAppear(_ roomData: ChatroomEntity)
+    case _fetchUserInfo
     
     // pageAction
     case _moveChatting
@@ -26,6 +26,8 @@ final class ChattingRoomCarouselViewModel: BaseViewModel<ChatCoordinator>, Obser
   private let service: ChatService
   
   @Published private(set) var chatroomUserListDetail: [ChatRoomUserListDetailDTO] = []
+  
+  private(set) var roomData: ChatroomEntity? = nil
   
   public init(
     chatService: ChatService,
@@ -37,21 +39,28 @@ final class ChattingRoomCarouselViewModel: BaseViewModel<ChatCoordinator>, Obser
   
   public func action(_ action: Action) {
     switch action {
-    case let ._viewAppear(roomId):
-      self.action(._fetchUserInfo(roomId))
+    case let ._viewAppear(roomData):
+      self.roomData = roomData
+      self.action(._fetchUserInfo)
       
-    case let ._fetchUserInfo(roomId):
-      Task {
-        await self.fetchUserInfo(roomId: roomId)
+    case ._fetchUserInfo:
+      if let roomData = self.roomData {
+        Task {
+          await self.fetchUserInfo(roomId: roomData.roomId)
+        }
       }
       
-    case let .tappedEnterButton(roomId):
-      Task {
-        await self.requestEnterChattingRoom(roomId: roomId)
+    case .tappedEnterButton:
+      if let roomData = self.roomData {
+        Task {
+          await self.requestEnterChattingRoom(roomId: roomData.roomId)
+        }
       }
       
     case ._moveChatting:
-      coordinator.push(page: .inChatting)
+      if let roomData = self.roomData {
+        coordinator.push(page: .inChatting(roomData))
+      }
       
     case ._moveBack:
       self.coordinator.pop()

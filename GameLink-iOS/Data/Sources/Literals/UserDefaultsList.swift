@@ -15,6 +15,14 @@ public struct UserDefaultsList {
     @UserDefaultsWrapper<String>(key: "refreshToken")
     public static var refreshToken
   }
+  
+  public struct RiotAccount {
+    @UserDefaultsWrapper<String>(key: "userId")
+    public static var userId
+    
+    @UserDefaultsWrapper<String>(key: "summonerName")
+    public static var summonerName
+  }
 }
 
 extension UserDefaultsList {
@@ -31,5 +39,10 @@ extension UserDefaultsList {
   public static func clearAuthData() {
     UserDefaultsList.Auth.accessToken = nil
     UserDefaultsList.Auth.refreshToken = nil
+  }
+  
+  public static func setRiotAccount(userId: String, summonerName: String) {
+    UserDefaultsList.RiotAccount.userId = userId
+    UserDefaultsList.RiotAccount.summonerName = summonerName
   }
 }

@@ -9,18 +9,50 @@ import SwiftUI
 
 struct InChattingView: View {
   
+  @ObservedObject private var viewModel: InChattingViewModel
+  
+  let roomData: ChatroomEntity
+  
   @State private var userInput: String = ""
+  
+  init(viewModel: InChattingViewModel, roomData: ChatroomEntity) {
+    self.viewModel = viewModel
+    self.roomData = roomData
+  }
   
   var body: some View {
     VStack(spacing: 0) {
-      ScrollView {
-        Text("채팅방 내역")
+      ScrollViewReader { proxy in
+        ScrollView {
+          if let userId = viewModel.userId {
+            LazyVStack(spacing: 10) {
+              ForEach(viewModel.chatMessages.compactMap { $0.content != nil ? $0 : nil }, id: \.chatMessageId) { message in
+                SpeechBubble(
+                  type: message.userId == userId ? .mine : .others,
+                  data: message
+                )
+                .id(message.chatMessageId)
+              }
+            }
+            .padding(.vertical, 14)
+            .padding(.horizontal, GridRules.globalHorizontalPadding)
+            .onChange(of: viewModel.chatMessages) { _ in
+              if let lastMessage = viewModel.chatMessages.last {
+                proxy.scrollTo(lastMessage.chatMessageId, anchor: .bottom)
+              }
+            }
+          }
+        }
       }
       
       userInputArea()
     }
     .task {
-    
+      viewModel.action(._viewAppear(roomData))
+    }
+    .onDisappear {
+      print("채팅 방 나가기")
+      viewModel.action(._stompDisconnect)
     }
     .glNavigation(
       centerContent: {
@@ -34,7 +66,7 @@ struct InChattingView: View {
           .padding(.horizontal, 6)
           .padding(.vertical, 4)
           .onTapGesture {
-            
+            viewModel.action(._moveBack)
           }
       }
     )
@@ -55,12 +87,13 @@ private extension InChattingView {
         .textInputAutocapitalization(.never)
         .background(
           Capsule()
-          .fill(.glGray3)
+            .fill(.glGray3)
         )
         .tint(.glPrimary1)
       
       Button {
-        
+        viewModel.action(._sendMessage(self.userInput))
+        userInput.removeAll()
       } label: {
         Image(systemName: "arrow.up")
           .foregroundStyle(.glBackground2)
@@ -72,13 +105,39 @@ private extension InChattingView {
           )
       }
     }
+    .padding(.horizontal, 16)
     .background(
       .glBackground2
     )
-    .padding(.horizontal, 16)
   }
 }
 
 #Preview {
-  InChattingView()
+  InChattingView(
+    viewModel: InChattingViewModel(
+      stompService: DefaultStompService(service: DefaultChatService()),
+      coordinator: ChatCoordinator(
+        initialScene: .inChatting(
+          ChatroomEntity(
+            roomId: "test",
+            roomName: "test",
+            userCount: 1,
+            maxUserCount: 3,
+            leaderTierText: "S1",
+            leaderTier: .silver,
+            positions: [.adcarry]
+          )
+        )
+      )
+    ),
+    roomData: ChatroomEntity(
+      roomId: "test",
+      roomName: "test",
+      userCount: 1,
+      maxUserCount: 3,
+      leaderTierText: "S1",
+      leaderTier: .silver,
+      positions: [.adcarry]
+    )
+  )
 }

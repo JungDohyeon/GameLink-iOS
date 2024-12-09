@@ -75,6 +75,7 @@ private extension ProfileViewModel {
       switch result {
       case let .success(data):
         self.userProfileInfo = data
+        UserDefaultsList.setRiotAccount(userId: data.userId, summonerName: data.nickname)
         
       case let .failure(error):
         switch error {
@@ -93,7 +94,6 @@ private extension ProfileViewModel {
       guard let self = self else { return }
       switch result {
       case .success:
-        print("SUCCESS!")
         self.action(._fetchUserInfo)
         
       case let .failure(error):

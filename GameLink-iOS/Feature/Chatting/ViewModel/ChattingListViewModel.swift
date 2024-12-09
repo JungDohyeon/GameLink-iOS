@@ -14,12 +14,14 @@ final class ChattingListViewModel: BaseViewModel<ChatCoordinator>, ObservableObj
     // User Action
     case viewAppear
     case tappedChatroom(ChatroomEntity)
+    case tappedMyRoom(MyChatroomContent)
     case tappedSelectPositionButton(LOLPosition)
     
     // Inner Business Action
-    case _fetchChatroomList
+    case _fetchChatroomList(isMy: Bool)
     case _fetchNextPage
     case _setSelectPositionView(_ isVisible: Bool)
+    case _setPage(page: Int)
     
     // pageAction
     case _moveFilterList
@@ -28,20 +30,27 @@ final class ChattingListViewModel: BaseViewModel<ChatCoordinator>, ObservableObj
   }
   
   private let service: ChatService
+  private let riotService: RiotService
   
   private(set) var page: Int = 0
   private(set) var size: Int = 20
   private(set) var hasNext: Bool = false
   
+  @Published var errorMsg: String? = nil
+  @Published var isMy: Bool = false
+  
   @Published private(set) var showSelectPositionView: Bool = false
   @Published private(set) var selectedChatroom: ChatroomEntity? = nil
   @Published private(set) var chatroomList: [ChatroomEntity] = []
+  @Published private(set) var myRoomList: [MyChatroomContent] = []
   
   public init(
     chatService: ChatService,
+    riotService: RiotService,
     coordinator: ChatCoordinator
   ) {
     self.service = chatService
+    self.riotService = riotService
     super.init(coordinator: coordinator)
   }
   
@@ -51,12 +60,23 @@ final class ChattingListViewModel: BaseViewModel<ChatCoordinator>, ObservableObj
       self.selectedChatroom = nil
       self.page = 0
       self.hasNext = false
-      self.chatroomList = []
-      self.action(._fetchChatroomList)
+      self.chatroomList.removeAll()
+      self.myRoomList.removeAll()
+      self.action(._fetchChatroomList(isMy: self.isMy))
       
     case let .tappedChatroom(chatroom):
-      self.selectedChatroom = chatroom
-      self.showSelectPositionView = true
+      Task {
+        await self.checkAccount()
+        
+        DispatchQueue.main.async {
+          if UserDefaultsList.RiotAccount.userId != nil {
+            self.selectedChatroom = chatroom
+            self.showSelectPositionView = true
+          } else {
+            self.errorMsg = "프로필에서 유저 정보를 등록해주세요!"
+          }
+        }
+      }
       
     case let .tappedSelectPositionButton(position):
       if let roomId = self.selectedChatroom?.roomId {
@@ -65,21 +85,43 @@ final class ChattingListViewModel: BaseViewModel<ChatCoordinator>, ObservableObj
         }
       }
       
-    case ._fetchChatroomList:
+    case let .tappedMyRoom(roomData):
+      self.coordinator.push(
+        page: .inChatting(
+          ChatroomEntity(
+            roomId: roomData.roomId,
+            roomName: roomData.roomName,
+            userCount: roomData.users.count,
+            maxUserCount: 10,
+            leaderTierText: "test",
+            leaderTier: .bronze,
+            positions: [])
+        )
+      )
+      
+    case let ._setPage(page):
+      self.page = page
+      
+    case let ._fetchChatroomList(isMy):
       Task {
-        await self.fetchChatList(page: self.page, size: self.size)
+        if !isMy {
+          await self.fetchChatList(page: self.page, size: self.size)
+        } else {
+          await self.fetchMyRoom(page: self.page, size: self.size)
+        }
       }
       
     case ._fetchNextPage:
-      self.page += 1
-      self.action(._fetchChatroomList)
+      if hasNext {
+        self.page += 1
+        self.action(._fetchChatroomList(isMy: self.isMy))
+      }
       
     case ._moveFilterList:
       self.coordinator.push(page: .filterList)
       
     case ._moveUserDetailCarousel:
       if let roomData = self.selectedChatroom {
-        print("이동!@!@!")
         self.coordinator.push(page: .userCarousel(roomData))
       }
       
@@ -95,6 +137,27 @@ final class ChattingListViewModel: BaseViewModel<ChatCoordinator>, ObservableObj
 private extension ChattingListViewModel {
   
   @MainActor
+  func checkAccount() async {
+    self.riotService.checkAccount { [weak self] result in
+      guard let self = self else { return }
+      
+      switch result {
+      case let .success(data):
+        UserDefaultsList.setRiotAccount(userId: data.userId, summonerName: data.summonerName)
+        
+      case let .failure(error):
+        switch error {
+        case .requestErr, .requestFailed, .serverError, .unknown:
+          self.errorMsg = error.localizedDescription
+          
+        default:
+          self.errorMsg = "유저 정보가 없습니다.\n프로필 탭에서 유저 정보를 등록해주세요."
+        }
+      }
+    }
+  }
+  
+  @MainActor
   func fetchChatList(page: Int, size: Int) async {
     service.chatroomList(page: page, size: size) { [weak self] result in
       guard let self = self else { return }
@@ -106,7 +169,22 @@ private extension ChattingListViewModel {
             ChatroomEntity.init(dto: $0)
           }
         )
+        self.hasNext = data.hasNext
         
+      case let .failure(error):
+        print(error.localizedDescription)
+      }
+    }
+  }
+  
+  @MainActor
+  func fetchMyRoom(page: Int, size: Int) async {
+    service.fetchMyRoom(page: page, size: size) { [weak self] result in
+      guard let self = self else { return }
+      
+      switch result {
+      case let .success(data):
+        self.myRoomList.append(contentsOf: data.content)
         self.hasNext = data.hasNext
         
       case let .failure(error):
