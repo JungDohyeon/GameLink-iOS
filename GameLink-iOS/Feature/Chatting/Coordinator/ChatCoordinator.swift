@@ -35,10 +35,13 @@ final class ChatCoordinator: BaseCoordinator<ChatScene> {
       injector?.resolve(ChattingListView.self)
     case .filterList:
       injector?.resolve(ChattingFilterDetailView.self)
+        .toolbar(.hidden, for: .tabBar)
     case let .userCarousel(roomData):
       injector?.resolve(ChattingRoomCarouselView.self, argument: roomData)
+        .toolbar(.hidden, for: .tabBar)
     case let .inChatting(roomData):
       injector?.resolve(InChattingView.self, argument: roomData)
+        .toolbar(.hidden, for: .tabBar)
     }
   }
 }
