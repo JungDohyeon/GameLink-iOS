@@ -18,6 +18,7 @@ import Moya
   case createChatroom(roomName: String, maxUserCount: Int)
   case chatroomUserDetailInfo(roomId: String)
   case chatMessageList(roomId: String, page: Int, size: Int)
+  case myChatroom(page: Int, size: Int)
 }
 
 extension ChatroomAPI: BaseAPI {
@@ -53,6 +54,8 @@ extension ChatroomAPI: BaseAPI {
       endPath += "/users/info"
     case .chatMessageList:
       endPath += "/message/list"
+    case .myChatroom:
+      endPath += "/my"
     }
     
     return endPath
@@ -76,6 +79,8 @@ extension ChatroomAPI: BaseAPI {
     case .chatroomUserDetailInfo:
       return .get
     case .chatMessageList:
+      return .get
+    case .myChatroom:
       return .get
     }
   }
@@ -109,6 +114,10 @@ extension ChatroomAPI: BaseAPI {
       params["page"] = page
       params["size"] = size
       
+    case let .myChatroom(page, size):
+      params["page"] = page
+      params["size"] = size
+      
     default:
       break
     }
@@ -133,6 +142,8 @@ extension ChatroomAPI: BaseAPI {
     case .chatroomUserDetailInfo:
       return URLEncoding.default
     case .chatMessageList:
+      return URLEncoding.default
+    case .myChatroom:
       return URLEncoding.default
     }
   }
