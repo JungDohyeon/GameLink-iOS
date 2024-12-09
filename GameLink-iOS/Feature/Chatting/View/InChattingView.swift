@@ -44,8 +44,7 @@ struct InChattingView: View {
           }
         }
       }
-      
-      userInputArea()
+      .padding(.bottom, 56)
     }
     .task {
       viewModel.action(._viewAppear(roomData))
@@ -56,7 +55,7 @@ struct InChattingView: View {
     }
     .glNavigation(
       centerContent: {
-        Text("채팅방 이름")
+        Text(viewModel.roomData?.roomName ?? "이름을 불러오지 못했습니다")
           .glFont(.body1Bold)
           .foregroundStyle(.white)
       },
@@ -70,6 +69,9 @@ struct InChattingView: View {
           }
       }
     )
+    .overlay(alignment: .bottom) {
+      userInputArea()
+    }
   }
 }
 
@@ -104,7 +106,9 @@ private extension InChattingView {
               .fill(.primary1)
           )
       }
+      .disabled(self.userInput.isEmpty)
     }
+    .padding(.top, 10)
     .padding(.horizontal, 16)
     .background(
       .glBackground2
