@@ -95,11 +95,14 @@ final class ChattingListViewModel: BaseViewModel<ChatCoordinator>, ObservableObj
             maxUserCount: 10,
             leaderTierText: "test",
             leaderTier: .bronze,
-            positions: [])
+            positions: []
+          )
         )
       )
       
     case let ._setPage(page):
+      self.myRoomList.removeAll()
+      self.chatroomList.removeAll()
       self.page = page
       
     case let ._fetchChatroomList(isMy):
@@ -112,7 +115,7 @@ final class ChattingListViewModel: BaseViewModel<ChatCoordinator>, ObservableObj
       }
       
     case ._fetchNextPage:
-      if hasNext {
+      if self.hasNext {
         self.page += 1
         self.action(._fetchChatroomList(isMy: self.isMy))
       }
